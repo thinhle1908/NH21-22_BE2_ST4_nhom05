@@ -18,3 +18,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/index',[MyController::class,'index']);
+Route::get('/login',[MyController::class,'login']);

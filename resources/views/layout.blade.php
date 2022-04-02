@@ -6,22 +6,22 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title>Home | E-Shopper</title>
-    <link href="{{ asset{'css/bootstrap.min.css'} }}" rel="stylesheet">
-    <link href="{{ asset{'css/font-awesome.min.css'} }}" rel="stylesheet">
-    <link href="{{ asset{'css/prettyPhoto.css'} }}" rel="stylesheet">
-    <link href="{{ asset{'css/price-range.css'} }}" rel="stylesheet">
-    <link href="{{ asset{'css/animate.css'} }}" rel="stylesheet">
-	<link href="{{ asset{'css/main.css'} }}" rel="stylesheet">
-	<link href="{{ asset{'css/responsive.css'} }}" rel="stylesheet">
+    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/font-awesome.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/prettyPhoto.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/price-range.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/animate.css') }}" rel="stylesheet">
+	<link href="{{ asset('css/main.css') }}" rel="stylesheet">
+	<link href="{{ asset('css/responsive.css') }}" rel="stylesheet">
     <!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
     <![endif]-->       
-    <link rel="shortcut icon" href="images/ico/favicon.ico">
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+    <link rel="shortcut icon" href="{{ asset('images/ico/favicon.ico') }}">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ asset('images/ico/apple-touch-icon-144-precomposed.png') }}">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ asset('images/ico/apple-touch-icon-114-precomposed.png') }}">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ asset('images/ico/apple-touch-icon-72-precomposed.png') }}">
+    <link rel="apple-touch-icon-precomposed" href="{{ asset('images/ico/apple-touch-icon-57-precomposed.png') }}">
 </head><!--/head-->
 
 <body>
@@ -88,9 +88,9 @@
 							<ul class="nav navbar-nav">
 								<li><a href=""><i class="fa fa-user"></i> Account</a></li>
 								<li><a href=""><i class="fa fa-star"></i> Wishlist</a></li>
-								<li><a href="checkout.html"><i class="fa fa-crosshairs"></i> Checkout</a></li>
-								<li><a href="cart.html"><i class="fa fa-shopping-cart"></i> Cart</a></li>
-								<li><a href="login.html"><i class="fa fa-lock"></i> Login</a></li>
+								<li><a href="{{ asset('checkout.html') }}"><i class="fa fa-crosshairs"></i> Checkout</a></li>
+								<li><a href="{{ asset('cart.html') }}"><i class="fa fa-shopping-cart"></i> Cart</a></li>
+								<li><a href="{{ asset('login') }}"><i class="fa fa-lock"></i> Login</a></li>
 							</ul>
 						</div>
 					</div>
@@ -112,24 +112,24 @@
 						</div>
 						<div class="mainmenu pull-left">
 							<ul class="nav navbar-nav collapse navbar-collapse">
-								<li><a href="index.html" class="active">Home</a></li>
+								<li><a href="{{ asset ('index.html') }}" class="active">Home</a></li>
 								<li class="dropdown"><a href="#">Shop<i class="fa fa-angle-down"></i></a>
                                     <ul role="menu" class="sub-menu">
-                                        <li><a href="shop.html">Products</a></li>
-										<li><a href="product-details.html">Product Details</a></li> 
-										<li><a href="checkout.html">Checkout</a></li> 
-										<li><a href="cart.html">Cart</a></li> 
-										<li><a href="login.html">Login</a></li> 
+                                        <li><a href="{{ asset ('shop.html') }}">Products</a></li>
+										<li><a href="{{ asset ('product-details.html') }}">Product Details</a></li> 
+										<li><a href="{{ asset ('checkout.html') }}">Checkout</a></li> 
+										<li><a href="{{ asset ('cart.html') }}">Cart</a></li> 
+										<li><a href="{{ asset ('login.html') }}">Login</a></li> 
                                     </ul>
                                 </li> 
 								<li class="dropdown"><a href="#">Blog<i class="fa fa-angle-down"></i></a>
                                     <ul role="menu" class="sub-menu">
-                                        <li><a href="blog.html">Blog List</a></li>
-										<li><a href="blog-single.html">Blog Single</a></li>
+                                        <li><a href="{{ asset('blog.html') }}">Blog List</a></li>
+										<li><a href="{{ asset('blog-single.html') }}">Blog Single</a></li>
                                     </ul>
                                 </li> 
-								<li><a href="404.html">404</a></li>
-								<li><a href="contact-us.html">Contact</a></li>
+								<li><a href="{{ asset('404.html') }}">404</a></li>
+								<li><a href="{{ asset('contact-us.html') }}">Contact</a></li>
 							</ul>
 						</div>
 					</div>
@@ -142,7 +142,7 @@
 			</div>
 		</div><!--/header-bottom-->
 	</header><!--/header-->
-	
+	@yield('content');
 	
 	<footer id="footer"><!--Footer-->
 		<div class="footer-top">
@@ -301,14 +301,12 @@
 		</div>
 		
 	</footer><!--/Footer-->
-	
 
-  
-    <script src="js/jquery.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/jquery.scrollUp.min.js"></script>
-	<script src="js/price-range.js"></script>
-    <script src="js/jquery.prettyPhoto.js"></script>
-    <script src="js/main.js"></script>
+    <script src="{{ asset('js/jquery.js') }}"></script>
+	<script src="{{ asset('js/boots(rap.min.js') }}"></script>
+	<script src="{{ asset('js/jquery.scrollUp.min.js') }}"></script>
+	<script src="{{ asset('js/price-range.js') }}"></script>
+    <script src="{{ asset('js/jquery.prettyPhoto.js') }}"></script>
+    <script src="{{ asset('js/main.js') }}"></script>
 </body>
 </html>

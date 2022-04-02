@@ -19,3 +19,6 @@ Route::get('/', function () {
 });
 Route::get('/index',[MyController::class,'index']);
 Route::get('/login',[MyController::class,'login']);
+Route::get('/product-details',[MyController::class,'product-details']);
+Route::get('/shop',[MyController::class,'shop']);
+

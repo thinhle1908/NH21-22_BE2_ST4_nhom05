@@ -19,4 +19,13 @@ class MyController extends Controller
     public function shop(){
         return view('shop');
     }
+    public function err404(){
+        return view('404');
+    }
+    public function blog_single(){
+        return view('blog-single');
+    }
+    public function blog(){
+        return view('blog');
+    }
 }

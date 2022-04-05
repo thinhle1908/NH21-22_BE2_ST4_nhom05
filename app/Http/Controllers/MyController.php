@@ -28,4 +28,13 @@ class MyController extends Controller
     public function blog(){
         return view('blog');
     }
+    public function cart(){
+        return view('cart');
+    }
+    public function checkout(){
+        return view('checkout');
+    }
+    public function contact_us(){
+        return view('contact-us');
+    }
 }

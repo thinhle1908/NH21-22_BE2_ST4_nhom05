@@ -22,6 +22,9 @@ Route::get('/login',[MyController::class,'login']);
 Route::get('/product-details',[MyController::class,'productdetails']);
 Route::get('/shop',[MyController::class,'shop']);
 Route::get('/404',[MyController::class,'err404']);
-
+Route::get('/cart', [MyController::class,'cart']);
 Route::get('/blog-single',[MyController::class,'blog_single']);
 Route::get('/blog',[MyController::class,'blog']);
+Route::get('/checkout', [MyController::class,'checkout']);
+Route::get('/contact-us', [MyController::class,'contact_us']);
+          

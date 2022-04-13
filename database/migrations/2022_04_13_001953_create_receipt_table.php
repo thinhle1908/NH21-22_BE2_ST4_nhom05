@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateRatingTable extends Migration
+class CreateReceiptTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,13 @@ class CreateRatingTable extends Migration
      */
     public function up()
     {
-        Schema::create('rating', function (Blueprint $table) {
-            $table->id("rating_id");
-            $table->integer("product_id");
+        Schema::create('receipt', function (Blueprint $table) {
+            $table->id("receipt_id");
             $table->integer("user_id");
-            $table->integer("rating_star",1);
-            $table->string("rating_image");
-            $table->string("rating_content");
+            $table->integer("receipt_totalPrice");
+            $table->dateTime("receipt_purchaseDate");
+            $table->string("receipt_status");
+            $table->integer("receipt_quantity");
         });
     }
 
@@ -30,6 +30,6 @@ class CreateRatingTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('rating');
+        Schema::dropIfExists('receipt');
     }
 }

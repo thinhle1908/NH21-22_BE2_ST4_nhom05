@@ -26,6 +26,7 @@
             <th>Name</th>
             <th>Price</th>
             <th>Description</th>
+            <th>Manufactures</th>
         </tr>
         
         @foreach($data as $row)
@@ -34,6 +35,7 @@
             <td>{{ $row->name }}</td>
             <td>{{ $row->price }}</td>
             <td>{{ $row->description }}</td>
+            <td>{{ $row->manufacture->manu_name }}</td>
         </tr>
         @endforeach
     </table>

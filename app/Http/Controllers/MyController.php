@@ -15,7 +15,7 @@ class MyController extends Controller
     public function page($name){
         return view($name);
     }
-    
+
     // public function login(){
     //     return view('login');
     // }

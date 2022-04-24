@@ -16,9 +16,10 @@ class ManufactureSeeder extends Seeder
     public function run()
     {
         DB::table('manufactures')->insert([
-            
-            'manu_name'=>Str::random(100)
-
+            ['manu_name'=>"Tivi"],
+            ['manu_name'=>"Tủ lạnh"],
+            ['manu_name'=>"Máy Giặt"],
+            ['manu_name'=>"Máy lạnh"]
         ]);
     }
 }

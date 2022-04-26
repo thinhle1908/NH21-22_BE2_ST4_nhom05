@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Manufacture;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -14,22 +15,14 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $this->call([
-            UserSeeder::class
+            ProductsSeeder::class
         ]);
         $this->call([
-            Cart::class
+            ProtypesSeeder::class
         ]);
         $this->call([
-            UserSeeder::class
+            ManufactureSeeder::class
         ]);
-        $this->call([
-            UserSeeder::class
-        ]);
-        $this->call([
-            UserSeeder::class
-        ]);
-        $this->call([
-            UserSeeder::class
-        ]);
+       
     }
 }

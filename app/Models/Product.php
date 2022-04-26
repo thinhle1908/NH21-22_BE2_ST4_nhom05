@@ -12,4 +12,9 @@ class Product extends Model
     {
         return $this->belongsTo(Manufacture::class,"manu_id");
     }
+    public function protype()
+    {
+        return $this->belongsTo(Protype::class,"type_id");
+    }
+
 }

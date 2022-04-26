@@ -17,7 +17,7 @@ class ManufactureSeeder extends Seeder
     {
         DB::table('manufactures')->insert([
             
-            'manu_name'=>Str::random(100)
+            'manu_name'=>"Sam Sung"
 
         ]);
     }

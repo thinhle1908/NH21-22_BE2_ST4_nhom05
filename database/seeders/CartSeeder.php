@@ -16,9 +16,9 @@ class CartSeeder extends Seeder
     {
         //
         DB::table('carts')->insert([
-            'user_id'=>random_int(1,100),
-            'product_id'=>random_int(1,10000),
-            'product_quantity'=>random_int(1,1000),
+            'user_id'=>1,
+            'product_id'=>1,
+            'product_quantity'=>1,
             
         ]);
     }

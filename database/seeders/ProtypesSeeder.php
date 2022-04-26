@@ -17,7 +17,7 @@ class ProtypesSeeder extends Seeder
     {
         DB::table('protypes')->insert([
             
-            'type_name'=>Str::random(100)
+            'type_name'=>"Điện thoại"
         ]);
     }
 }

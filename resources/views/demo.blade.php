@@ -27,16 +27,23 @@
             <th>Price</th>
             <th>Description</th>
             <th>Manufactures</th>
+            <th>Protype</th>
+            <th>Cart</th>
+            <th>Receipt</th>
         </tr>
         
         @foreach($data as $row)
-            <?php?>
         <tr>
+            
             <td>{{ $row->name }}</td>
             <td>{{ $row->price }}</td>
             <td>{{ $row->description }}</td>
             <td>{{ $row->manufacture->manu_name }}</td>
+            <td>{{ $row->protype->type_name }}</td>
+            
+          
         </tr>
+        
         @endforeach
     </table>
     </body>

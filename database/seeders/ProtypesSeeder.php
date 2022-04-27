@@ -16,8 +16,11 @@ class ProtypesSeeder extends Seeder
     public function run()
     {
         DB::table('protypes')->insert([
-            
-            'type_name'=>Str::random(100)
+            ['type_name'=> "SamSung"],
+            ['type_name'=> "Sony"],
+            ['type_name'=> "TCL"],
+            ['type_name'=> "LG"],
+            ['type_name'=> "Casper"]
         ]);
     }
 }

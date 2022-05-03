@@ -16,11 +16,16 @@ class ProtypesSeeder extends Seeder
     public function run()
     {
         DB::table('protypes')->insert([
+<<<<<<< HEAD
+            
+            'type_name'=>"Điện thoại"
+=======
             ['type_name'=> "SamSung"],
             ['type_name'=> "Sony"],
             ['type_name'=> "TCL"],
             ['type_name'=> "LG"],
             ['type_name'=> "Casper"]
+>>>>>>> 5ad701092a92db813983922ea91f699f336f1576
         ]);
     }
 }

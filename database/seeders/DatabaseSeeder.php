@@ -13,12 +13,14 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-       
-        
-     
+        $this->call([
+            ProtypesSeeder::class
+        ]);
+        $this->call([
+            ManufactureSeeder::class
+        ]);
         $this->call([
             ProductsSeeder::class
         ]);
-        
     }
 }

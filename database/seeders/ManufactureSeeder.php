@@ -16,10 +16,15 @@ class ManufactureSeeder extends Seeder
     public function run()
     {
         DB::table('manufactures')->insert([
-            ['manu_name'=>"Tivi"],
-            ['manu_name'=>"Tủ lạnh"],
-            ['manu_name'=>"Máy Giặt"],
-            ['manu_name'=>"Máy lạnh"]
+            ['manu_name'=>"REVLON COS"],
+            ['manu_name'=>"HOT TOOLS"],
+            ['manu_name'=>"Dynacraft"],
+            ['manu_name'=>"SAMSUNG"],
+            ['manu_name'=>"Garmin"],
+            ['manu_name'=>"Fossil"],
+            ['manu_name'=>"Acer"],
+            ['manu_name'=>"Electro-Voice"],
+            ['manu_name'=>"Mackie"]   
         ]);
     }
 }

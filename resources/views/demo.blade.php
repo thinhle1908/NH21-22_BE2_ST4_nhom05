@@ -30,6 +30,7 @@
             <th>Protype</th>
             <th>Cart</th>
             <th>Receipt</th>
+            <img src="images/product-details/donghosamsunganh1.jpg" alt="anh dong ho" height="200px" width="200px">
         </tr>
         
         @foreach($data as $row)
@@ -40,6 +41,7 @@
             <td>{{ $row->description }}</td>
             <td>{{ $row->manufacture->manu_name }}</td>
             <td>{{ $row->protype->type_name }}</td>
+            <td><img src="images/product-details/{{ $row->image }}"  alt="" height="200px" width="200px"></td>
             
           
         </tr>

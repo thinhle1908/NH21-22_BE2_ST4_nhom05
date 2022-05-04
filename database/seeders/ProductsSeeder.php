@@ -87,7 +87,7 @@ class ProductsSeeder extends Seeder
              'manu_id'=>4,
              'type_id'=>3,
              'price'=>199.99,
-             'image'=>"61dh16sj5+L._AC_SL1356_.jpg",
+             'image'=>"donghosamsunganh1.jpg",
              'description'=>"Samsung Electronics Galaxy Watch 4 40mm Smartwatch with ECG Monitor Tracker for Health Fitness Running Sleep Cycles GPS Fall Detection Bluetooth US Version,...",
              'feature'=> 0],
               //08

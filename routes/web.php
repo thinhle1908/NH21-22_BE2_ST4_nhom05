@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\MyController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,12 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+
+Route::get('/demo',[MyController::class,'index']);
+
 Route::get('/', function () {
     return view('welcome');
-});
-
-Route::get('/index', function () {
-    return view('index');
 });
 
 Route::get('/dashboard', function () {

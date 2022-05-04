@@ -23,6 +23,7 @@ class ManufactureSeeder extends Seeder
             ['manu_name'=>"Garmin"],
             ['manu_name'=>"Fossil"],
             ['manu_name'=>"Acer"],
+            ['manu_name'=>"Newel"],
             ['manu_name'=>"Electro-Voice"],
             ['manu_name'=>"Mackie"]   
         ]);

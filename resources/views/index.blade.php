@@ -228,13 +228,13 @@
 								<div class="productinfo text-center">
 									<img src="images/product-details/{{ $row->image }}" alt="" height="250px" width="250px"/>
 									<h2>{{ $row->price }}$</h2>
-									<p>{{ substr($row->name,0,30) }}</p>
+									<p>{{ substr($row->name,0,30) }}...</p>
 									<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
 								</div>
 								<div class="product-overlay">
 									<div class="overlay-content">
-										<h2>$56</h2>
-										<p>Easy Polo Black Edition</p>
+										<h2>{{ $row->price }}$</h2>
+										<p>{{ $row->name }}</p>
 										<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
 									</div>
 								</div>

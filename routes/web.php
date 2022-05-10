@@ -15,7 +15,7 @@ use App\Http\Controllers\MyController;
 
 
 
-Route::get('/demo',[MyController::class,'index']);
+Route::get('/index',[MyController::class,'index']);
 
 Route::get('/', function () {
     return view('welcome');

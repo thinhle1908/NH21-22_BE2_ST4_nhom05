@@ -10,7 +10,7 @@ class MyController extends Controller
     //
     public function index(){
         $products = Product::all();
-        return view('demo',['data'=>$products]);
+        return view('index',['data'=>$products]);
     }
     public function page($name){
         return view($name);

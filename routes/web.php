@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MyController;
+use App\Http\Controllers\ProductsController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,7 +17,7 @@ use App\Http\Controllers\MyController;
 
 
 
-Route::get('/index',[MyController::class,'index']);
+Route::get('/index',[ProductsController::class,'getTenFeatureProducts']);
 
 Route::get('/', function () {
     return view('welcome');

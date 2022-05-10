@@ -36,7 +36,7 @@ class ProductsSeeder extends Seeder
              STYLING FLEXIBILITY: Multiple settings (4 heat/3 speed) for styling variety and great performance on all hair types. Turbo boost button provides an extra speed option.
              ERGONOMIC DESIGN: Comfortable hold, agile to operate, detachable end cap for easy cleaning.
              TRAVEL READY: Automatic dual voltage lets you create when you are on-the-go.
-             ",'feature'=> 0],
+             ",'feature'=> 1],
              //03
              ['name'=> "Revlon 1875W Lightweight + Compact Travel Hair Dryer, Yellow",
              'manu_id'=>1,
@@ -48,7 +48,7 @@ class ProductsSeeder extends Seeder
              2 heat/speed settings for drying and styling flexibility and control
              Cool shot button help to set the look for a gorgeous, long-lasting results
              IONIC TECHNOLOGY helps to reduce frizz and static, leaving hair looking conditioned, smooth and shiny",
-             'feature'=> 0],
+             'feature'=> 1],
               //04
               ['name'=> "Dynacraft Magna Front Shock Mountain Bike Boys, Girls",
               'manu_id'=>3,
@@ -59,7 +59,7 @@ class ProductsSeeder extends Seeder
               18 speed index derailleur
               Front and rear linear pull brakes
               Quick release seat post",
-              'feature'=> 0],
+              'feature'=> 1],
                //05
              ['name'=> "RoyalBaby Freestyle Kids Bike 12 14 16 18 20 Inch Children’s Bicycle for Age 3-12 Years Boys Girls
              ",
@@ -89,7 +89,7 @@ class ProductsSeeder extends Seeder
              'price'=>199.99,
              'image'=>"donghosamsunganh1.jpg",
              'description'=>"Samsung Electronics Galaxy Watch 4 40mm Smartwatch with ECG Monitor Tracker for Health Fitness Running Sleep Cycles GPS Fall Detection Bluetooth US Version,...",
-             'feature'=> 0],
+             'feature'=> 1],
               //08
               ['name'=> "Garmin 010-02064-00 Instinct, Rugged Outdoor Watch with GPS, Features Glonass and Galileo, Heart Rate Monitoring and 3-Axis Compass, Graphite
               ",
@@ -185,7 +185,7 @@ class ProductsSeeder extends Seeder
               Eight M10 threaded mounting points, aluminum pole mounts, and all-metal handles
               90˚ x 60˚ pattern for best coverage on mid-size stages. 40˚ monitor angle with rubber feet
               Note: Products with electrical plugs are designed for use in the US. Outlets and voltage differ internationally and this product may require an adapter or converter for use in your destination. Please check compatibility before purchasing.",
-              'feature'=> 0],
+              'feature'=> 1],
                //15
              ['name'=> "Mackie SRM Series, 12-Inch, 1000W High-Definition Portable Powered Loudspeaker (SRM450v3)
              ",
@@ -198,7 +198,7 @@ class ProductsSeeder extends Seeder
              Quick one-button Speaker Mode selection for application-specific voicing (PA, DJ, Monitor and Soloist)
              Effortlessly eliminate nasty feedback with one-button automatic Feedback Destroyer
              Integrated 2-channel mixer featuring dual Mackie Wide-Z inputs",
-             'feature'=> 0]                     
+             'feature'=> 1]                     
         ]);
     }
 }

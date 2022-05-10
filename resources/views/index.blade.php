@@ -221,7 +221,7 @@
 				<div class="features_items">
 					<!--features_items-->
 					<h2 class="title text-center">Features Items</h2>
-					@foreach($data as $row)
+					@foreach($tenProductsFeature as $row)
 					<div class="col-sm-4">
 						<div class="product-image-wrapper">
 							<div class="single-products">

@@ -22,7 +22,10 @@ Route::get('/index',[ProductsController::class,'getTenFeatureProducts']);
 Route::get('/', function () {
     return view('welcome');
 });
-
+Route::get('/index', [MyController::class, 'index']);
+Route::get('/register', function () {
+    return view('index');
+});
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');

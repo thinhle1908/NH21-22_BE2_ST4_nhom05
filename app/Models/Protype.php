@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Protype extends Model
+class Protypes extends Model
 {
     protected $primaryKey = 'type_id';
     use HasFactory;

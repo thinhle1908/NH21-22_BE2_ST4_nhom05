@@ -241,14 +241,167 @@ class ProductsSeeder extends Seeder
              'manu_id'=>2,
              'type_id'=>1,
              'price'=>25.66,
-             'image'=>"51amMDS+Q7L._SL1000_.jpg",
+             'image'=>"51amMDS+Q7L_SL1000_.jpg",
              'description'=>"The tool to finish your look, touch it up or reimagine your 2nd-day style.
              2 Heat/Speed Settings for full-bodied curls
              Unique flexible, ball-tipped bristles gently comb and pull strands of hair for smooth results
              ¾” Barrel and Curl Release feature great for second-day styling variety
              8 ft professional Cord",
              'feature'=> 0],    
-
+            //20
+            ['name'=> "TCL 32-inch 1080p Roku Smart LED TV - 32S327, 2019 Model",
+             'manu_id'=>11,
+             'type_id'=>6,
+             'price'=>168.00,
+             'image'=>"71wYJc19PiL._AC_SL1500_.jpg",
+             'description'=>"Easy Voice Control: Works with Amazon Alexa or Google Assistant to help you find movie titles, launch or change channels, even switch inputs, using just your voice. Also available through the Roku mobile app
+             Smart Functionality offers access to over 5,000 streaming channels featuring more than 500,000 movies and TV episodes via Roku TV
+             1080p Full HD Resolution excellent detail, color, and contrast. Wireless Connection: 802.11 2x2 Dual Band
+             Direct-lit LED produces great picture quality with 60Hz refresh rate for fast moving action scenes with virtually no motion blur. Screw Size : M4 x 8
+             Inputs: 3 HDMI, 1 USB, RF, Composite, Headphone Jack, optical audio out",
+             'feature'=> 1],   
+             //21
+            ['name'=> "SAMSUNG 32-inch Class LED Smart FHD TV 1080P (UN32N5300AFXZA, 2018 Model)",
+            'manu_id'=>4,
+            'type_id'=>6,
+            'price'=>168.00,
+            'image'=>"91UsHjAPTlL._AC_SL1500_.jpg",
+            'description'=>"Full HD 1080p Resolution - Enjoy a viewing experience that is 2x the clarity of standard HD TVs.
+            Smart TV - Get to your entertainment the faster, easier, and more intelligent way. Easily access your streaming services all in one place using the Samsung Remote Control.
+            Micro Dimming Pro - Reveal a more true-to-life picture with enhanced contrast.
+            Quad Core Processor: enjoy a Fluid browsing experience and faster control switching between apps, streaming content and other media effortlessly.
+            Dimensions: Without Stand 28.9 W x 17.3 H x 3.1 D | With Stand 28.9 W x 18.2 H x 6.4 D. Stand Size (WxHxD)-5.4 x 6.5 x 1.8 inches
+            Inputs Outputs: Two HDMI Input, One Component Video Input, One RF In (Satellite Input), One RF In (Terrestrial Cable Input), One USB Input, One Composite In (AV), One Ethernet (LAN) and One Digital Audio Out (Optical)",
+            'feature'=> 0],   
+            //22
+            ['name'=> "LG Electronics 24LJ4540-WU 24-Inch 720p LED HD TV, white",
+            'manu_id'=>12,
+            'type_id'=>6,
+            'price'=>136.99,
+            'image'=>"91UsHjAPTlL._AC_SL1500_.jpg",
+            'description'=>"Dimensions: 21.9 W x 13.6 H x 2.1 D (TV without stand) | 21.9 W x 15.2 H x 5.8 D (TV with stand)
+            No smart functionality.
+            720p HD resolution for a crisp picture. Direct-lit LED produces great picture quality. Resolution - 1366 x 768. Brightness (Typ.)- 180 cd/m2. Pixel pitch(mm)- 0.38175x0.38175
+            60Hz refresh rate allows fast moving action scenes to be seen with minimal motion blur (120Hz effective rate).
+            Inputs: 1 HDMI, 1 USB, 1 (ATSC); Speaker System: Internal",
+            'feature'=> 1], 
+            //23
+            ['name'=> "LG LTNC11131V 11.1 cu. Ft. Stainless Top Freezer Counter Depth Refrigerator",
+            'manu_id'=>12,
+            'type_id'=>7,
+            'price'=>159.99,
+            'image'=>"41IqDiAc2+L._AC_SL1000_.jpg",
+            'description'=>"8.49 Cu. Ft. Fridge Capacity | 2.62 Freezer Capacity
+            Counter Depth Design
+            Multi-Air Flow Freshness System
+            Low Decibel Quiet Operation",
+            'feature'=> 0], 
+            //24
+            ['name'=> "Koolatron Urban Series 18 Bottle Slim Dual Zone Wine Cooler, Thermoelectric Wine Fridge, Freestanding Wine Cellar for Home Bar, Kitchen, Apartment, Condo, Cottage",
+            'manu_id'=>13,
+            'type_id'=>7,
+            'price'=>329.99,
+            'image'=>"61nxyLAq37L._AC_SX679_.jpg",
+            'description'=>"DUAL ZONE COOLING Separately controlled temperature zones let you customize your ideal wine storage environment with a range of 54-66°F (12-18°C) in the 8-bottle upper zone and 46-66°F (8-18°C) in the 10-bottle lower zone
+            EXTERNAL TOUCH SCREEN CONTROLS Tap the digital display to easily adjust the temperature in each zone or turn on the interior LED light without opening the door
+            FREESTANDING CONVENIENCE Place this attractive, compact unit anywhere there is a power source so your favourite wines are always close at hand
+            UV PROTECTIVE DOOR Attractive mirrored glass door protects your wine from damage by harmful UV rays while soft interior lighting subtly highlights your wine collection
+            RELIABLE COOLING Eco-friendly thermoelectric technology efficiently cools to 46-66°F (8-18°C) without any vibration or harmful CFCs to ensure your wine is kept at an optimal temperature",
+            'feature'=> 1], 
+            //25
+            ['name'=> "Koolatron Urban Series 20 Bottle Wine Cooler, Black Thermoelectric Wine Fridge, Freestanding Wine Cellar for Home Bar, Small Kitchen, Apartment, Condo, Cottage, RV",
+            'manu_id'=>13,
+            'type_id'=>7,
+            'price'=>238.99,
+            'image'=>"615enhJ7bnL._AC_SX679_.jpg",
+            'description'=>"DIGITAL TEMPERATURE CONTROL - Temperature control buttons and clear digital display lets you customize the ideal storage environment for red or white wines.
+            EXTERNAL TOUCH SCREEN CONTROLS - Tap the digital display to easily adjust the temperature in each zone or turn on the interior LED light without opening the door.
+            FREESTANDING CONVENIENCE - Place this attractive, compact unit anywhere there is a power source so your favourite wines are always close at hand.
+            UV PROTECTIVE DOOR - Attractive mirrored glass door protects your wine from damage by harmful UV rays while soft interior lighting subtly highlights your wine collection
+            CUSTOMIZABLE INTERIOR - Wire racks can be removed to fit larger or irregular shaped bottles with a maximum capacity of 20 standard 750 mL wine bottles",
+            'feature'=> 1], 
+            //26
+            ['name'=> "LG LW6019ER Rated 6,000 BTU Window Air Conditioner with Remote, Cools up to 250 Sq. Ft, Ultra Efficient, Energy Star, 3 Cool & Fan Speeds, 115V, 6000, WhiteRV",
+            'manu_id'=>12,
+            'type_id'=>8,
+            'price'=>309.98,
+            'image'=>"81TxYQnSleL._AC_SX679_.jpg",
+            'description'=>"6, 000 BTU window air conditioner; 6,000 BTU window air conditioner; Energy Star rating; Cools a room up to 260 sq. ft.; Dehumidification up to 1.8 pints per hour; Full-function remote controls unit from across the room; Thermistor thermostat maintains the selected temperature; 3 cooling speeds / 3 fan speeds; 24-hour on/off timer cools on your schedule; Energy saver function conserves energy and saves you money; Height 12.38; Width 19.38; Depth 19.56; Weight 56.00; Color; Operating System
+            Energy star rating; Batteries Included; Batteries Required; Number of Batteries 2; Battery Type AAA Alkaline Battery; Language English; Assembly Required
+            Uses standard 115-volt/15-amp electrical outlet
+            Cools a room up to 260.00 sq. ft
+            Dehumidification up to 1.80 pints per hour.",
+            'feature'=> 1], 
+            //27
+            ['name'=> "TCL 6W3ER1-A Home Series Window-air-Conditioner, 6,000 BTU, White",
+            'manu_id'=>11,
+            'type_id'=>8,
+            'price'=>269.98,
+            'image'=>"81pDS9XM8+L._AC_SX679_.jpg",
+            'description'=>"POWERFUL COOLING CAPACITY: The 6,000 BTU window air conditioner is powerful enough to cool rooms up to 250 sq. ft. and features multiple fan speeds that allow you to choose your level of comfort.
+            COMFORTABLY QUIET: Thoughtfully designed to not disturb you, this ac unit noise level is as low as 50 decibels so you can enjoy serene cooling in peace.
+            ENERGY SAVINGS: TCL line of Energy Star Certified window AC units help you save on your energy bill when compared to similar models.
+            KEEP YOUR ENERGY BILL LOW: Sleep mode lowers your energy bill to keep you comfortable at night while eco-mode saves you energy during the day.
+            COOLING EVERYWHERE YOU NEED IT: Customize the direction of airflow to where you need it most with 8-way cooling using two 4-way directional vents.",
+            'feature'=> 0], 
+             //28
+             ['name'=> "Samsung WE402NV/A3 Pedestal Pededstal, Brushed Black/Black Stainless Steel",
+             'manu_id'=>4,
+             'type_id'=>9,
+             'price'=>251.99,
+             'image'=>"71yp--AKJCL._AC_SX425_.jpg",
+             'description'=>"GIVE YOUR LAUNDRY A BOOST - Your washer and dryer gets lifted more than a foot off the ground for a more comfortable loading and unloading experience
+             ORGANIZE YOUR LAUNDRY ESSENTIALS - Keep all your necessities in one place with the built-in storage drawer
+             DIMENSIONS - Pedestal is 27 x 14.2 x 28.1 (WxHxD)
+             WEIGHT - Built tough with a net weight of 366 lbs
+             Controls, knobs and door handles are all treated with antimicrobial CleanGuard protection",
+             'feature'=> 1], 
+             //29
+             ['name'=> "COMFEE 1.6 Cu.ft Portable Washing Machine, 11lbs Capacity Fully Automatic Compact Washer with Wheels, 6 Wash Programs Laundry Washer with Drain Pump, Ideal for Apartments, RV, Camping, Magnetic Gray",
+             'manu_id'=>14,
+             'type_id'=>9,
+             'price'=>623.65,
+             'image'=>"61m2cCUhdbL._AC_SX679_.jpg",
+             'description'=>"Easy to Use: - This portable washing machine has 6 most commonly used programs including Normal, Quick, Heavy, Bulky, Delicate, and Spin Only. You are allowed to quickly start the machine the way you like. You can also add extra rinse time by pressing the “Extra Rinse” button. The washer also has 3 water temperatures, meet your different laundry needs. And it comes with a clear lid that allows you to look over the status of clothing at any time.
+             Space saving: - With only 20.7inch in width, 20.3inch in-depth, and 36.6inch in height, this compact washer is able to be stored easily. Fits in your room/RV/dormitory nicely. The large capacity of 1.6cu.ft top load washer can hold 11lbs of cloth. It equips with a stainless steel inner tub which lasts longer.
+             Extremely Energy Saving: - This washing machine equips with high quality and durable motor, providing stable power. Saving as much as 84% energy consumption comparing to similar models, our washing machine is able to save money for your household.
+             Child Lock: - COMFEE' full-automatic washer care about your family. Child Lock feature allows you to freeze the control panel to make sure everything goes right. Simply press and hold the “Temp” and “Program” button together for 3 seconds and the control panel will no longer respond unless the press and hold again.
+             Delay Start & Reloading Feature: - “Delay Start” function could save a big hassle for you. Simply throw your laundry in, and set a time when you want it to start, avoiding the headache of having to wash them all over again because of the smell. No need to power off and restart the machine if anything lost behind. Long press Start/Pause button for 3 seconds, you can have your laundry added before the main washing cycle finishes.",
+             'feature'=> 1], 
+             //30
+             ['name'=> "Dreo 36'' Nomad One Tower Fan with Remote, 24ft/s Velocity Quiet Cooling Fan, 90° Oscillating Fan with 4 Speeds, 4 Modes, 8H Timer, Bladeless Fan, Standing Floor Fans, Black, (DR-HTF007)",
+             'manu_id'=>15,
+             'type_id'=>10,
+             'price'=>59.99,
+             'image'=>"71KGfLoEBzL._AC_SY879_.jpg",
+             'description'=>"Powerful Meets Portable: Dreo's all-in-one airflow system combines with a supercharged electric motor, delivering high-speed, brisk cool. This 36-inch compact tower fan enlivens every inch of air in your living space fast at up to 24ft/s.
+             Cut Out the Noise: Enjoy all-day serenity and comfort, enabled by its algorithmic impeller design and the magical Conada effect. Along with display auto off, auto mute in Sleep mode, 8h timer, and soothing airflow, you can always get a restful sleep whenever you need it.
+             Easy to Clean & Safe to Use: Removable rear grille and impeller wheel make cleaning more accessible. Designed with fingertip pinch-proof grills, a fused plug and built-in circuit protection, this ETL-listed tower fan ensures safety is always prioritized.
+             Far and Vast: 90° oscillation and calibrated airflow path allow this oscillating fan to cover more areas in the room. Combine with your cooling air conditioner to cut cooling costs during hot days.",
+             'feature'=> 0], 
+             //31
+             ['name'=> "Dreo Tower Fan with Remote, 42 Inch Oscillating Bladeless Fan with 6 Speeds, 3 Modes, LED Display, Quiet Indoor Standing Fans for Home Bedroom Office Room, Black Powerful Floor Fan with 12-Hour Timer",
+             'manu_id'=>15,
+             'type_id'=>10,
+             'price'=>89.99,
+             'image'=>"71N+qDxpIkS._AC_SY879_.jpg",
+             'description'=>"24ft/s Velocity: This tower fan is equipped with a powerful motor and a unique air-duct that can provide a velocity of 24ft/s, effectively distributing airflow around the room. It lets you enjoy the cool quickly
+             Lower Noise, More Serenity: This bladeless fan adopts a unique air-duct design with fluid mechanics and minimize noise. Brings a comforting, cool, and ultra-quiet breeze, helping you to sink into a soothing night of rest
+             90° Oscillation Tower Fan: Compared to other 65°oscillating fans, for quicker cooling, ours provides wider coverage of airflow to increase indoor air circulation
+             6 Speeds+3 Modes + Additional Auto Mode: Customize your breeze with 6 speeds and 3 modes (Normal, Natural, and Sleep). Stay cool on hot summer days in the bedroom, study, or office. If you activate the pedestal fan’s auto mode, the velocity of the wind will automatically change with the temperature, allowing your room to always stay pleasant and healthy",
+             'feature'=> 0], 
+             //32
+             ['name'=> "Whynter ARC-102CS Compact Size 10,000 BTU Portable Air Conditioner, Dehumidifier, Fan with Carbon and SilverShield Filter for Rooms, 215 sq ft, White",
+             'manu_id'=>16,
+             'type_id'=>10,
+             'price'=>339.99,
+             'image'=>"71gRlrNIGxL._AC_SX679_.jpg",
+             'description'=>"10,000 BTU (ASHRAE) / 5,500 BTU (SACC) cooling capacity. Filter Type: 2 in 1 silver-ion coated washable pre-filter and carbon filter
+             Patented auto drain function fully exhausts all condensate automatically in most environments
+             Cool, Dehumidify, and fan modes; equipped with Activated Carbon & SilverShield Filter
+             Digital and remote control; 2 fan speeds
+             Air Flow (at high speed): 350m3/h / 206 CFM",
+             'feature'=> 0], 
         ]);
     }
 }

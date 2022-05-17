@@ -16,5 +16,11 @@ class Product extends Model
     {
         return $this->belongsTo(Protype::class,"type_id");
     }
-
+    //Tìm kiếm
+    public function scopeSearch($query){
+        if($key = request()->key){
+            $query = $query->where('name','like','%'.$key.'%');
+        }
+        return $query;
+    }
 }

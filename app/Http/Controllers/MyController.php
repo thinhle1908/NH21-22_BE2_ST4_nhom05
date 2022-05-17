@@ -13,7 +13,7 @@ class MyController extends Controller
     //
     public function index()
     {
-        $products = Product::where('feature', '1')->take(6)->get();
+        $products = Product::where('feature', '1')->search()->paginate(3);
         $manufactures = Manufacture::take(10)->get();
         $protype = Protypes::take(10)->get();
         return view('index')->with('tenProductsFeature',$products)->with('tenManufactures',$manufactures)->with('tenProtypes',$protype);

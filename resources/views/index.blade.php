@@ -101,7 +101,7 @@
 						<!--price-range-->
 						<h2>Price Range</h2>
 						<div class="well text-center">
-							<input type="text" class="span2" value="" data-slider-min="0" data-slider-max="600" data-slider-step="5" data-slider-value="[250,450]" id="sl2" ><br />
+							<input type="text" class="span2" value="" data-slider-min="0" data-slider-max="600" data-slider-step="5" data-slider-value="[250,450]" id="sl2"><br />
 							<b class="pull-left">$ 0</b> <b class="pull-right">$ 600</b>
 						</div>
 					</div>
@@ -125,7 +125,7 @@
 						<div class="product-image-wrapper">
 							<div class="single-products">
 								<div class="productinfo text-center">
-									<img src="images/product-details/{{ $row->image }}" alt="" height="250px" width="250px"/>
+									<img src="images/product-details/{{ $row->image }}" alt="" height="250px" width="250px" />
 									<h2>{{ $row->price }}$</h2>
 									<p>{{ substr($row->name,0,30) }}...</p>
 									<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
@@ -147,7 +147,10 @@
 						</div>
 					</div>
 					@endforeach
+					<hr>
+					<div class="">{{$tenProductsFeature->appends(request()->all())->links()}}</div>
 				</div>
+
 				<!--features_items-->
 
 
@@ -254,4 +257,5 @@
 		</div>
 	</div>
 </section>
+
 @endsection

@@ -2318,6 +2318,12 @@ textarea {
     border-radius: 0;
     margin-top: 16px;
 }
+.btn.btn-primary1 {
+    background: #FE980F;
+    border: 0 none;
+    border-radius: 0;
+    margin-top: 0px;
+}
 
 .blank-arrow {
     position: relative;

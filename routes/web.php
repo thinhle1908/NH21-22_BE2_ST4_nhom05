@@ -16,21 +16,15 @@ use App\Http\Controllers\ProductsController;
 */
 
 
-
-Route::get('/index',[ProductsController::class,'getTenFeatureProducts']);
-
 Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/index', [MyController::class, 'index']);
-Route::get('/register', function () {
-    return view('index');
-});
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
 
 Route::get('/{url}', function ($url) {
     return view($url);

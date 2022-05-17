@@ -16,7 +16,7 @@ class MyController extends Controller
         $products = Product::where('feature', '1')->take(6)->get();
         $manufactures = Manufacture::take(10)->get();
         $protype = Protypes::take(10)->get();
-        return view('index', ['tenProductsFeature' => $products,'tenManufactures'=>$manufactures,'tenProtypes'=>$protype]);
+        return view('index')->with('tenProductsFeature',$products)->with('tenManufactures',$manufactures)->with('tenProtypes',$protype);
     }
     public function page($name)
     {

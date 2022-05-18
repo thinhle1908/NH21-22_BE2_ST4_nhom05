@@ -198,7 +198,57 @@ class ProductsSeeder extends Seeder
              Quick one-button Speaker Mode selection for application-specific voicing (PA, DJ, Monitor and Soloist)
              Effortlessly eliminate nasty feedback with one-button automatic Feedback Destroyer
              Integrated 2-channel mixer featuring dual Mackie Wide-Z inputs",
-             'feature'=> 1]                     
+             'feature'=> 1],
+             //16
+             ['name'=> "Hot Tools 24K Gold One-Step Hair Dryer and Volumizer | Style and Dry, Professional Blowout with Ease",
+             'manu_id'=>2,
+             'type_id'=>1,
+             'price'=>46.88,
+             'image'=>"71QBEI8EpCL._SL1500_.jpg",
+             'description'=>"ONE-STEP: Quick, even heat and charcoal-infused bristles mean you can achieve beautiful blowouts with ease — in a fraction of the time.
+             DESIGN: The versatile oval brush design has gently curved sides created to smooth hair, while the rounded edges help craft volume from the roots down to beautifully curled ends.
+             IONIC TECHNOLOGY: Helps maintain a neutral charge on the hair’s surface, leaving the hair looking conditioned and smooth, while helping reduce frizz and static.
+             ALL HAIR TYPES: Complete with a rotating temperature control and 2 heat/ speed settings providing ultimate styling control. Fast styling, great results for all hair types.
+             COMFORTABLE: The lightweight design and soft-touch finish provide a relaxed grip. Equipped with an 8 ft. professional cord giving you free range of movement and all the reach you need.
+             SYLISTS PREFERRED: Hot Tools heritage is rooted in the professional community. We’re proud we’ve been a trusted, stylist-recommended brand since we began in 1990.",
+             'feature'=> 0],
+             //17
+             ['name'=> "HOT TOOLS Pro Artist Black Gold Heated Hair Styling Round Brush",
+             'manu_id'=>2,
+             'type_id'=>1,
+             'price'=>70.22,
+             'image'=>"71jS1-pRG9L._SL1500_.jpg",
+             'description'=>"Revive locks and help refresh your style on 2nd or even 3rd day hair.
+             Micro-Shine finish that resists corrosion from regular use of styling products.
+             The exclusive H12 Oval Design smooths, shapes, and adds volume helping refresh hair
+             Ten variable heat settings reach up to 430˚F
+             Features dual voltage great for
+             Equipped with Auto-Shut Off for peace of mind",
+             'feature'=> 0],    
+             //18
+             ['name'=> "Hot Tools Helix Turbo Ionic Tourmaline Salon Dryer Lite",
+             'manu_id'=>2,
+             'type_id'=>1,
+             'price'=>55.00,
+             'image'=>"81rgS2lvFyL._SL1500_.jpg",
+             'description'=>"Turbo Ionic Lite Blow Dryer
+             Lightweight
+             Quiet operation
+             Ion Technology",
+             'feature'=> 0],    
+             //19
+             ['name'=> "HOT TOOLS Professional 3/4” Hot Air Styling Brush, Black",
+             'manu_id'=>2,
+             'type_id'=>1,
+             'price'=>25.66,
+             'image'=>"51amMDS+Q7L._SL1000_.jpg",
+             'description'=>"The tool to finish your look, touch it up or reimagine your 2nd-day style.
+             2 Heat/Speed Settings for full-bodied curls
+             Unique flexible, ball-tipped bristles gently comb and pull strands of hair for smooth results
+             ¾” Barrel and Curl Release feature – great for second-day styling variety
+             8 ft professional Cord",
+             'feature'=> 0],    
+
         ]);
     }
 }

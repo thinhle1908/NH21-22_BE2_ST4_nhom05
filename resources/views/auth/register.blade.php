@@ -103,7 +103,7 @@
                     name="password_confirmation" required />
             </div>
 
-            <div class="form-group ">
+            <div class="form-group " style="padding-left:58%">
                 <a class="btn btn-warning "  href="{{ route('login') }}">
                     {{ __('Already registered?') }}
                 </a>

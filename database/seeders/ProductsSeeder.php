@@ -61,7 +61,7 @@ class ProductsSeeder extends Seeder
               Quick release seat post",
               'feature'=> 1],
                //05
-             ['name'=> "RoyalBaby Freestyle Kids Bike 12 14 16 18 20 Inch Children’s Bicycle for Age 3-12 Years Boys Girls
+             ['name'=> "RoyalBaby Freestyle Kids Bike 12 14 16 18 20 Inch Childrens Bicycle for Age 3-12 Years Boys Girls
              ",
              'manu_id'=>3,
              'type_id'=>2,
@@ -125,13 +125,13 @@ class ProductsSeeder extends Seeder
               'price'=>1349.99,
               'image'=>"61M-QNJf4pL._AC_SL1200_.jpg",
               'description'=>"OWERFUL, FAST, AMAZING: Our new laptop is packed with the premium performance you’ve come to expect from Samsung — plus some; It’s powered by the latest 12th Gen Evo-certified Intel processor, our most powerful available CPU yet
-              THIN, LIGHT, POWERFUL: With a PC this powerful, you’ll want to take it with you wherever you go; And you can! At less than 2 pounds, Galaxy Book2 Pro is our thinnest and lightest laptop yet
+              THIN, LIGHT, POWERFUL: With a PC this powerful, youll want to take it with you wherever you go; And you can! At less than 2 pounds, Galaxy Book2 Pro is our thinnest and lightest laptop yet
               BRILLIANT, BRIGHT, BEAUTIFUL: Whether you're scrolling through your social feed or video chatting with your bestie, everything looks amazing on a stunning AMOLED screen that’s up to 33% brighter;* Available in two sizes (13.3 and 15.6)
               VIDEO CHAT IN HIGH DEFINITION: Galaxy Book2 Pro features an upgraded full HD camera with a 1080p wide-angle view that’s 2x clearer* than before; You’ll sound amazing too with upgraded Dolby Atmos sound and intelligent noise canceling
               LONG LASTING CHARGE, POWERS UP FAST: Galaxy Book2 Pro features our longest-lasting battery to keep you going for hours and hours on a single charge; When you finally do need a jolt of power, get energized faster with a universal fast charger that gets you 40% of battery power back in just 30 minutes
               INNOVATION THAT MOVES YOU FORWARD: Get the combined capabilities of a laptop and a tablet with a versatile 2 in 1 design that features a 360° hinge; Bring ideas to life on the screen with an included S Pen that feels like a real pen
               UNITE YOUR GALAXY, MULTIPLY THE POSSIBILITIES: All of your Galaxy devices sync to help you do more; Pair them up and take control of an interconnected network of seemingly unlimited possibilities; Access a file, photo or text on any device
-              › See more product details
+               See more product details
               Note: Products with electrical plugs are designed for use in the US. Outlets and voltage differ internationally and this product may require an adapter or converter for use in your destination. Please check compatibility before purchasing.",
               'feature'=> 0],
                //11
@@ -156,7 +156,7 @@ class ProductsSeeder extends Seeder
               'image'=>"61MGsq1ZVaL._AC_SL1331_.jpg",
               'description'=>"This product works and looks like new. Backed by the 90-day Amazon Renewed Guarantee.
               - This pre-owned product has been professionally inspected, tested and cleaned by Amazon-qualified suppliers.
-              - There will be no visible cosmetic imperfections when held at an arm’s length.
+              - There will be no visible cosmetic imperfections when held at an arms length.
               - Products with batteries will exceed 80% capacity relative to new.
               - Accessories may not be original, but will be compatible and fully functional. Product may come in generic box.
               - This product is eligible for a replacement or refund within 90 days of receipt if you are not satisfied under the Amazon Renewed Guarantee. See terms here.",
@@ -167,10 +167,10 @@ class ProductsSeeder extends Seeder
              'type_id'=>5,
              'price'=>499.00,
              'image'=>"81Z78Ezg9ZL._AC_SL1500_.jpg",
-             'description'=>"High‑quality Bluetooth  audio streaming for background music or musical accompaniment
+             'description'=>"Highquality Bluetooth  audio streaming for background music or musical accompaniment
              Three optimally located handles and a rugged composite structure
-             High‑efficiency 1000 W Class‑D power amplifier delivers up to 126 dB peak SPL utilizing transducers designed and engineered by EV
-             EV‑patented Signal Synchronized Transducers (SST) waveguide design provides precise and consistent coverage, minimal distortion, and maximized acoustical loading",
+             Highefficiency 1000 W ClassD power amplifier delivers up to 126 dB peak SPL utilizing transducers designed and engineered by EV
+             EVpatented Signal Synchronized Transducers (SST) waveguide design provides precise and consistent coverage, minimal distortion, and maximized acoustical loading",
              'feature'=> 0],
               //14
               ['name'=> "Electro-Voice EKX15 15 2 Way Full Range 1600W Passive Loudspeaker
@@ -198,7 +198,57 @@ class ProductsSeeder extends Seeder
              Quick one-button Speaker Mode selection for application-specific voicing (PA, DJ, Monitor and Soloist)
              Effortlessly eliminate nasty feedback with one-button automatic Feedback Destroyer
              Integrated 2-channel mixer featuring dual Mackie Wide-Z inputs",
-             'feature'=> 1]                     
+             'feature'=> 1],
+             //16
+             ['name'=> "Hot Tools 24K Gold One-Step Hair Dryer and Volumizer | Style and Dry, Professional Blowout with Ease",
+             'manu_id'=>2,
+             'type_id'=>1,
+             'price'=>46.88,
+             'image'=>"71QBEI8EpCL._SL1500_.jpg",
+             'description'=>"ONE-STEP: Quick, even heat and charcoal-infused bristles mean you can achieve beautiful blowouts with ease — in a fraction of the time.
+             DESIGN: The versatile oval brush design has gently curved sides created to smooth hair, while the rounded edges help craft volume from the roots down to beautifully curled ends.
+             IONIC TECHNOLOGY: Helps maintain a neutral charge on the hairs surface, leaving the hair looking conditioned and smooth, while helping reduce frizz and static.
+             ALL HAIR TYPES: Complete with a rotating temperature control and 2 heat/ speed settings providing ultimate styling control. Fast styling, great results for all hair types.
+             COMFORTABLE: The lightweight design and soft-touch finish provide a relaxed grip. Equipped with an 8 ft. professional cord giving you free range of movement and all the reach you need.
+             SYLISTS PREFERRED: Hot Tools heritage is rooted in the professional community. Were proud we’ve been a trusted, stylist-recommended brand since we began in 1990.",
+             'feature'=> 0],
+             //17
+             ['name'=> "HOT TOOLS Pro Artist Black Gold Heated Hair Styling Round Brush",
+             'manu_id'=>2,
+             'type_id'=>1,
+             'price'=>70.22,
+             'image'=>"71jS1-pRG9L._SL1500_.jpg",
+             'description'=>"Revive locks and help refresh your style on 2nd or even 3rd day hair.
+             Micro-Shine finish that resists corrosion from regular use of styling products.
+             The exclusive H12 Oval Design smooths, shapes, and adds volume helping refresh hair
+             Ten variable heat settings reach up to 430˚F
+             Features dual voltage great for
+             Equipped with Auto-Shut Off for peace of mind",
+             'feature'=> 0],    
+             //18
+             ['name'=> "Hot Tools Helix Turbo Ionic Tourmaline Salon Dryer Lite",
+             'manu_id'=>2,
+             'type_id'=>1,
+             'price'=>55.00,
+             'image'=>"81rgS2lvFyL._SL1500_.jpg",
+             'description'=>"Turbo Ionic Lite Blow Dryer
+             Lightweight
+             Quiet operation
+             Ion Technology",
+             'feature'=> 0],    
+             //19
+             ['name'=> "HOT TOOLS Professional 3/4” Hot Air Styling Brush, Black",
+             'manu_id'=>2,
+             'type_id'=>1,
+             'price'=>25.66,
+             'image'=>"51amMDS+Q7L._SL1000_.jpg",
+             'description'=>"The tool to finish your look, touch it up or reimagine your 2nd-day style.
+             2 Heat/Speed Settings for full-bodied curls
+             Unique flexible, ball-tipped bristles gently comb and pull strands of hair for smooth results
+             ¾” Barrel and Curl Release feature great for second-day styling variety
+             8 ft professional Cord",
+             'feature'=> 0],    
+
         ]);
     }
 }

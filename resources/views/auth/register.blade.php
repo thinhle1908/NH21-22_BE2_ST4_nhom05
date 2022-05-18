@@ -1,4 +1,4 @@
-<x-guest-layout>
+{{-- <x-guest-layout>
     <x-auth-card>
         <x-slot name="logo">
             <a href="/">
@@ -56,4 +56,62 @@
             </div>
         </form>
     </x-auth-card>
+</x-guest-layout> --}}
+<x-guest-layout>
+
+    <div class="container">
+        <!-- Validation Errors -->
+        <x-auth-validation-errors class="mb-4" :errors="$errors" />
+        
+        <br>
+        <form class="row col-md-6 col-md-offset-3" method="POST" action="{{ route('register') }}">
+            @csrf
+            <!-- Logo -->
+            <div class="logo pull-center">
+                <a href="index"><img src="images/home/logo.png" alt="" /></a>
+            </div>
+            <h2>Register</h2>
+            <!-- Name -->
+            
+
+            <div class="form-group">
+                <x-label for="name" :value="__('Name')" />
+
+                <x-input id="name" class="form-control" type="text" name="name" :value="old('name')" required autofocus />
+            </div>
+
+            <!-- Email Address -->
+            <div class="form-group">
+                <x-label for="email" :value="__('Email')" />
+
+                <x-input id="email" class="form-control" type="email" name="email" :value="old('email')" required />
+            </div>
+
+            <!-- Password -->
+            <div class="form-group">
+                <x-label for="password" :value="__('Password')" />
+
+                <x-input id="password" class="form-control" type="password" name="password" required
+                    autocomplete="new-password" />
+            </div>
+
+            <!-- Confirm Password -->
+            <div class="form-group">
+                <x-label for="password_confirmation" :value="__('Confirm Password')" />
+
+                <x-input id="password_confirmation" class="form-control" type="password"
+                    name="password_confirmation" required />
+            </div>
+
+            <div class="form-group d-flex">
+                <a class="btn btn-warning mr-auto"  href="{{ route('login') }}">
+                    {{ __('Already registered?') }}
+                </a>
+
+                <x-button class="btn btn-light">
+                    {{ __('Register') }}
+                </x-button>
+            </div>
+        </form>
+    </div>
 </x-guest-layout>

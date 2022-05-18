@@ -64,11 +64,11 @@
         <x-auth-validation-errors class="mb-4" :errors="$errors" />
         
         <br>
-        <form class="row col-md-6 col-md-offset-3" method="POST" action="{{ route('register') }}">
+        <form class="row col-md-6 col-md-offset-3 margin-right" method="POST" action="{{ route('register') }}">
             @csrf
             <!-- Logo -->
-            <div class="logo pull-center">
-                <a href="index"><img src="images/home/logo.png" alt="" /></a>
+            <div class="logo">
+                <a href="index"><img  class= " center-block"src="images/home/logo.png" alt="" /></a>
             </div>
             <h2>Register</h2>
             <!-- Name -->
@@ -103,8 +103,8 @@
                     name="password_confirmation" required />
             </div>
 
-            <div class="form-group d-flex">
-                <a class="btn btn-warning mr-auto"  href="{{ route('login') }}">
+            <div class="form-group ">
+                <a class="btn btn-warning "  href="{{ route('login') }}">
                     {{ __('Already registered?') }}
                 </a>
 

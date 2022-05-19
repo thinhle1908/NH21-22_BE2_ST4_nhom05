@@ -109,7 +109,7 @@
 			<!--header-bottom-->
 			<div class="container">
 				<div class="row">
-					<div class="col-sm-9">
+					<div class="col-sm-8">
 						<div class="navbar-header">
 							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
 								<span class="sr-only">Toggle navigation</span>
@@ -141,8 +141,8 @@
 							</ul>
 						</div>
 					</div>
-					<div class="col-sm-3">
-							<form action="" class="form-inline">
+					<div class="col-sm-4">
+							<form action="{{ asset ('/shop') }}" class="form-inline">
 							
 								<div class="form-group">
 									<label class="sr-only" for="">label</label>
@@ -151,7 +151,7 @@
 							
 								
 							
-								<button type="submit" class="btn btn-primary">Search</button>
+								<button type="submit" class="btn btn-primary1">Search</button>
 							</form>
 					</div>
 				</div>

@@ -13,10 +13,17 @@ class MyController extends Controller
     //
     public function index()
     {
-        $products = Product::where('feature', '1')->search()->paginate(3);
+        $products = Product::where('feature', '1')->paginate(3);
         $manufactures = Manufacture::take(10)->get();
         $protype = Protypes::take(10)->get();
         return view('index')->with('tenProductsFeature',$products)->with('tenManufactures',$manufactures)->with('tenProtypes',$protype);
+    }
+    public function shop()
+    {
+        $products = Product::search()->paginate(6);
+        $manufactures = Manufacture::take(10)->get();
+        $protype = Protypes::take(10)->get();
+        return view('shop')->with('tenProductsFeature',$products)->with('tenManufactures',$manufactures)->with('tenProtypes',$protype);
     }
     public function page($name)
     {

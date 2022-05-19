@@ -22,6 +22,17 @@ class MyController extends Controller
     {
         return view($name);
     }
+    public $slug;
+    public function mount($slug){
+        $this->slug = $slug;
+    }
+    public function productDetails($id){
+        // $pro = Product::find($id);
+        $pro = Product::where('id',$id)->first();
+        $manufactures = Manufacture::take(10)->get();
+        return view('product-details',compact('pro'))->with('tenManufactures',$manufactures);
+
+    }
 
     // public function login(){
     //     return view('login');

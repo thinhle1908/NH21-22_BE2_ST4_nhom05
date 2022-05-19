@@ -147,15 +147,15 @@
 					<div class="product-details"><!--product-details-->
 						<div class="col-sm-5">
 							<div class="view-product">
-								<img src="images/product-details/1.jpg" alt="" />
-								<h3>ZOOM</h3>
+								<img src="{{  asset('images/product-details/'.$pro->image)}}" alt="" />
+								
 							</div>
 							<div id="similar-product" class="carousel slide" data-ride="carousel">
 								
 								  <!-- Wrapper for slides -->
 								    <div class="carousel-inner">
 										<div class="item active">
-										  <a href=""><img src="images/product-details/similar1.jpg" alt=""></a>
+										  <a href=""><img src="{{ asset('images/product-details/similar1.jpg') }}" alt=""></a>
 										  <a href=""><img src="images/product-details/similar2.jpg" alt=""></a>
 										  <a href=""><img src="images/product-details/similar3.jpg" alt=""></a>
 										</div>
@@ -183,13 +183,14 @@
 
 						</div>
 						<div class="col-sm-7">
+							
 							<div class="product-information"><!--/product-information-->
-								<img src="images/product-details/new.jpg" class="newarrival" alt="" />
-								<h2>Anne Klein Sleeveless Colorblock Scuba</h2>
-								<p>Web ID: 1089772</p>
-								<img src="images/product-details/rating.png" alt="" />
+								<img src="" class="newarrival" alt="" />
+								<h2>{{$pro->name}}</h2>
+							
+								<img src="{{  asset('images/'.$pro->name)}}" alt="" />
 								<span>
-									<span>US $59</span>
+									<span>${{$pro->price}}</span>
 									<label>Quantity:</label>
 									<input type="text" value="3" />
 									<button type="button" class="btn btn-fefault cart">
@@ -199,9 +200,16 @@
 								</span>
 								<p><b>Availability:</b> In Stock</p>
 								<p><b>Condition:</b> New</p>
-								<p><b>Brand:</b> E-SHOPPER</p>
+								@foreach($tenManufactures as $row)
+								@if($pro->manu_id == $row->manu_id)
+								
+									<p><b>Brand:</b> {{$row->manu_name}}</p>
+								
+								@endif
+								@endforeach
 								<a href=""><img src="images/product-details/share.png" class="share img-responsive"  alt="" /></a>
 							</div><!--/product-information-->
+							
 						</div>
 					</div><!--/product-details-->
 					
@@ -375,7 +383,7 @@
 										<li><a href=""><i class="fa fa-clock-o"></i>12:41 PM</a></li>
 										<li><a href=""><i class="fa fa-calendar-o"></i>31 DEC 2014</a></li>
 									</ul>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+									<p>{{$pro->description}}</p>
 									<p><b>Write Your Review</b></p>
 									
 									<form action="#">

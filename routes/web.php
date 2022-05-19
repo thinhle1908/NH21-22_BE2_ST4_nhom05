@@ -22,6 +22,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/index', [MyController::class, 'index']);
+Route::get('/product-details/{id}', [MyController::class, 'productDetails']);
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');

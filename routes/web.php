@@ -22,11 +22,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/index', [MyController::class, 'index']);
-<<<<<<< HEAD
 Route::get('/product-details/{id}', [MyController::class, 'productDetails']);
-=======
+
 Route::get('/shop', [MyController::class, 'shop']);
->>>>>>> 24469e935e1f27d12969139b71ad7344376062dc
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');

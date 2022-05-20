@@ -13,10 +13,11 @@ class MyController extends Controller
     //
     public function index()
     {
-        $products = Product::where('feature', '1')->paginate(3);
+        $products = Product::all()->take(9);
         $manufactures = Manufacture::take(10)->get();
         $protype = Protypes::take(10)->get();
-        return view('index')->with('tenProductsFeature',$products)->with('tenManufactures',$manufactures)->with('tenProtypes',$protype);
+        $featureProducts = Product::where('feature',1)->get()->take(3);
+        return view('index')->with('tenProductsFeature',$products)->with('tenManufactures',$manufactures)->with('tenProtypes',$protype)->with('featureproducts',$featureProducts);
     }
     public function shop()
     {
@@ -40,6 +41,10 @@ class MyController extends Controller
         return view('product-details',compact('pro'))->with('tenManufactures',$manufactures);
 
     }
+    public function showMoreProducts($qty){
+        return response()->json($qty);
+    }
+    
 
     // public function login(){
     //     return view('login');

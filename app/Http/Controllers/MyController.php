@@ -41,8 +41,10 @@ class MyController extends Controller
         return view('product-details',compact('pro'))->with('tenManufactures',$manufactures);
 
     }
-    public function showMoreProducts($qty){
-        return response()->json($qty);
+    public function showMoreProducts($qty)
+    {
+        $product = Product::skip($qty)->take(9)->get();
+        return $product;
     }
     
 

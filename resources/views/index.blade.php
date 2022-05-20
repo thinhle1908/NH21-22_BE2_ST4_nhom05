@@ -154,11 +154,12 @@
                                 </div>
                             </div>
                         @endforeach
+                        <div id="result"></div>
                         <hr>
                        
                     </div>
                     <div class="row">
-                        <div class="col-md-2 col-md-offset-5"> <button id="btnshowmore" style="margin-bottom:30%">Show More
+                        <div class="col-md-2 col-md-offset-5"> <button id="btnshowmore" style="margin-bottom:30%" value="9">Show More
                                 Products</button>
                         </div>
                     </div>

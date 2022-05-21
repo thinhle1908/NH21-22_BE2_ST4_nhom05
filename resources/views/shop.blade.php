@@ -128,13 +128,17 @@
 									<img src="images/product-details/{{ $row->image }}" alt="" height="250px" width="250px" />
 									<h2>{{ $row->price }}$</h2>
 									<p>{{ substr($row->name,0,30) }}...</p>
-									<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+									<a href="#"
+									data-url="{{ route('addToCart',['id' => $row->id])}}"
+									class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
 								</div>
 								<div class="product-overlay">
 									<div class="overlay-content">
 										<h2>{{ $row->price }}$</h2>
 										<a href="{{URL::to('/product-details/'.$row->id)}}"><p>{{ $row->name }}</p></a>
-										<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+										<a href="#" 
+										data-url="{{ route('addToCart',['id' => $row->id])}}"
+										class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
 									</div>
 								</div>
 							</div>
@@ -168,7 +172,9 @@
 												<img src="images/home/recommend1.jpg" alt="" />
 												<h2>$56</h2>
 												<p>Easy Polo Black Edition</p>
-												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+												<a href="#"
+												data-url="{{ route('addToCart',['id' => $row->id])}}"
+												class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
 											</div>
 
 										</div>
@@ -181,7 +187,9 @@
 												<img src="images/home/recommend2.jpg" alt="" />
 												<h2>$56</h2>
 												<p>Easy Polo Black Edition</p>
-												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+												<a href="#" 
+												data-url="{{ route('addToCart',['id' => $row->id])}}"
+												class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
 											</div>
 
 										</div>
@@ -194,7 +202,9 @@
 												<img src="images/home/recommend3.jpg" alt="" />
 												<h2>$56</h2>
 												<p>Easy Polo Black Edition</p>
-												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+												<a href="#" 
+												data-url="{{ route('addToCart',['id' => $row->id])}}"
+												class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
 											</div>
 
 										</div>
@@ -209,7 +219,9 @@
 												<img src="images/home/recommend1.jpg" alt="" />
 												<h2>$56</h2>
 												<p>Easy Polo Black Edition</p>
-												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+												<a href="#" 
+												data-url="{{ route('addToCart',['id' => $row->id])}}"
+												class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
 											</div>
 
 										</div>
@@ -222,7 +234,9 @@
 												<img src="images/home/recommend2.jpg" alt="" />
 												<h2>$56</h2>
 												<p>Easy Polo Black Edition</p>
-												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+												<a href="#" 
+												data-url="{{ route('addToCart',['id' => $row->id])}}"
+												class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
 											</div>
 
 										</div>
@@ -235,7 +249,9 @@
 												<img src="images/home/recommend3.jpg" alt="" />
 												<h2>$56</h2>
 												<p>Easy Polo Black Edition</p>
-												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+												<a href="#" 
+												data-url="{{ route('addToCart',['id' => $row->id])}}"
+												class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
 											</div>
 
 										</div>

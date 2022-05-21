@@ -10,7 +10,9 @@ body {
     position: relative;
     font-weight: 400px;
 }
-
+.image-cart{
+    height: 100px;
+}
 ul li {
     list-style: none;
 }
@@ -882,7 +884,7 @@ h2.title {
     height: 0;
     position: absolute;
     -webkit-transition: height 500ms ease 0s;
-    transition: height 500ms ease 0s;
+    transition: height 500ms ease 1s;
     width: 100%;
     display: block;
 }
@@ -1622,6 +1624,7 @@ h2.title {
 .cart_quantity_input {
     color: #696763;
     float: left;
+    width: 100px;
     font-size: 16px;
     text-align: center;
     font-family: 'Roboto', sans-serif;

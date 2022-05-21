@@ -47,6 +47,41 @@ class MyController extends Controller
         $product = Product::skip($qty)->take(9)->get();
         return $product;
     }
+    //ShowCart
+    function showCart(){
+        //echo "<pre>";
+        //print_r(session()->get('cart'));
+        $carts = session()->get('cart');
+        return view('cart',compact('carts'));
+    }
+    //AddToCart
+    public function addToCart($id){
+        $product = Product::find($id);
+        $cart = session()->get('cart');
+        if(isset($cart[$id]) ){
+            $cart[$id]['quantity'] = $cart[$id]['quantity'] + 1;
+        }else {
+            
+            $cart[$id] = [
+                'name' => $product->name,
+                'manu_id'=>$product->manu_id,
+                'type_id'=>$product->type_id,
+                'price'=>$product->price,
+                'image'=>$product->image,
+                'description'=>$product->description,
+                'quantity'=> 1
+                
+            ];
+        }
+        //echo "<pre>";
+        //print_r(session()->get('cart'));
+        session()->put('cart', $cart);
+        return response()->json([
+            'code' => 200,
+            'message' => 'success'
+        ], 200);
+    }
+
     
 
     // public function login(){

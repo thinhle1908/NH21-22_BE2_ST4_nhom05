@@ -133,14 +133,18 @@
                                                 width="250px" />
                                             <h2>{{ $row->price }}$</h2>
                                             <p>{{ substr($row->name, 0, 30) }}...</p>
-                                            <a href="#" class="btn btn-default add-to-cart"><i
+                                            <a href="#" 
+                                            data-url="{{ route('addToCart',['id' => $row->id])}}"
+                                            class="btn btn-default add-to-cart"><i
                                                     class="fa fa-shopping-cart"></i>Add to cart</a>
                                         </div>
                                         <div class="product-overlay">
                                             <div class="overlay-content">
                                                 <h2>{{ $row->price }}$</h2>
                                                 <a href="{{URL::to('/product-details/'.$row->id)}}"><p>{{ $row->name }}</p></a>
-                                                <a href="#" class="btn btn-default add-to-cart"><i
+                                                <a href="#" 
+                                                data-url="{{ route('addToCart',['id' => $row->id])}}"
+                                                class="btn btn-default add-to-cart"><i
                                                         class="fa fa-shopping-cart"></i>Add to cart</a>
                                             </div>
                                         </div>
@@ -184,7 +188,9 @@
                                                             width="250px" />
                                                         <h2>{{ $row->price }}$</h2>
                                                         <p>{{ substr($row->name, 0, 30) }}...</p>
-                                                        <a href="#" class="btn btn-default add-to-cart"><i
+                                                        <a href="#"
+                                                        data-url="{{ route('addToCart',['id' => $row->id])}}"
+                                                         class="btn btn-default add-to-cart"><i 
                                                                 class="fa fa-shopping-cart"></i>Add to cart</a>
                                                     </div>
 

@@ -323,12 +323,35 @@
 	<!--/Footer-->
 
 	<script src="{{ asset('js/ajax.js') }}"></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<script src="{{ asset('js/jquery.js') }}"></script>
 	<script src="{{ asset('js/bootstrap.min.js') }}"></script>
 	<script src="{{ asset('js/jquery.scrollUp.min.js') }}"></script>
 	<script src="{{ asset('js/price-range.js') }}"></script>
 	<script src="{{ asset('js/jquery.prettyPhoto.js') }}"></script>
 	<script src="{{ asset('js/main.js') }}"></script>
+	<script>
+		function addTocart(event){
+			event.preventDefault();
+			let urlCart = $(this).data('url');
+			$.ajax({
+				type: 'GET',
+				url: urlCart,
+				dataType: 'json',
+				success: function (data) {
+					if (data.code === 200){
+                        alert('them san pham thanh cong ')
+                    }
+				},
+				error: function() {
+						
+				}
+			});
+		}
+		$(function () {
+			$('.add-to-cart').on('click', addTocart);
+		}); 
+	</script>
 </body>
 
 </html>

@@ -23,6 +23,10 @@ Route::get('/', function () {
 });
 Route::get('/index', [MyController::class, 'index']);
 Route::get('/product-details/{id}', [MyController::class, 'productDetails']);
+//showCart
+Route::get('/cart', [MyController::class,'showCart'])->name('showCart');
+//AddToCart
+Route::get('/add-to-cart/{id}', [MyController::class, 'addToCart'])->name('addToCart');
 
 Route::get('/shop', [MyController::class, 'shop']);
 

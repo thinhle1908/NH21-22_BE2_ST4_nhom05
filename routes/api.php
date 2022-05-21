@@ -20,4 +20,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 Route::get('/product/qty/{qty}', [MyController::class, 'showMoreProducts']); 
 Route::get('/product-feature/qty/{qty}', [MyController::class, 'showMoreProductsFeature']); 
-Route::get('/filter/{min}/{max}', [MyController::class, 'showManufacturebyID']); 
+Route::get('/filter/{min}/{max}', [MyController::class, 'showProductbyPrice']); 

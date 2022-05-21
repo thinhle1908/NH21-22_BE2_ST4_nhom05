@@ -47,6 +47,11 @@ class MyController extends Controller
         $product = Product::skip($qty)->take(9)->get();
         return $product;
     }
+    public function showMoreProductsFeature($qty)
+    {
+        $product = Product::where('feature',1)->skip($qty)->take(3)->get();
+        return $product;
+    }
     
 
     // public function login(){

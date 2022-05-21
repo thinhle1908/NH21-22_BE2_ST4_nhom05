@@ -79,7 +79,7 @@
                             @foreach ($tenProtypes as $row)
                                 <div class="panel panel-default">
                                     <div class="panel-heading">
-                                        <h4 class="panel-title"><a href="#">{{ $row->type_name }}</a></h4>
+                                        <h4 class="panel-title"><a href="/protype/{{ $row->type_id}}">{{ $row->type_name }}</a></h4>
                                     </div>
                                 </div>
                             @endforeach
@@ -92,7 +92,7 @@
                             <div class="brands-name">
                                 <ul class="nav nav-pills nav-stacked">
                                     @foreach ($tenManufactures as $row)
-                                        <li><a href="#"> <span class="pull-right">(50)</span>{{ $row->manu_name }}</a>
+                                        <li><a href="/manufacture/{{ $row->manu_id}}"> <span class="pull-right">(50)</span>{{ $row->manu_name }}</a>
                                         </li>
                                     @endforeach
                                 </ul>

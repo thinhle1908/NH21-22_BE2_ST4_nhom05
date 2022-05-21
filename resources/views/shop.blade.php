@@ -125,7 +125,7 @@
 						<div class="product-image-wrapper">
 							<div class="single-products">
 								<div class="productinfo text-center">
-									<img src="images/product-details/{{ $row->image }}" alt="" height="250px" width="250px" />
+									<img src="{{URL::to('images/product-details/'.$row->image)}}" alt="" height="250px" width="250px" />
 									<h2>{{ $row->price }}$</h2>
 									<p>{{ substr($row->name,0,30) }}...</p>
 									<a href="#"

@@ -11,6 +11,20 @@ use App\Models\Protypes;
 class MyController extends Controller
 {
     //
+    public function showProtypebyID($type_id)
+    {
+        $product = Product::where('type_id',$type_id)->paginate(6);
+        $manufactures = Manufacture::take(10)->get();
+        $protype = Protypes::take(10)->get();
+        return view('shop')->with('tenProductsFeature',$product)->with('tenManufactures',$manufactures)->with('tenProtypes',$protype);
+    }
+    public function showManufacturebyID($manu_id)
+    {
+        $product = Product::where('manu_id',$manu_id)->paginate(6);
+        $manufactures = Manufacture::take(10)->get();
+        $protype = Protypes::take(10)->get();
+        return view('shop')->with('tenProductsFeature',$product)->with('tenManufactures',$manufactures)->with('tenProtypes',$protype);
+    }
     public function showProductbyPrice($min,$max)
     {
         $products = Product::whereBetween('price',[$min,$max])->get();

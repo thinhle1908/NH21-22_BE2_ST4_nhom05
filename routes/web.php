@@ -59,3 +59,5 @@ Route::post('/email/verification-notification', function (Request $request) {
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');    
+Route::get('/manufacture/{manu_id}', [MyController::class, 'showManufacturebyID']);
+Route::get('/protype/{type_id}', [MyController::class, 'showProtypebyID']);

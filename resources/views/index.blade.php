@@ -160,14 +160,14 @@
                         @endforeach
                         <div id="result"></div>
                         <hr>
-
-                    </div>
-                    <div class="row">
-                        <div class="col-md-2 col-md-offset-5"> <button id="btnshowmore" class="btn btn-light"
-                                style="margin-bottom:30%" value="9">Show More
-                                Products</button>
+                        <div class="row">
+                            <div class="col-md-2 col-md-offset-5"> <button id="btnshowmore" class="btn btn-light"
+                                    style="margin-bottom:30%" value="9">Show More
+                                    Products</button>
+                            </div>
                         </div>
                     </div>
+                    
 
                     <!--features_items-->
 

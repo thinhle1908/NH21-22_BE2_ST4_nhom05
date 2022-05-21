@@ -19,3 +19,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 Route::get('/product/qty/{qty}', [MyController::class, 'showMoreProducts']); 
+Route::get('/product-feature/qty/{qty}', [MyController::class, 'showMoreProductsFeature']); 

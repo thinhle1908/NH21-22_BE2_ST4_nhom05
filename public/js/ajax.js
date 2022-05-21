@@ -1,16 +1,20 @@
-const btnShowMoreProducts = document.querySelector('#btnshowmore'); 
+const btnShowMoreProducts = document.querySelector('#btnshowmore');
+const btnShowBackMoreFuature = document.querySelector('#btnshowbackmorefuature');
 const divResult = document.querySelector('#result');
+const btnShowMoreFuature = document.querySelector('#btnshowmorefuature');
+const divResultFeature = document.querySelector('#result-feature');
+const collection = document.getElementsByClassName("example");
 
-btnShowMoreProducts.addEventListener('click', (e) => {
+
+btnShowMoreProducts.addEventListener('click', () => {
     showMoreProduct();
 });
 async function showMoreProduct() {
     const qty = btnShowMoreProducts.getAttribute('value');
     const url = './api/product/qty/' + qty;
     const response = await fetch(url);
-     // Bước 2: đọc dữ liệu trả về
-     const result = await response.json();
-    console.log(parseInt(qty)+9);
+    // Bước 2: đọc dữ liệu trả về
+    const result = await response.json();
     result.forEach(element => {
         divResult.innerHTML += `
         <div class="col-sm-4">
@@ -20,14 +24,14 @@ async function showMoreProduct() {
                     <img src="images/product-details/${element.image}" alt="" height="250px"
                         width="250px" />
                     <h2>${element.price}</h2>
-                    <p>${element.name.substr(0,30)}...</p>
+                    <p>${element.name.substr(0, 30)}...</p>
                     <a href="#" class="btn btn-default add-to-cart"><i
                             class="fa fa-shopping-cart"></i>Add to cart</a>
                 </div>
                 <div class="product-overlay">
                     <div class="overlay-content">
                         <h2>${element.price} $</h2>
-                        <p>${element.name} </p>
+                        <a href="/product-details/${element.id}"><p>${element.name}</p></a>
                         <a href="#" class="btn btn-default add-to-cart"><i
                                 class="fa fa-shopping-cart"></i>Add to cart</a>
                     </div>
@@ -44,5 +48,81 @@ async function showMoreProduct() {
     `;
 
     });
-    btnShowMoreProducts.setAttribute('value',parseInt(qty)+9);
+    btnShowMoreProducts.setAttribute('value', parseInt(qty) + 9);
+}
+
+btnShowMoreFuature.addEventListener('click', () => {
+    showMoreProductFeature();
+});
+async function showMoreProductFeature() {
+    const featureqty = btnShowMoreFuature.getAttribute('value');
+    const classItem = document.querySelectorAll('.item');
+    const url = './api/product-feature/qty/' + featureqty;
+
+    const response = await fetch(url);
+    // Bước 2: đọc dữ liệu trả về
+    const result = await response.json();
+    if (result != "") {
+        divResultFeature.innerHTML = ``;
+        result.forEach(element => {
+            divResultFeature.innerHTML += `
+        <div class="item active">
+            <div class="col-sm-4">
+                <div class="product-image-wrapper">
+                    <div class="single-products">
+                        <div class="productinfo text-center">
+                            <img src="images/product-details/${element.image}" height="250px"
+                                width="250px" />
+                            <h2>${element.price}$</h2>
+                            <p>${element.name.substr(0, 30)}...</p>
+                            <a href="#" class="btn btn-default add-to-cart"><i
+                                    class="fa fa-shopping-cart"></i>Add to cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `;
+        });
+        btnShowMoreFuature.setAttribute('value', parseInt(featureqty) + 3);
+        btnShowBackMoreFuature.setAttribute('value', parseInt(btnShowBackMoreFuature.getAttribute('value')) + 3);
+    }
+   
+}
+btnShowBackMoreFuature.addEventListener('click', () => {
+    showBackMoreProductFeature();
+});
+async function showBackMoreProductFeature() {
+    const featureqty = btnShowBackMoreFuature.getAttribute('value');
+    const url = './api/product-feature/qty/' + featureqty;
+
+    const response = await fetch(url);
+    // Bước 2: đọc dữ liệu trả về
+    const result = await response.json();
+    if (result != "" && featureqty >= -3) {
+        divResultFeature.innerHTML = ``;
+        result.forEach(element => {
+            divResultFeature.innerHTML += `
+        <div class="item active">
+            <div class="col-sm-4">
+                <div class="product-image-wrapper">
+                    <div class="single-products">
+                        <div class="productinfo text-center">
+                            <img src="images/product-details/${element.image}" height="250px"
+                                width="250px" />
+                            <h2>${element.price}$</h2>
+                            <p>${element.name.substr(0, 30)}...</p>
+                            <a href="#" class="btn btn-default add-to-cart"><i
+                                    class="fa fa-shopping-cart"></i>Add to cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `;
+        });
+        btnShowMoreFuature.setAttribute('value', parseInt(btnShowMoreFuature.getAttribute('value')) - 3);
+        btnShowBackMoreFuature.setAttribute('value', parseInt(featureqty) - 3);
+    }
+   
 }

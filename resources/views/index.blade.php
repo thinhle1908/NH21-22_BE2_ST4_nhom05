@@ -160,10 +160,11 @@
                         @endforeach
                         <div id="result"></div>
                         <hr>
-                       
+
                     </div>
                     <div class="row">
-                        <div class="col-md-2 col-md-offset-5"> <button id="btnshowmore" style="margin-bottom:30%" value="9">Show More
+                        <div class="col-md-2 col-md-offset-5"> <button id="btnshowmore" class="btn btn-light"
+                                style="margin-bottom:30%" value="9">Show More
                                 Products</button>
                         </div>
                     </div>
@@ -176,8 +177,7 @@
                         <h2 class="title text-center">Features items</h2>
 
                         <div id="recommended-item-carousel" class="carousel slide" data-ride="carousel">
-                            <div class="carousel-inner">
-
+                            <div class="carousel-inner" id="result-feature">
                                 <div class="item active">
                                     @foreach ($featureproducts as $row)
                                         <div class="col-sm-4">
@@ -199,13 +199,16 @@
                                         </div>
                                     @endforeach
                                 </div>
+
                             </div>
-                            <a class="left recommended-item-control" href="#recommended-item-carousel" data-slide="prev">
+                            <a class="left recommended-item-control " href="#recommended-item-carousel" data-slide="prev" id="btnshowbackmorefuature" value="-3">
                                 <i class="fa fa-angle-left"></i>
                             </a>
-                            <a class="right recommended-item-control" href="#recommended-item-carousel" data-slide="next">
+
+                            <a class="right recommended-item-control" href="#recommended-item-carousel"id="btnshowmorefuature" value="3" data-slide="next">
                                 <i class="fa fa-angle-right"></i>
                             </a>
+
                         </div>
                     </div>
                     <!--/recommended_items-->

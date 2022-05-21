@@ -142,17 +142,17 @@
 						</div>
 					</div>
 					<div class="col-sm-4">
-							<form action="{{ asset ('/shop') }}" class="form-inline">
-							
-								<div class="form-group">
-									<label class="sr-only" for="">label</label>
-									<input  class="form-control" name="key" placeholder="Seacrh By Name...">
-								</div>
-							
-								
-							
-								<button type="submit" class="btn btn-primary1">Search</button>
-							</form>
+						<form action="{{ asset ('/shop') }}" class="form-inline">
+
+							<div class="form-group">
+								<label class="sr-only" for="">label</label>
+								<input class="form-control" name="key" placeholder="Seacrh By Name...">
+							</div>
+
+
+
+							<button type="submit" class="btn btn-primary1">Search</button>
+						</form>
 					</div>
 				</div>
 			</div>
@@ -331,27 +331,72 @@
 	<script src="{{ asset('js/jquery.prettyPhoto.js') }}"></script>
 	<script src="{{ asset('js/main.js') }}"></script>
 	<script>
-		function addTocart(event){
+		function addTocart(event) {
 			event.preventDefault();
 			let urlCart = $(this).data('url');
 			$.ajax({
 				type: 'GET',
 				url: urlCart,
 				dataType: 'json',
-				success: function (data) {
-					if (data.code === 200){
-                        alert('them san pham thanh cong ')
-                    }
+				success: function(data) {
+					if (data.code === 200) {
+						alert('them san pham thanh cong ')
+					}
 				},
 				error: function() {
-						
+
 				}
 			});
 		}
-		$(function () {
+		$(function() {
 			$('.add-to-cart').on('click', addTocart);
-		}); 
+		});
 	</script>
+	<script>
+	function cartUpdate(event) {
+		event.preventDefault();
+		let urlUpdateCart = $('.update_cart_url').data('url');
+		let id  = $(this).data('id');
+		let quantity = $(this).parents('tr').find('input').val();
+		 $.ajax({
+		 	type: "GET",
+		  	url: urlUpdateCart,
+		 	data: {id: id, quantity: quantity},
+			 success: function(data) {
+				if(data.code === 200){
+					alert('Cập nhật thành công');
+				 	$('.cart_items').html(data.cart_items);
+				}
+				},
+				error: function() {
+
+				}
+		 })
+	}
+	function cartDelete(event){
+		event.preventDefault();
+		let urlDelete = $('.delete_cart_url').data('url');
+		let id = $(this).data('id')
+		$.ajax({
+		 	type: "GET",
+		  	url: urlDelete,
+		 	data: {id: id},
+			 success: function(data) {
+				if(data.code === 200){
+					alert('Xoá thành công');
+				 	$('.cart_items').html(data.cart_items);
+				}
+				},
+				error: function() {
+
+				}
+		 })
+	}
+	$(function() {
+		$(document).on('click', '.cart_update', cartUpdate);
+		$(document).on('click', '.cart_delete', cartDelete);
+	});
+</script>
 </body>
 
 </html>

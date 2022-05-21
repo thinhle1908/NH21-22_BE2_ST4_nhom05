@@ -73,6 +73,7 @@ class MyController extends Controller
         }else {
             
             $cart[$id] = [
+                'id' => $id,
                 'name' => $product->name,
                 'manu_id'=>$product->manu_id,
                 'type_id'=>$product->type_id,
@@ -91,7 +92,30 @@ class MyController extends Controller
             'message' => 'success'
         ], 200);
     }
-
+    //UpdateCart
+    public function updateCart(Request $request)
+    {
+        if($request ->id && $request ->quantity){
+            $carts = session() ->get('cart');
+            $carts[$request->id]['quantity'] = $request -> quantity;
+            session()->put('cart',$carts);
+            $carts = session()->get('cart');
+            $cart_items = view('cart', compact('carts'))->render();
+            return response() -> json(['cart_items' => $cart_items ,'code' => 200], 200);
+        }
+    }
+    //DeleteCart
+    public function deleteCart(Request $request)
+    {
+        if($request ->id){
+            $carts = session() ->get('cart');
+            unset($carts[$request->id]);
+            session()->put('cart',$carts);
+            $carts = session()->get('cart');
+            $cart_items = view('cart', compact('carts'))->render();
+            return response() -> json(['cart_items' => $cart_items ,'code' => 200], 200);
+        }
+    }
     
 
     // public function login(){

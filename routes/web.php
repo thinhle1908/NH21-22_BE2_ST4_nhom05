@@ -27,7 +27,10 @@ Route::get('/product-details/{id}', [MyController::class, 'productDetails']);
 Route::get('/cart', [MyController::class,'showCart'])->name('showCart');
 //AddToCart
 Route::get('/add-to-cart/{id}', [MyController::class, 'addToCart'])->name('addToCart');
-
+//UpdateCart
+Route::get('/update_cart', [MyController::class, 'updateCart'])->name('updateCart');
+//DeleteCart
+Route::get('/delete_cart', [MyController::class, 'deleteCart'])->name('deleteCart');
 Route::get('/shop', [MyController::class, 'shop']);
 
 Route::get('/dashboard', function () {

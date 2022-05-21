@@ -1592,6 +1592,10 @@ h2.title {
 #cart_items .cart_info .cart_description p {
     color: #696763
 }
+#cart_items .cart_info .cart_name p {
+    font-weight: 700;
+    color: #696763
+}
 
 #cart_items .cart_info .cart_price p {
     color: #696763;

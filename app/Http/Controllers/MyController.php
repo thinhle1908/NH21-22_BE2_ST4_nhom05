@@ -35,10 +35,11 @@ class MyController extends Controller
         $this->slug = $slug;
     }
     public function productDetails($id){
-        // $pro = Product::find($id);
+        $product = Product::find($id);
         $pro = Product::where('id',$id)->first();
+        $related_product = Product::where('type_id',$product->type_id)->limit(3)->whereNotIn('id',[$id])->get();
         $manufactures = Manufacture::take(10)->get();
-        return view('product-details',compact('pro'))->with('tenManufactures',$manufactures);
+        return view('product-details',compact('pro'))->with('tenManufactures',$manufactures)->with('productRelated',$related_product);
 
     }
     public function showMoreProducts($qty)

@@ -133,7 +133,7 @@
 								<div class="product-overlay">
 									<div class="overlay-content">
 										<h2>{{ $row->price }}$</h2>
-										<p>{{ $row->name }}</p>
+										<a href="{{URL::to('/product-details/'.$row->id)}}"><p>{{ $row->name }}</p></a>
 										<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
 									</div>
 								</div>

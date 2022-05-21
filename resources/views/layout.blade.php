@@ -353,50 +353,133 @@
 		});
 	</script>
 	<script>
-	function cartUpdate(event) {
-		event.preventDefault();
-		let urlUpdateCart = $('.update_cart_url').data('url');
-		let id  = $(this).data('id');
-		let quantity = $(this).parents('tr').find('input').val();
-		 $.ajax({
-		 	type: "GET",
-		  	url: urlUpdateCart,
-		 	data: {id: id, quantity: quantity},
-			 success: function(data) {
-				if(data.code === 200){
-					alert('Cập nhật thành công');
-				 	$('.cart_items').html(data.cart_items);
-				}
+		function cartUpdate(event) {
+			event.preventDefault();
+			let urlUpdateCart = $('.update_cart_url').data('url');
+			let id = $(this).data('id');
+			let quantity = $(this).parents('tr').find('input').val();
+			$.ajax({
+				type: "GET",
+				url: urlUpdateCart,
+				data: {
+					id: id,
+					quantity: quantity
+				},
+				success: function(data) {
+					if (data.code === 200) {
+						alert('Cập nhật thành công');
+						$('.cart_items').html(data.cart_items);
+					}
 				},
 				error: function() {
 
 				}
-		 })
-	}
-	function cartDelete(event){
-		event.preventDefault();
-		let urlDelete = $('.delete_cart_url').data('url');
-		let id = $(this).data('id')
-		$.ajax({
-		 	type: "GET",
-		  	url: urlDelete,
-		 	data: {id: id},
-			 success: function(data) {
-				if(data.code === 200){
-					alert('Xoá thành công');
-				 	$('.cart_items').html(data.cart_items);
-				}
+			})
+		}
+
+		function cartDelete(event) {
+			event.preventDefault();
+			let urlDelete = $('.delete_cart_url').data('url');
+			let id = $(this).data('id')
+			$.ajax({
+				type: "GET",
+				url: urlDelete,
+				data: {
+					id: id
+				},
+				success: function(data) {
+					if (data.code === 200) {
+						alert('Xoá thành công');
+						$('.cart_items').html(data.cart_items);
+					}
 				},
 				error: function() {
 
 				}
-		 })
-	}
-	$(function() {
-		$(document).on('click', '.cart_update', cartUpdate);
-		$(document).on('click', '.cart_delete', cartDelete);
-	});
-</script>
+			})
+		}
+		$(function() {
+			$(document).on('click', '.cart_update', cartUpdate);
+			$(document).on('click', '.cart_delete', cartDelete);
+		});
+	</script>
+	<script>
+		btnShowMoreFuature.addEventListener('click', () => {
+			showMoreProductFeature();
+		});
+		async function showMoreProductFeature() {
+			const featureqty = btnShowMoreFuature.getAttribute('value');
+			const classItem = document.querySelectorAll('.item');
+			const url = './api/product-feature/qty/' + featureqty;
+
+			const response = await fetch(url);
+			// Bước 2: đọc dữ liệu trả về
+			const result = await response.json();
+			if (result != "") {
+				divResultFeature.innerHTML = ``;
+				result.forEach(element => {
+					divResultFeature.innerHTML += `
+        <div class="item active">
+            <div class="col-sm-4">
+                <div class="product-image-wrapper">
+                    <div class="single-products">
+                        <div class="productinfo text-center">
+                            <img src="images/product-details/${element.image}" height="250px"
+                                width="250px" />
+                            <h2>${element.price}$</h2>
+                            <p>${element.name.substr(0, 30)}...</p>
+                            <a href="#" class="btn btn-default add-to-cart"><i
+                                    class="fa fa-shopping-cart"></i>Add to cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `;
+				});
+				btnShowMoreFuature.setAttribute('value', parseInt(featureqty) + 3);
+				btnShowBackMoreFuature.setAttribute('value', parseInt(btnShowBackMoreFuature.getAttribute('value')) + 3);
+			}
+
+		}
+		btnShowBackMoreFuature.addEventListener('click', () => {
+			showBackMoreProductFeature();
+		});
+		async function showBackMoreProductFeature() {
+			const featureqty = btnShowBackMoreFuature.getAttribute('value');
+			const url = './api/product-feature/qty/' + featureqty;
+
+			const response = await fetch(url);
+			// Bước 2: đọc dữ liệu trả về
+			const result = await response.json();
+			if (result != "" && featureqty > -3) {
+				divResultFeature.innerHTML = ``;
+				result.forEach(element => {
+					divResultFeature.innerHTML += `
+        <div class="item active">
+            <div class="col-sm-4">
+                <div class="product-image-wrapper">
+                    <div class="single-products">
+                        <div class="productinfo text-center">
+                            <img src="images/product-details/${element.image}" height="250px"
+                                width="250px" />
+                            <h2>${element.price}$</h2>
+                            <p>${element.name.substr(0, 30)}...</p>
+                            <a href="#" class="btn btn-default add-to-cart"><i
+                                    class="fa fa-shopping-cart"></i>Add to cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `;
+				});
+				btnShowMoreFuature.setAttribute('value', parseInt(btnShowMoreFuature.getAttribute('value')) - 3);
+				btnShowBackMoreFuature.setAttribute('value', parseInt(featureqty) - 3);
+			}
+
+		}
+	</script>
 </body>
 
 </html>

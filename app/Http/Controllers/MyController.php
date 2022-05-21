@@ -48,7 +48,8 @@ class MyController extends Controller
         $products = Product::search()->paginate(6);
         $manufactures = Manufacture::take(10)->get();
         $protype = Protypes::take(10)->get();
-        return view('shop')->with('tenProductsFeature',$products)->with('tenManufactures',$manufactures)->with('tenProtypes',$protype);
+        $featureProducts = Product::where('feature',1)->get()->take(3);
+        return view('shop')->with('tenProductsFeature',$products)->with('tenManufactures',$manufactures)->with('tenProtypes',$protype)->with('featureproducts',$featureProducts);;
     }
     public function page($name)
     {

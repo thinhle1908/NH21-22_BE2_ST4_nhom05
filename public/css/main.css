@@ -1619,7 +1619,14 @@ h2.title {
     color: #FE980F;
     font-size: 24px;
 }
-
+.cart_price{
+    color: #FE980F;
+    font-size: 24px;
+}
+.cart_total_price {
+    color: #FE980F;
+    font-size: 24px;
+}
 .cart_product {
     display: block;
     /*  margin: 15px -70px 10px 25px;*/
@@ -1649,6 +1656,8 @@ h2.title {
 
 .cart_delete {
     display: block;
+    width: 35px;
+    height: 35px;
     margin-right: -12px;
     overflow: hidden;
 }

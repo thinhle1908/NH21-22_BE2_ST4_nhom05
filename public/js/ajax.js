@@ -134,21 +134,20 @@ async function showBackMoreProductFeature() {
 
 }
 pricerange.addEventListener('click', () => {
-    
     filterAllProducts();
 })
 async function filterAllProducts() {
     const tooltip = document.querySelectorAll('.tooltip-inner');
     let total;
     tooltip.forEach(element => {
-         total = element.innerHTML;
+        total = element.innerHTML;
     });
     const myArray = total.split(":");
-    const min = myArray[0].replace(" ","");
-    const max = myArray[1].replace(" ","");
-    
+    const min = myArray[0].replace(" ", "");
+    const max = myArray[1].replace(" ", "");
+
     console.log(myArray);
-    const url = './api/filter/' + min +"/"+max;
+    const url = './api/filter/' + min + "/" + max;
     const response = await fetch(url);
     // Bước 2: đọc dữ liệu trả về
     const result = await response.json();

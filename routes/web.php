@@ -25,6 +25,7 @@ Route::get('/index', [MyController::class, 'index']);
 Route::get('/product-details/{id}', [MyController::class, 'productDetails']);
 //showCart
 Route::get('/cart', [MyController::class,'showCart'])->name('showCart');
+Route::get('/checkout', [MyController::class,'showProductbyCart'])->name('showProductbyCart');
 //AddToCart
 Route::get('/add-to-cart/{id}', [MyController::class, 'addToCart'])->name('addToCart');
 //UpdateCart
@@ -61,3 +62,4 @@ Route::get('/dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');    
 Route::get('/manufacture/{manu_id}', [MyController::class, 'showManufacturebyID']);
 Route::get('/protype/{type_id}', [MyController::class, 'showProtypebyID']);
+Route::get('/place-order', [MyController::class, 'placeOrder']);

@@ -97,6 +97,7 @@
 								<li><a href="{{ asset('checkout		') }}"><i class="fa fa-crosshairs"></i> Checkout</a></li>
 								<li><a href="{{ asset('cart') }}"><i class="fa fa-shopping-cart"></i> Cart</a></li>
 								<li><a href="{{ asset('login') }}"><i class="fa fa-lock"></i> Login</a></li>
+								
 							</ul>
 						</div>
 					</div>

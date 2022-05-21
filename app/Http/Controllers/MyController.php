@@ -131,7 +131,21 @@ class MyController extends Controller
             return response() -> json(['cart_items' => $cart_items ,'code' => 200], 200);
         }
     }
-    
+    public function showProductbyCart(){
+        $carts = session()->get('cart');
+        return view('checkout',compact('carts'));
+    }
+    public function placeOrder(Request $request){
+        $data = array();
+        $data['shipping_name'] = $request->shipping_name;
+        $data['shipping_email'] = $request->shipping_email;
+        $data['shipping_address'] = $request->shipping_address;
+        $data['shipping_phone'] = $request->shipping_phone;
+        $shipping_id = DB::table('shipping')->insertGetId($data);
+        Session::put('shipping_id',$shipping_id);
+        return Redirect('/payment');
+    }
+public function payment(){}
 
     // public function login(){
     //     return view('login');

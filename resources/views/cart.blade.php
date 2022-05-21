@@ -1,6 +1,5 @@
 @extends('layout')
 @section('content')
-	<section id="cart_items">
 		<div class="container">
 			<div class="breadcrumbs">
 				<ol class="breadcrumb">

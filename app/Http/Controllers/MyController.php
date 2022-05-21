@@ -11,6 +11,11 @@ use App\Models\Protypes;
 class MyController extends Controller
 {
     //
+    public function showProductbyPrice($min,$max)
+    {
+        $products = Product::whereBetween('price',[$min,$max])->get();
+        return $products;
+    }
     public function showMoreProductsFeature($qty)
     {
         $product = Product::where('feature',1)->skip($qty)->take(3)->get();

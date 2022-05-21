@@ -133,8 +133,7 @@
                                                 width="250px" />
                                             <h2>{{ $row->price }}$</h2>
                                             <p>{{ substr($row->name, 0, 30) }}...</p>
-                                            <a href="#" class="btn btn-default add-to-cart" 
-                                            data-url="{{ route('addToCart',['id' => $row->id])}}"><i
+                                            <a href="#" class="btn btn-default add-to-cart" ><i
                                                     class="fa fa-shopping-cart"></i>Add to cart</a>
                                         </div>
                                         <div class="product-overlay">
@@ -143,8 +142,7 @@
                                                 <a href="{{ URL::to('/product-details/' . $row->id) }}">
                                                     <p>{{ $row->name }}</p>
                                                 </a>
-                                                <a href="#" 
-                                                data-url="{{ route('addToCart',['id' => $row->id])}}" class="btn btn-default add-to-cart"><i
+                                                <a href="#" class="btn btn-default add-to-cart"><i
                                                         class="fa fa-shopping-cart"></i>Add to cart</a>
                                             </div>
                                         </div>

@@ -99,7 +99,7 @@ async function showBackMoreProductFeature() {
     const response = await fetch(url);
     // Bước 2: đọc dữ liệu trả về
     const result = await response.json();
-    if (result != "" && featureqty >= -3) {
+    if (result != "" && featureqty > -3) {
         divResultFeature.innerHTML = ``;
         result.forEach(element => {
             divResultFeature.innerHTML += `

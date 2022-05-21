@@ -47,7 +47,6 @@ class MyController extends Controller
         $product = Product::skip($qty)->take(9)->get();
         return $product;
     }
-<<<<<<< HEAD
     //ShowCart
     function showCart(){
         //echo "<pre>";
@@ -83,13 +82,6 @@ class MyController extends Controller
         ], 200);
     }
 
-=======
-    public function showMoreProductsFeature($qty)
-    {
-        $product = Product::where('feature',1)->skip($qty)->take(3)->get();
-        return $product;
-    }
->>>>>>> 2b7e7185c02865160c65e9dc49bf2869215d4684
     
 
     // public function login(){

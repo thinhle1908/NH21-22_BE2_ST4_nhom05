@@ -57,7 +57,9 @@
 									<span>${{$pro->price}}</span>
 									<label>Quantity:</label>
 									<input type="text" value="1" />
-									<button type="button" class="btn btn-fefault cart">
+									<button type="button"
+									data-url="{{ route('addToCart',['id' => $pro->id])}}"
+									 class="btn btn-fefault add-to-cart">
 										<i class="fa fa-shopping-cart"></i>
 										Add to cart
 									</button>
@@ -186,7 +188,8 @@
 												<img src="images/home/gallery4.jpg" alt="" />
 												<h2>$56</h2>
 												<p>Easy Polo Black Edition</p>
-												<button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
+												<button type="button" 
+												class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
 											</div>
 										</div>
 									</div>
@@ -267,7 +270,9 @@
 													<img src="{{  asset('images/product-details/'.$item->image)}}" width= "250px" height= "250px" alt="" />
 													<h2>{{$item->price}}</h2>
 													<p>{{substr($item->name, 0, 30)}}</p>
-													<button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
+													<button type="button" 
+													data-url="{{ route('addToCart',['id' => $item->id])}}"
+													class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
 												</div>
 											</div>
 										</div>

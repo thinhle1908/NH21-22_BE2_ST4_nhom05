@@ -38,7 +38,18 @@ Route::get('/shop', [MyController::class, 'shop']);
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
-
+//show Admin Recept
+Route::get('/dashboard/receipt', function () {
+    return view('adminReceipt');
+})->middleware(['auth'])->name('dashboard');
+//show Admin Vocher
+Route::get('/dashboard/vocher', function () {
+    return view('adminVocher');
+})->middleware(['auth'])->name('dashboard');
+//show Admin Recept_Detail
+Route::get('/dashboard/receipt_detail', function () {
+    return view('adminReceiptDetail');
+})->middleware(['auth'])->name('dashboard');
 require __DIR__ . '/auth.php';
 
 Route::get('/{url}', function ($url) {

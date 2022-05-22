@@ -16,14 +16,16 @@ class MyController extends Controller
         $product = Product::where('type_id',$type_id)->paginate(6);
         $manufactures = Manufacture::take(10)->get();
         $protype = Protypes::take(10)->get();
-        return view('shop')->with('tenProductsFeature',$product)->with('tenManufactures',$manufactures)->with('tenProtypes',$protype);
+        $featureProducts = Product::where('feature',1)->get()->take(3);
+        return view('shop')->with('tenProductsFeature',$product)->with('tenManufactures',$manufactures)->with('tenProtypes',$protype)->with('featureproducts',$featureProducts);
     }
     public function showManufacturebyID($manu_id)
     {
         $product = Product::where('manu_id',$manu_id)->paginate(6);
         $manufactures = Manufacture::take(10)->get();
         $protype = Protypes::take(10)->get();
-        return view('shop')->with('tenProductsFeature',$product)->with('tenManufactures',$manufactures)->with('tenProtypes',$protype);
+        $featureProducts = Product::where('feature',1)->get()->take(3);
+        return view('shop')->with('tenProductsFeature',$product)->with('tenManufactures',$manufactures)->with('tenProtypes',$protype)->with('featureproducts',$featureProducts);
     }
     public function showProductbyPrice($min,$max)
     {

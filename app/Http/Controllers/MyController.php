@@ -174,4 +174,9 @@ public function payment(){}
     // public function contact_us(){
     //     return view('contact-us');
     // }
+
+    public function forgotPassword()
+    {
+        return view('resources/views/forgot-password.blade.php');
+    }
 }

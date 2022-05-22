@@ -63,7 +63,7 @@
 				<div class="row">
 					<div class="col-md-4 clearfix">
 						<div class="logo pull-left">
-							<a href="index.html"><img src="{{ asset('images/home/logo.png')}}" alt="" /></a>
+							<a href="{{ asset('index') }}"><img src="{{ asset('images/home/logo.png')}}" alt="" /></a>
 						</div>
 						<div class="btn-group pull-right clearfix">
 							<div class="btn-group">
@@ -94,7 +94,7 @@
 							<ul class="nav navbar-nav">
 								<li><a href=""><i class="fa fa-user"></i> Account</a></li>
 								<li><a href=""><i class="fa fa-star"></i> Wishlist</a></li>
-								<li><a href="{{ asset('checkout		') }}"><i class="fa fa-crosshairs"></i> Checkout</a></li>
+								<li><a href="{{ asset('checkout') }}"><i class="fa fa-crosshairs"></i> Checkout</a></li>
 								<li><a href="{{ asset('cart') }}"><i class="fa fa-shopping-cart"></i> Cart</a></li>
 								<li><a href="{{ asset('login') }}"><i class="fa fa-lock"></i> Login</a></li>
 								
@@ -121,14 +121,14 @@
 						</div>
 						<div class="mainmenu pull-left">
 							<ul class="nav navbar-nav collapse navbar-collapse">
-								<li><a href="{{ asset ('index.html') }}" class="active">Home</a></li>
+								<li><a href="{{ asset ('index') }}" class="active">Home</a></li>
 								<li class="dropdown"><a href="#">Shop<i class="fa fa-angle-down"></i></a>
 									<ul role="menu" class="sub-menu">
 										<li><a href="{{ asset ('/shop') }}">Products</a></li>
 										<li><a href="{{ asset ('/product-details') }}">Product Details</a></li>
-										<li><a href="{{ asset ('checkout.html') }}">Checkout</a></li>
-										<li><a href="{{ asset ('cart.html') }}">Cart</a></li>
-										<li><a href="{{ asset ('login.html') }}">Login</a></li>
+										<li><a href="{{ asset ('/checkout.html') }}">Checkout</a></li>
+										<li><a href="{{ asset ('/cart') }}">Cart</a></li>
+										<li><a href="{{ asset ('/login') }}">Login</a></li>
 									</ul>
 								</li>
 								<li class="dropdown"><a href="#">Blog<i class="fa fa-angle-down"></i></a>
@@ -341,7 +341,7 @@
 				dataType: 'json',
 				success: function(data) {
 					if (data.code === 200) {
-						alert('them san pham thanh cong ')
+						alert('Đã thêm thành công sản phẩm vào giỏ hàng')
 					}
 				},
 				error: function() {

@@ -180,14 +180,6 @@
 							</div>
 
 						</div>
-						<a class="left recommended-item-control " href="#recommended-item-carousel" data-slide="prev" id="btnshowbackmorefuature" value="-3">
-							<i class="fa fa-angle-left"></i>
-						</a>
-
-						<a class="right recommended-item-control" href="#recommended-item-carousel" id="btnshowmorefuature" value="3" data-slide="next">
-							<i class="fa fa-angle-right"></i>
-						</a>
-
 					</div>
 				</div>
 				<!--/recommended_items-->

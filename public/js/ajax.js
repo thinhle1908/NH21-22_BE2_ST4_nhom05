@@ -63,13 +63,12 @@ btnShowMoreFuature.addEventListener('click', () => {
 });
 async function showMoreProductFeature() {
     const featureqty = btnShowMoreFuature.getAttribute('value');
-    const classItem = document.querySelectorAll('.item');
     const url = './api/product-feature/qty/' + featureqty;
 
     const response = await fetch(url);
     // Bước 2: đọc dữ liệu trả về
     const result = await response.json();
-    if (result != "") {
+    if (result != ""  && featureqty > 0) {
         divResultFeature.innerHTML = ``;
         result.forEach(element => {
             divResultFeature.innerHTML += `
@@ -91,8 +90,8 @@ async function showMoreProductFeature() {
         </div>
     `;
         });
-        btnShowMoreFuature.setAttribute('value', parseInt(featureqty) + 3);
-        btnShowBackMoreFuature.setAttribute('value', parseInt(btnShowBackMoreFuature.getAttribute('value')) + 3);
+        btnShowMoreFuature.setAttribute('value', parseInt(featureqty) - 3);
+        btnShowBackMoreFuature.setAttribute('value', parseInt(btnShowBackMoreFuature.getAttribute('value')) - 3);
     }
 
 }
@@ -106,7 +105,7 @@ async function showBackMoreProductFeature() {
     const response = await fetch(url);
     // Bước 2: đọc dữ liệu trả về
     const result = await response.json();
-    if (result != "" && featureqty > -3) {
+    if (result != "" && featureqty > -3 ) {
         divResultFeature.innerHTML = ``;
         result.forEach(element => {
             divResultFeature.innerHTML += `
@@ -128,8 +127,8 @@ async function showBackMoreProductFeature() {
         </div>
     `;
         });
-        btnShowMoreFuature.setAttribute('value', parseInt(btnShowMoreFuature.getAttribute('value')) - 3);
-        btnShowBackMoreFuature.setAttribute('value', parseInt(featureqty) - 3);
+        btnShowMoreFuature.setAttribute('value', parseInt(btnShowMoreFuature.getAttribute('value')) + 3);
+        btnShowBackMoreFuature.setAttribute('value', parseInt(featureqty) + 3);
     }
 
 }

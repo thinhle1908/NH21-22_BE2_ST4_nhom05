@@ -47,9 +47,20 @@ class ManufactureSeeder extends Seeder
             //15
             ['manu_name'=>"Dreo"],
             //16
-            ['manu_name'=>"Whynter"]
+            ['manu_name'=>"Whynter"],
 
-
+            //17 Minh
+            ['manu_name'=>"Ava"],
+            //18 Minh
+            ['manu_name'=>"Sunhouse"],
+            //19 Minh
+            ['manu_name'=>"Hommy"],
+            //20 Minh
+            ['manu_name'=>"Kangaroo"],
+            //21
+            ['manu_name'=>"Apple"],
+            //22
+            ['manu_name'=>"JBL"],
         ]);
     }
 }

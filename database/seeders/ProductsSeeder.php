@@ -402,6 +402,89 @@ class ProductsSeeder extends Seeder
              Digital and remote control; 2 fan speeds
              Air Flow (at high speed): 350m3/h / 206 CFM",
              'feature'=> 0], 
+
+             //Minh 33
+             ['name'=> "Ava BF502A",
+             'manu_id'=>17,
+             'type_id'=>11,
+             'price'=>1690000,
+             'image'=>"nckd1.jpg",
+             'description'=>"Dung tích sử dụng 5.5 lít, nướng gà nguyên con dưới 2 kg",
+             'feature'=> 5], 
+             //Minh 34
+             ['name'=> "Sunhouse SHD4026",
+             'manu_id'=>18,
+             'type_id'=>11,
+             'price'=>2187000,
+             'image'=>"nckd2.jpg",
+             'description'=>"Dung tích sử dụng 6 lít phù hợp sử dụng trong gia đình 5 - 6 thành viên",
+             'feature'=> 6], 
+             //Minh 35
+             ['name'=> "Hommy BF525",
+             'manu_id'=>19,
+             'type_id'=>11,
+             'price'=>2570000,
+             'image'=>"nckd3.jpg",
+             'description'=>"Công suất 2000W cùng công nghệ nướng không khí nóng đối lưu giúp thực phẩm chín nhanh và đều",
+             'feature'=> 5], 
+             //Minh 36
+             ['name'=> "Sunhouse SHD4062",
+             'manu_id'=>18,
+             'type_id'=>11,
+             'price'=>1972000,
+             'image'=>"nckd4.jpg",
+             'description'=>"Dung tích 5.5 lít có thể chiên gà vịt nguyên con tầm 1.5 kg",
+             'feature'=> 5], 
+
+             //Minh 37
+             ['name'=> "Kangaroo KG12AF1A",
+             'manu_id'=>20,
+             'type_id'=>20,
+             'price'=>4542000,
+             'image'=>"nckd5.jpg",
+             'description'=>"Các chức năng gồm chiên không dầu, khoai tây, thịt, cá, tôm, pizza, đùi gà, bánh mỳ, gà nướng nguyên con, sấy khô.",
+             'feature'=> 5], 
+
+             // 38 Minh
+             ['name'=> "Tai nghe Bluetooth AirPods 2 Wireless charge Apple MRXJ2",
+             'manu_id'=>21,
+             'type_id'=>12,
+             'price'=>3490000,
+             'image'=>"tainghe1.jpg",
+             'description'=>"AirPods 2 - một sản phẩm đã từng làm mưa làm gió trước khi người “anh em” AirPods Pro ra mắt. Đến thời điểm hiện tại, mặc dù không còn hot như Airpods Pro, nhưng Tai nghe Bluetooth AirPods 2 Wireless charge Apple MRXJ2 vẫn còn nhiều đặc điểm khiến sản phẩm này trở nên hấp dẫn và vẫn giữ được vị trí của mình với một lượng fan nhất định.",
+             'feature'=> 0],
+             // 39 Minh
+             ['name'=> "Tai nghe Bluetooth AirPods Pro MagSafe Charge Apple MLWK3 Trắng",
+             'manu_id'=>21,
+             'type_id'=>12,
+             'price'=>5190000,
+             'image'=>"tainghe2.jpg",
+             'description'=>"Tai nghe Bluetooth AirPods Pro MagSafe Charge Apple MLWK3 trắng được chế tác với vẻ ngoài tinh giản, gam màu trắng trẻ trung, sáng đẹp, phối hợp tuyệt vời với mọi trang phục từ đời thường đến công sở, dự tiệc của bạn. ",
+             'feature'=> 0],
+             // 40 Minh
+             ['name'=> "Tai nghe Bluetooth AirPods 3 Apple MME73 Trắng",
+             'manu_id'=>21,
+             'type_id'=>12,
+             'price'=>4490000,
+             'image'=>"tainghe3.jpg",
+             'description'=>"Airpods 3 có thiết kế tương tự như AirPods Pro nhưng không còn phần eartips, đường viền và thân ngắn hơn cho âm thanh truyền tải đến tai tối ưu. Bề mặt tai nghe Bluetooth Apple phủ sắc trắng thời thượng, được làm từ các vật liệu tái chế với độ bền cao, bảo vệ môi trường sống của con người.",
+             'feature'=> 0],
+             // 41 Minh
+             ['name'=> "Tai nghe Bluetooth True Wireless Galaxy Buds Pro Bạc",
+             'manu_id'=>4,
+             'type_id'=>12,
+             'price'=>2490000,
+             'image'=>"tainghe4.jpg",
+             'description'=>"Tai nghe Bluetooth True Wireless Samsung Buds Pro sở hữu vẻ ngoài đẹp mắt thời thượng với hai màu đen và trắng. Thiết kế mới trên hình dạng tai nghe cổ điển, có khả năng làm giảm bớt sự khó chịu khi sử dụng tai nghe trong nhiều giờ",
+             'feature'=> 0],
+             // 42 Minh
+             ['name'=> "Tai nghe Bluetooth True Wireless JBL T115TWS",
+             'manu_id'=>22,
+             'type_id'=>12,
+             'price'=>990000,
+             'image'=>"tainghe5.jpg",
+             'description'=>"Thiết kế housing với đường nét tinh tế, uốn cong theo hình oval, bề mặt bằng nhựa sần tốt, bền bỉ, kháng vỡ, cầm nắm dễ chịu, xoay chuyển vị trí linh hoạt để đeo tai vừa vặn. Nút tai silicone mềm mại, nâng cao khả năng cách âm khi chọn nút tai phù hợp với khổ tai của mình.",
+             'feature'=> 0],
         ]);
     }
 }

@@ -36,7 +36,12 @@ class ProtypesSeeder extends Seeder
             ['type_name'=> "Washing machine"],
              //10
             ['type_name'=> "Air conditioner fan"],
-            
+
+            //11 minh
+            ['type_name'=> "Air Fryer"],
+
+            //12 minh
+            ['type_name'=> "Earphone"],
         ]);
     }
 }

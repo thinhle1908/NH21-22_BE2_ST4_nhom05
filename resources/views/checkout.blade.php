@@ -77,6 +77,7 @@
 					@php
 					$total = 0;
 					@endphp
+					@if(!empty($carts))
 					@foreach($carts as $id => $value)
 					@php
 					$total += $value['price'] * $value['quantity'];
@@ -109,6 +110,7 @@
 						</tr>
 
 					@endforeach
+					@endif
 							<td colspan="4">&nbsp;</td>
 							<td colspan="2">
 								<table class="table table-condensed total-result">

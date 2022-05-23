@@ -11,9 +11,6 @@
 
         <form method="POST" action="{{ route('login') }}">
             @csrf
-
-      
-
             <!-- Email Address -->
             <div class="mt-4">
                 <x-label for="email" :value="__('Email')" />
@@ -45,6 +42,7 @@
         </form>
     </x-auth-card>
 </x-guest-layout> --}}
+
 <x-guest-layout>
 
     <div class="container">
@@ -77,11 +75,14 @@
 
            
 
-            <div class="form-group " style="padding-left:30%">
+            <div class="form-group " style="padding-left:20%">
+            <a class="btn"  href="{{ url('forgot-password') }}">
+                    {{ __('Forgot password?') }}
+                </a>
                 <a class="btn btn-warning "  href="{{ route('register') }}">
                     {{ __('Dont have account?') }}
                 </a>
-
+                
                 <x-button class="btn btn-light">
                     {{ __('Login') }}
                 </x-button>

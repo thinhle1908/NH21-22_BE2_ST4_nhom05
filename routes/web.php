@@ -63,3 +63,5 @@ Route::get('/dashboard', function () {
 Route::get('/manufacture/{manu_id}', [MyController::class, 'showManufacturebyID']);
 Route::get('/protype/{type_id}', [MyController::class, 'showProtypebyID']);
 Route::get('/place-order', [MyController::class, 'placeOrder']);
+
+

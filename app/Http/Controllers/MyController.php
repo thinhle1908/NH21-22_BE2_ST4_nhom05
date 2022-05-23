@@ -34,16 +34,18 @@ class MyController extends Controller
     }
     public function showMoreProductsFeature($qty)
     {
-        $product = Product::where('feature',1)->skip($qty)->take(3)->get();
+        $from = $qty-3;
+        $product = Product::where('feature',1)->skip($from)->take(3)->get();
         return $product;
     }
     public function index()
     {
+        $qtyproduct = Product::where('feature',1)->count();
         $products = Product::all()->take(9);
         $manufactures = Manufacture::take(10)->get();
         $protype = Protypes::take(10)->get();
-        $featureProducts = Product::where('feature',1)->get()->take(3);
-        return view('index')->with('tenProductsFeature',$products)->with('tenManufactures',$manufactures)->with('tenProtypes',$protype)->with('featureproducts',$featureProducts);
+        $featureProducts = Product::where('feature',1)->orderBy('id','desc')->get()->take(3);
+        return view('index')->with('tenProductsFeature',$products)->with('tenManufactures',$manufactures)->with('tenProtypes',$protype)->with('featureproducts',$featureProducts)->with('qtyProductFeature',$qtyproduct);
     }
     public function shop()
     {
@@ -198,4 +200,9 @@ class MyController extends Controller
     // public function contact_us(){
     //     return view('contact-us');
     // }
+
+    public function forgotPassword()
+    {
+        return view('resources/views/forgot-password.blade.php');
+    }
 }

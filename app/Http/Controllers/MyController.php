@@ -6,8 +6,9 @@ use App\Models\Manufacture;
 use Illuminate\Http\Request;
 use App\Models\Product;
 use App\Models\Protypes;
-use App\Models\Orders;
+use App\Models\Orders;            
 use App\Models\Orders_Items;
+use App\Models\Rating;
 
 
 class MyController extends Controller
@@ -71,7 +72,15 @@ class MyController extends Controller
         $pro = Product::where('id',$id)->first();
         $related_product = Product::where('type_id',$product->type_id)->limit(3)->whereNotIn('id',[$id])->get();
         $manufactures = Manufacture::take(10)->get();
-        return view('product-details',compact('pro'))->with('tenManufactures',$manufactures)->with('productRelated',$related_product)->with('tenProtypes',$protype);
+
+        //phuc vu cho rating
+      
+        $rating = Rating::where('product_id',$id)->avg('rating');
+        $rating = round($rating);
+        
+        // [het] phuc vu cho rating
+       
+        return view('product-details',compact('pro'))->with('tenManufactures',$manufactures)->with('productRelated',$related_product)->with('rating',$rating)->with('tenProtypes',$protype);
 
     }
     public function showMoreProducts($qty)
@@ -222,8 +231,12 @@ foreach ($carts as $cart){
     //     return view('contact-us');
     // }
 
+    //forgot password: Minh
     public function forgotPassword()
     {
         return view('resources/views/forgot-password.blade.php');
     }
+
+    //Rating: Minh
+
 }

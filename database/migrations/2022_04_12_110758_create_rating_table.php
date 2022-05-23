@@ -14,12 +14,10 @@ class CreateRatingTable extends Migration
     public function up()
     {
         Schema::create('rating', function (Blueprint $table) {
-            $table->id('rating_id');
+            $table->id();
             $table->integer('product_id');
-            $table->integer("'user_id'");
-            $table->integer('rating_star');
-            $table->string('rating_image');
-            $table->string('rating_content');
+            $table->integer('rating');
+         
         });
     }
 

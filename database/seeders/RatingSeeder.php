@@ -16,11 +16,19 @@ class RatingSeeder extends Seeder
     public function run()
     {
         DB::table('rating')->insert([
-            'product_id'=>random_int(1,10000),
-            'user_id'=>random_int(1,100000),
-            'rating_star'=>random_int(1,5),
-            'rating_image'=> Str::random(10),
-            'rating_content'=> Str::random(10),
+            [
+                
+            'product_id'=>1,
+            'rating'=>3], //cho 3 rating mac dinh de test
+
+            [ 
+                'product_id'=>1,
+            'rating'=>4],
+
+            [  
+                'product_id'=>1,
+            'rating'=>5],
+          
         ]);
     }
 }

@@ -200,20 +200,53 @@
 										<li><a href=""><i class="fa fa-clock-o"></i>12:41 PM</a></li>
 										<li><a href=""><i class="fa fa-calendar-o"></i>31 DEC 2014</a></li>
 									</ul>
-									<p></p>
+									<p>{{$pro->description}}</p>
+
+
 									<p><b>Write Your Review</b></p>
-									
 									<form action="#">
 										<span>
 											<input type="text" placeholder="Your Name"/>
 											<input type="email" placeholder="Email Address"/>
 										</span> 
 										<textarea name="" ></textarea>
-										<b>Rating: </b> <img src="{{ asset('images/product-details/rating.png')}}" alt="" />
+										<b>Rating: </b> 
+										<ul class="list-inline" title = "Average Rating">
+
+										@for($count = 1; $count <= 5; $count++)
+										
+										@php
+										$color ="";
+										if($count<=$rating){
+											$color = '#ffcc00;'; 
+										}
+										else{
+											$color = '#ccc';
+										}
+
+										@endphp
+										
+										<li title="RatingStar"
+										id =""
+										data-index="" 
+										data-product_id=""
+										data-rating="" 
+										class="rating" 
+										style="cursor:pointer; color:{{$color}}; font-size:30px;"
+										>
+										&#9733
+										</li>				
+										@endfor
+									</ul>
+
 										<button type="button" class="btn btn-default pull-right">
 											Submit
 										</button>
 									</form>
+									<div class="rating-css">
+ 
+</div>
+									
 								</div>
 							</div>
 							

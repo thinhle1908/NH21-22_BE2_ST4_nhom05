@@ -3,6 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MyController;
 use App\Http\Controllers\ProductsController;
+use App\Http\Controllers\ReceipDetailtController;
+use App\Http\Controllers\ReceiptController;
+use App\Http\Controllers\VoucherController;
 use Illuminate\Http\Request;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
 
@@ -35,21 +38,16 @@ Route::get('/update_cart', [MyController::class, 'updateCart'])->name('updateCar
 Route::get('/delete_cart', [MyController::class, 'deleteCart'])->name('deleteCart');
 Route::get('/update_cart', [MyController::class, 'updateCart'])->name('updateCart');
 Route::get('/shop', [MyController::class, 'shop']);
-
+//show admin voucher
+Route::get('/dashboard/voucher', [VoucherController::class, 'voucher'])->middleware(['auth'])->name('dashboard');
+//show admin receipt
+Route::get('/dashboard/receipt', [ReceiptController::class, 'receipt'])->middleware(['auth'])->name('dashboard');
+//show admin receipt_details
+Route::get('dashboard/receipt_detail', [ReceipDetailtController::class, 'receipt_detail'])->middleware(['auth'])->name('dashboard');
+//Delete AdminVoucher
+Route::match(['get','post'],'/dashboard/delete-voucher/{id}',[VoucherController::class ,'deleteVoucher']);
 Route::get('/dashboard', function () {
     return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
-//show Admin Recept
-Route::get('/dashboard/receipt', function () {
-    return view('adminReceipt');
-})->middleware(['auth'])->name('dashboard');
-//show Admin Vocher
-Route::get('/dashboard/vocher', function () {
-    return view('adminVocher');
-})->middleware(['auth'])->name('dashboard');
-//show Admin Recept_Detail
-Route::get('/dashboard/receipt_detail', function () {
-    return view('adminReceiptDetail');
 })->middleware(['auth'])->name('dashboard');
 require __DIR__ . '/auth.php';
 

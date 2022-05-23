@@ -57,7 +57,7 @@
   data-theme="theme-default"
   data-assets-path="../../../"
   data-template="vertical-menu-template-free"
-  
+
 >
   <head>
     <meta charset="utf-8" />
@@ -70,7 +70,11 @@
     <title>Dashboard - Analytics | Sneat - Bootstrap 5 HTML Admin Template - Pro</title>
 
     <meta name="description" content="" />
-
+    <style>
+table, th, td {
+  border:1px solid black;
+}
+</style>
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="../../../img/favicon/favicon.ico" />
 
@@ -317,12 +321,12 @@
             </li>
             <li class="menu-item">
               <a
-                href="{{ asset('dashboard/vocher') }}"
+                href="{{ asset('dashboard/voucher') }}"
                 target="_blank"
                 class="menu-link"
               >
                 <i class="menu-icon tf-icons bx bx-file"></i>
-                <div data-i18n="Documentation">View Vocher
+                <div data-i18n="Documentation">View Voucher
                 </div>
               </a>
             </li>

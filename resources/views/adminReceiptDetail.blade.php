@@ -27,21 +27,18 @@
   <div class="content-wrapper">
     <table>
       <thead>
+        @foreach($receipt_details as $data)
         <tr>
           <th>ID Receipt</th>
-          <th>ID User</th>
-          <th>Total Price Receipt</th>
-          <th>Status</th>
-          <th>Quantity</th>
+          <th>ID Product</th>
+          <th>Product Quantity</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <th scope row ="row">1</th>
-          <td>2</td>
-          <td>3</td>
-          <td>4</td>
-          <td>5</td>
+          <th scope row ="row">{{$data->receipt_id}}</th>
+          <td>{{$data->product_id}}</td>
+          <td>{{$data->product_quantity}}</td>
         </tr>
       </tbody>
     </table>

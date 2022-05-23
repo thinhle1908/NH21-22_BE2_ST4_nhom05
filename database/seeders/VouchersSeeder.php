@@ -26,7 +26,7 @@ class VouchersSeeder extends Seeder
             ['voucher_code'=>"NOVOUCHER",
             'voucher_value'=>0,
             'voucher_name'=>"Không có vocher"],
-            
+
         ]);
     }
 }

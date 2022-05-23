@@ -3,7 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-
+use Illuminate\Support\Facades\DB;
 class ReceiptSeeder extends Seeder
 {
     /**
@@ -13,6 +13,8 @@ class ReceiptSeeder extends Seeder
      */
     public function run()
     {
-        //
+        DB::table('receipt')->insert([
+            //1
+        ]);
     }
 }

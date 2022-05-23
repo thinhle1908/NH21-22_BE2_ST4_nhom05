@@ -292,7 +292,7 @@
               </a>
             </li>
              <!-- Tên danh mục -->
-            <li class="menu-header small text-uppercase"><span class="menu-header-text">Tên danh mục </span></li>
+            <li class="menu-header small text-uppercase"><span class="menu-header-text">Receipt</span></li>
               <li class="menu-item">
                 <a
                   href="{{ asset('dashboard/receipt') }}"
@@ -300,7 +300,7 @@
                   class="menu-link"
                 >
                   <i class="menu-icon tf-icons bx bx-file"></i>
-                  <div data-i18n="Documentation">Receipt
+                  <div data-i18n="Documentation">View Receipt
                   </div>
                 </a>
               </li>
@@ -311,7 +311,7 @@
                 class="menu-link"
               >
                 <i class="menu-icon tf-icons bx bx-file"></i>
-                <div data-i18n="Documentation">Receipt Detail
+                <div data-i18n="Documentation">View Receipt Detail
                 </div>
               </a>
             </li>
@@ -322,7 +322,7 @@
                 class="menu-link"
               >
                 <i class="menu-icon tf-icons bx bx-file"></i>
-                <div data-i18n="Documentation">Vocher
+                <div data-i18n="Documentation">View Vocher
                 </div>
               </a>
             </li>

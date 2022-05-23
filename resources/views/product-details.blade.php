@@ -55,8 +55,6 @@
 								<img src="{{  asset('images/'.$pro->name)}}" alt="" />
 								<span>
 									<span>${{$pro->price}}</span>
-									<label>Quantity:</label>
-									<input type="text" value="1" />
 									<button type="button"
 									data-url="{{ route('addToCart',['id' => $pro->id])}}"
 									 class="btn btn-fefault add-to-cart">

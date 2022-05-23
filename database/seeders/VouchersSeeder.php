@@ -16,10 +16,17 @@ class VouchersSeeder extends Seeder
     {
         //
         DB::table('vouchers')->insert([
+            //1
+            ['voucher_code'=>"VOUCHERGIAM50",
+            'voucher_value'=>50,
+            'voucher_name'=>"Voucher giảm 50%"],
+            ['voucher_code'=>"VOUCHERGIAM30",
+            'voucher_value'=>30,
+            'voucher_name'=>"Voucher giảm 30%"],
+            ['voucher_code'=>"NOVOUCHER",
+            'voucher_value'=>0,
+            'voucher_name'=>"Không có vocher"],
             
-            'voucher_code'=>Str::random(100),
-            'voucher_value'=>random_int(1,100),
-            'voucher_name'=>Str::random(10),
         ]);
     }
 }

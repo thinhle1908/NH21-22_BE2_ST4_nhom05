@@ -9,6 +9,7 @@ use App\Models\Protypes;
 use App\Models\Orders;            
 use App\Models\Orders_Items;
 use App\Models\Rating;
+use App\Models\Voucher;
 use Mail;
 
 class MyController extends Controller
@@ -93,7 +94,8 @@ class MyController extends Controller
         //echo "<pre>";
         //print_r(session()->get('cart'));
         $carts = session()->get('cart');
-        return view('cart',compact('carts'));
+        $voucher = Voucher::search()->get();
+        return view('cart',compact('carts'))->with('voucher',$voucher);
     }
     //AddToCart
     public function addToCart($id){

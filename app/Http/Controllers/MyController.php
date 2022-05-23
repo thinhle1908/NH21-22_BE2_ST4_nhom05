@@ -63,10 +63,11 @@ class MyController extends Controller
     }
     public function productDetails($id){
         $product = Product::find($id);
+        $protype = Protypes::take(10)->get();
         $pro = Product::where('id',$id)->first();
         $related_product = Product::where('type_id',$product->type_id)->limit(3)->whereNotIn('id',[$id])->get();
         $manufactures = Manufacture::take(10)->get();
-        return view('product-details',compact('pro'))->with('tenManufactures',$manufactures)->with('productRelated',$related_product);
+        return view('product-details',compact('pro'))->with('tenManufactures',$manufactures)->with('productRelated',$related_product)->with('tenProtypes',$protype);
 
     }
     public function showMoreProducts($qty)
@@ -137,17 +138,38 @@ class MyController extends Controller
         $carts = session()->get('cart');
         return view('checkout',compact('carts'));
     }
-    public function placeOrder(Request $request){
-        $data = array();
-        $data['shipping_name'] = $request->shipping_name;
-        $data['shipping_email'] = $request->shipping_email;
-        $data['shipping_address'] = $request->shipping_address;
-        $data['shipping_phone'] = $request->shipping_phone;
-        $shipping_id = DB::table('shipping')->insertGetId($data);
-        Session::put('shipping_id',$shipping_id);
-        return Redirect('/payment');
-    }
-public function payment(){}
+//     public function placeOrder(Request $request){
+//         // $data = array();
+//         // $data['shipping_name'] = $request->shipping_name;
+//         // $data['shipping_email'] = $request->shipping_email;
+//         // $data['shipping_address'] = $request->shipping_address;
+//         // $data['shipping_phone'] = $request->shipping_phone;
+//         // $shipping_id = DB::table('shipping')->insertGetId($data);
+//         // Session::put('shipping_id',$shipping_id);
+//         // return Redirect('/payment');
+//         $order = new Orders();
+//         $order->order_name = $request->input('order_name');
+//         $order->order_address = $request->input('order_address');
+//         $order->order_email = $request->input('order_email');
+//         $order->order_phone = $request->input('order_phone');
+//         $order->order_notes = $request->input('order_notes');
+//         $order->save();
+//         $carts = session()->get('cart');
+//         foreach ($carts as $item){
+//             Orders_Items::create(
+//                 [
+//                     'order_id' => $order->id,
+//                     'product_id' => $item->product_id,
+//                     'qty' => $item->quantity,
+//                     'price' => $item->price,
+                
+                
+//                 ]
+//                 );
+//                 }
+//             return view('checkout');
+//     }
+// public function payment(){}
 
     // public function login(){
     //     return view('login');

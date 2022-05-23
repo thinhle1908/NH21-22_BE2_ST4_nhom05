@@ -187,7 +187,7 @@
                 <div data-i18n="Analytics">Dashboard</div>
               </a>
             </li>
-            <!-- Misc -->
+            <!-- Product -->
             <li class="menu-header small text-uppercase"><span class="menu-header-text">Product</span></li>
             <li class="menu-item">
               <a
@@ -210,29 +210,30 @@
                 </div>
               </a>
             </li>
+            
             <li class="menu-item">
                 <a
                   href="https://themeselection.com/demo/sneat-bootstrap-html-admin-template/documentation/"
                   target="_blank"
-                  class="menu-link"
-                >
+                  class="menu-link">
                   <i class="menu-icon tf-icons bx bx-file"></i>
                   <div data-i18n="Documentation">View products
-
                   </div>
                 </a>
               </li>
+              <!-- Tên danh mục -->
+              <li class="menu-header small text-uppercase"><span class="menu-header-text">Tên danh mục </span></li>
               <li class="menu-item">
-              <a
-                href="{{ asset('dashboard/receipt') }}"
-                target="_blank"
-                class="menu-link"
-              >
-                <i class="menu-icon tf-icons bx bx-file"></i>
-                <div data-i18n="Documentation">Receipt
-                </div>
-              </a>
-            </li>
+                <a
+                  href="{{ asset('dashboard/receipt') }}"
+                  target="_blank"
+                  class="menu-link"
+                >
+                  <i class="menu-icon tf-icons bx bx-file"></i>
+                  <div data-i18n="Documentation">Receipt
+                  </div>
+                </a>
+              </li>
             <li class="menu-item">
               <a
                 href="{{ asset('dashboard/receipt_detail') }}"
@@ -370,7 +371,7 @@
           </nav>
 
           <!-- / Navbar -->
-          {{$slot}}
+          {{ $slot }}
         </div>
         <!-- / Layout page -->
       </div>

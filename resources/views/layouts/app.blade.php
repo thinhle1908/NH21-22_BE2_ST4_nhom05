@@ -75,6 +75,7 @@
     <link rel="icon" type="image/x-icon" href="../../../img/favicon/favicon.ico" />
 
     <!-- Fonts -->
+    <link rel="stylesheet" href="css/all.css">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -195,8 +196,8 @@
                 target="_blank"
                 class="menu-link"
               >
-                <i class="menu-icon tf-icons bx bx-support"></i>
-                <div data-i18n="Support">Add Product</div>
+              <i class="fa-solid fa-cube" style="margin-right:10%"></i> 
+                <div> Add Product</div>
               </a>
             </li>
             <li class="menu-item">
@@ -205,24 +206,93 @@
                 target="_blank"
                 class="menu-link"
               >
-                <i class="menu-icon tf-icons bx bx-file"></i>
+              <i class="fa-solid fa-pen-to-square"  style="margin-right:10%"></i>
                 <div data-i18n="Documentation">Edit product
                 </div>
               </a>
             </li>
-            
             <li class="menu-item">
-                <a
-                  href="https://themeselection.com/demo/sneat-bootstrap-html-admin-template/documentation/"
-                  target="_blank"
-                  class="menu-link">
-                  <i class="menu-icon tf-icons bx bx-file"></i>
-                  <div data-i18n="Documentation">View products
-                  </div>
-                </a>
-              </li>
-              <!-- Tên danh mục -->
-              <li class="menu-header small text-uppercase"><span class="menu-header-text">Tên danh mục </span></li>
+              <a
+                href="https://themeselection.com/demo/sneat-bootstrap-html-admin-template/documentation/"
+                target="_blank"
+                class="menu-link"
+              >
+              <i class="fa-solid fa-cubes"  style="margin-right:10%"></i>
+                <div data-i18n="Documentation">View Product
+                </div>
+              </a>
+            </li>
+            <!-- Manufacture -->
+            <li class="menu-header small text-uppercase"><span class="menu-header-text">Manufacture</span></li>
+            <li class="menu-item">
+              <a
+                href="https://github.com/themeselection/sneat-html-admin-template-free/issues"
+                target="_blank"
+                class="menu-link"
+              >
+              <i class="fa-solid fa-copyright"  style="margin-right:10%"></i>
+                <div data-i18n="Support">Add Manufacture</div>
+              </a>
+            </li>
+            <li class="menu-item">
+              <a
+                href="https://themeselection.com/demo/sneat-bootstrap-html-admin-template/documentation/"
+                target="_blank"
+                class="menu-link"
+              >
+              <i class="fa-solid fa-scissors"  style="margin-right:10%"></i>
+                <div data-i18n="Documentation">Edit Manufacture
+                </div>
+              </a>
+            </li>
+            <li class="menu-item">
+              <a
+                href="https://themeselection.com/demo/sneat-bootstrap-html-admin-template/documentation/"
+                target="_blank"
+                class="menu-link"
+              >
+              <i class="fa-solid fa-trademark"  style="margin-right:10%"></i>
+                <div data-i18n="Documentation">View Manufacture
+                </div>
+              </a>
+            </li>
+            <!-- Protype -->
+            <li class="menu-header small text-uppercase"><span class="menu-header-text">Protype</span></li>
+            <li class="menu-item">
+              <a
+                href="https://github.com/themeselection/sneat-html-admin-template-free/issues"
+                target="_blank"
+                class="menu-link"
+              >
+              <i class="fa-solid fa-tag"  style="margin-right:10%"></i>
+             
+                <div data-i18n="Support">Add Protype</div>
+              </a>
+            </li>
+            <li class="menu-item">
+              <a
+                href="https://themeselection.com/demo/sneat-bootstrap-html-admin-template/documentation/"
+                target="_blank"
+                class="menu-link"
+              >
+              <i class="fa-solid fa-bookmark"  style="margin-right:10%"></i>
+                <div data-i18n="Documentation">Edit Protype
+                </div>
+              </a>
+            </li>
+            <li class="menu-item">
+              <a
+                href="https://themeselection.com/demo/sneat-bootstrap-html-admin-template/documentation/"
+                target="_blank"
+                class="menu-link"
+              >
+              <i class="fa-solid fa-tags"  style="margin-right:10%"></i>
+                <div data-i18n="Documentation">View Protype
+                </div>
+              </a>
+            </li>
+             <!-- Tên danh mục -->
+            <li class="menu-header small text-uppercase"><span class="menu-header-text">Tên danh mục </span></li>
               <li class="menu-item">
                 <a
                   href="{{ asset('dashboard/receipt') }}"
@@ -404,7 +474,7 @@
     <script src="../../../vendor/libs/apex-charts/apexcharts.js"></script>
 
     <!-- Main JS -->
-    <script src="../../../js/main.js"></script>
+    <script src="../../../js/adminmain.js"></script>
 
     <!-- Page JS -->
     <script src="../../../js/dashboards-analytics.js"></script>

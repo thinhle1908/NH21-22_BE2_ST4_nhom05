@@ -26,6 +26,7 @@ Route::get('/product-details/{id}', [MyController::class, 'productDetails']);
 //showCart
 Route::get('/cart', [MyController::class,'showCart'])->name('showCart');
 Route::get('/checkout', [MyController::class,'showProductbyCart'])->name('showProductbyCart');
+Route::post('/checkout', [MyController::class,'addOrder']);
 //AddToCart
 Route::get('/add-to-cart/{id}', [MyController::class, 'addToCart'])->name('addToCart');
 //UpdateCart

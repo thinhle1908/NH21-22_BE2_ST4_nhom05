@@ -6,6 +6,8 @@ use App\Models\Manufacture;
 use Illuminate\Http\Request;
 use App\Models\Product;
 use App\Models\Protypes;
+use App\Models\Orders;
+use App\Models\Orders_Items;
 
 
 class MyController extends Controller
@@ -139,6 +141,24 @@ class MyController extends Controller
     public function showProductbyCart(){
         $carts = session()->get('cart');
         return view('checkout',compact('carts'));
+    }
+    public function addOrder(Request $request)
+    {
+$order = Orders::create($request->all());
+$carts = session()->get('cart');
+foreach ($carts as $cart){
+    $data = [
+        'order_id' => $order->id,
+        'product_id' => $cart['id'],
+        'qty' => $cart['quantity'],
+        'price' => $cart['price'],
+        'total' => $cart['price']* $cart['quantity'] ,
+
+    ];
+    Orders_Items::create($data);
+    
+    return "ThanhCong";
+}
     }
 //     public function placeOrder(Request $request){
 //         // $data = array();

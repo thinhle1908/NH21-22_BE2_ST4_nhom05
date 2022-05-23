@@ -14,5 +14,6 @@ class Orders_Items extends Model
         'product_id',
         'price',
         'qty',
+        'total',
     ];
 }

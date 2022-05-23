@@ -19,6 +19,7 @@ class CreateOrdersItemsTable extends Migration
             $table->string('product_id');
             $table->string('qty');
             $table->string('price');
+            $table->string('total');
             $table->timestamps();
         });
     }

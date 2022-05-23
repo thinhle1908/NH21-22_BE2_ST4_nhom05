@@ -39,8 +39,8 @@
 						<div class="bill-to">
 							<p>Bill To</p>
 							<div class="form-one">
-								<form action ="{{URL::to('place-order')}}" method ="POST">
-									{{csrf_field()}}
+								<form action ="" method ="POST">
+									@csrf
 									<input type="text" name="order_email" placeholder="Email">
 									<input type="text" name="order_name" placeholder="Name">
 									
@@ -91,6 +91,9 @@
 							</td>
 							<td class="cart_price">
 							<p>${{ $value['price'] }}</p>
+							</td>
+							<td class="cart_price">
+							<p>${{ $value['id'] }}</p>
 							</td>
 							<td class="cart_quantity">
 								<div class="cart_quantity_button">

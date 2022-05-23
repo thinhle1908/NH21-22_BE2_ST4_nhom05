@@ -92,9 +92,7 @@
 							<td class="cart_price">
 							<p>${{ $value['price'] }}</p>
 							</td>
-							<td class="cart_price">
-							<p>${{ $value['id'] }}</p>
-							</td>
+							
 							<td class="cart_quantity">
 								<div class="cart_quantity_button">
 									<a class="cart_quantity_up" href=""> + </a>

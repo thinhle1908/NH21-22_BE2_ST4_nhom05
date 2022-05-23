@@ -157,9 +157,10 @@ foreach ($carts as $cart){
     ];
     Orders_Items::create($data);
     
+    }
+    $request->session()->flush();
     return "ThanhCong";
 }
-    }
 //     public function placeOrder(Request $request){
 //         // $data = array();
 //         // $data['shipping_name'] = $request->shipping_name;

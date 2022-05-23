@@ -24,24 +24,34 @@
 <x-app-layout>
 
   <!-- Content wrapper -->
-  <div class="content-wrapper">
+  <div class="content-wrapper" class="table-brodered">
     <table>
       <thead>
-        @foreach($receipt_details as $data)
         <tr>
-          <th>ID Receipt</th>
-          <th>ID Product</th>
-          <th>Product Quantity</th>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Address</th>
+          <th>Phone</th>
+          <th>Email</th>
+          <th>Notes</th>
         </tr>
       </thead>
+      @foreach($order as $data)
       <tbody>
         <tr>
-          <th scope row ="row">{{$data->receipt_id}}</th>
-          <td>{{$data->product_id}}</td>
-          <td>{{$data->product_quantity}}</td>
+          <th scope row="row">{{$data->id}}</th>
+          <td>{{$data->order_name}}</td>
+          <td>{{$data->order_address}}</td>
+          <td>{{$data->order_phone}}</td>
+          <td>{{$data->order_email}}</td>
+          <td>{{$data->order_notes}}</td>
+          <td><a href="{{asset('dashboard/delete-orders/'.$data->id)}}">Delete</a></td>
         </tr>
       </tbody>
+      @endforeach
     </table>
+    <hr>
+      <div class="">{{$order->appends(request()->all())->links()}}</div>
   </div>
   <!-- / Content -->
 

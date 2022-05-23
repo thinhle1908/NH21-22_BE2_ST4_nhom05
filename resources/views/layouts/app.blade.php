@@ -299,23 +299,23 @@ table, th, td {
             <li class="menu-header small text-uppercase"><span class="menu-header-text">Receipt</span></li>
               <li class="menu-item">
                 <a
-                  href="{{ asset('dashboard/receipt') }}"
+                  href="{{ asset('dashboard/orders') }}"
                   target="_blank"
                   class="menu-link"
                 >
                   <i class="menu-icon tf-icons bx bx-file"></i>
-                  <div data-i18n="Documentation">View Receipt
+                  <div data-i18n="Documentation">View Order
                   </div>
                 </a>
               </li>
             <li class="menu-item">
               <a
-                href="{{ asset('dashboard/receipt_detail') }}"
+                href="{{ asset('dashboard/order_items') }}"
                 target="_blank"
                 class="menu-link"
               >
                 <i class="menu-icon tf-icons bx bx-file"></i>
-                <div data-i18n="Documentation">View Receipt Detail
+                <div data-i18n="Documentation">View Order Items
                 </div>
               </a>
             </li>

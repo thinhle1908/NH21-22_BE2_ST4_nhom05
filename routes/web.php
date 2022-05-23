@@ -24,7 +24,7 @@ Route::get('/', function () {
 Route::get('/index', [MyController::class, 'index']);
 Route::get('/product-details/{id}', [MyController::class, 'productDetails']);
 //showCart
-Route::get('/cart', [MyController::class,'showCart'])->name('showCart');
+Route::get('/cart', [MyController::class,'showCart'])->name('showCart')->middleware(['auth'])->name('dashboard');
 Route::get('/checkout', [MyController::class,'showProductbyCart'])->name('showProductbyCart');
 Route::post('/checkout', [MyController::class,'addOrder']);
 //AddToCart

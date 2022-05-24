@@ -163,7 +163,7 @@ foreach ($carts as $cart){
         'product_id' => $cart['id'],
         'qty' => $cart['quantity'],
         'price' => $cart['price'],
-        'total' => $cart['price']* $cart['quantity'] ,
+        'total' => $cart['price']* $cart['quantity']*1.1 ,
 
     ];
     Orders_Items::create($data);

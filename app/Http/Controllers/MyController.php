@@ -185,8 +185,8 @@ foreach ($carts as $cart){
     // });
     
     
-    $request->session()->flush();
-    return "ThanhCong";
+    $request->session()->forget('cart');
+    return redirect('/index');
 }
 public function sendEmail($order){
     $email_to = $order->order_email;

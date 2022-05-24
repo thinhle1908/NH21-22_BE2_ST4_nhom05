@@ -127,8 +127,15 @@
 										<td>Free</td>										
 									</tr>
 									<tr>
+										<td>Voucher</td>
+										@php
+										$getData = $_GET['code'];
+										@endphp
+										<td>${{$getData}}</td>
+									</tr>
+									<tr>
 										<td>Total</td>
-										<td><span>${{$total+$total*0.1}}</span></td>
+										<td><span>${{$total+$total*0.1-$getData}}</span></td>
 									</tr>
 								</table>
 							</td>

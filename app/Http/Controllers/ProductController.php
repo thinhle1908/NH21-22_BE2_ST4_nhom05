@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 use App\Models\Product;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Protype;
+use App\Models\Manufacture;
 
 class ProductController extends Controller
 {
@@ -25,7 +27,9 @@ class ProductController extends Controller
      */
     public function create()
     {
-        //
+        $protypes = Protype::all();
+        $manufactures = Manufacture::all();
+        return view('adminAddProduct')->with('protypes',$protypes)->with('manufactures',$manufactures);
     }
 
     /**
@@ -36,7 +40,9 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        dd($request);
+        $data = $request->all();
+        Product::create($data);
     }
 
     /**
@@ -47,7 +53,7 @@ class ProductController extends Controller
      */
     public function show($id)
     {
-        //
+       
     }
 
     /**

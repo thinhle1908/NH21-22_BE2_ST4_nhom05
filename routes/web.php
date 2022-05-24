@@ -26,7 +26,8 @@ use Illuminate\Foundation\Auth\EmailVerificationRequest;
 |
 */
 
-
+Route::get('/dashboard/add-product',[ProductController::class,'create'])->middleware(['auth'])->name('dashboard');
+Route::post('/dashboard/add-product',[ProductController::class,'store'])->middleware(['auth'])->name('dashboard');
 Route::get('/dashboard/product', [ProductController::class, 'index'])->middleware(['auth'])->name('dashboard');
 Route::get('/index', [MyController::class, 'index']);
 Route::get('/product-details/{id}', [MyController::class, 'productDetails']);

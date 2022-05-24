@@ -196,7 +196,7 @@ table, th, td {
             <li class="menu-header small text-uppercase"><span class="menu-header-text">Product</span></li>
             <li class="menu-item">
               <a
-                href="https://github.com/themeselection/sneat-html-admin-template-free/issues"
+                href="{{ asset('dashboard/add-product') }}"
                 target="_blank"
                 class="menu-link"
               >

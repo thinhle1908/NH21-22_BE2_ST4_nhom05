@@ -19,6 +19,9 @@ class RatingSeeder extends Seeder
         DB::table('rating')->insert([
             ['product_id'=>1,
             'rating'=>3], 
+            
+            ['product_id'=>2,
+            'rating'=>3], //cho 3 rating mac dinh de test
 
             ['product_id'=>1,
             'rating'=>4],
@@ -42,8 +45,36 @@ class RatingSeeder extends Seeder
             'rating'=>4],
 
             ['product_id'=>3,
+            [  
+                'product_id'=>3,
             'rating'=>5],
-          
+            [  
+                'product_id'=>5,
+            'rating'=>3],
+            [  
+                'product_id'=>7,
+            'rating'=>4],
+            [  
+                'product_id'=>8,
+            'rating'=>2],
+            [  
+                'product_id'=>10,
+            'rating'=>3],
+            [  
+                'product_id'=>11,
+            'rating'=>5],
+            [  
+                'product_id'=>15,
+            'rating'=>4],
+            [  
+                'product_id'=>20,
+            'rating'=>5],
+            [  
+                'product_id'=>22,
+            'rating'=>3],
+            [  
+                'product_id'=>6,
+            'rating'=>4],
         ]);
     }
 }

@@ -25,26 +25,27 @@
 
   <!-- Content wrapper -->
   <div class="content-wrapper">
-    <table>
-      <thead>
+    <table style="width:100%" class="table-brodered">
         <tr>
-          <th>ID Receipt</th>
-          <th>ID User</th>
-          <th>Total Price Receipt</th>
+          <th>ID Voucher</th>
+          <th>Voucher Code</th>
           <th>Status</th>
-          <th>Quantity</th>
+          <th>Voucher Name</th>
         </tr>
-      </thead>
+      @foreach($voucher as $id=>$data)
       <tbody>
         <tr>
-          <th scope row ="row">1</th>
-          <td>2</td>
-          <td>3</td>
-          <td>4</td>
-          <td>5</td>
+          <th scope row="row">{{$data ->voucher_id}}</th>
+          <td>{{$data ->voucher_code}}</td>
+          <td>{{$data ->voucher_value}}</td>
+          <td>{{$data ->voucher_name}}</td>
+          <td><a href="{{asset('dashboard/delete-voucher/'.$data->voucher_id)}}">Delete</a></td>
         </tr>
       </tbody>
+      @endforeach
     </table>
+    <hr>
+    <div class="">{{$voucher->appends(request()->all())->links()}}</div>
   </div>
   <!-- / Content -->
 

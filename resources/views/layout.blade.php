@@ -94,7 +94,7 @@
 							<ul class="nav navbar-nav">
 								<li><a href=""><i class="fa fa-user"></i>@if(isset(Auth::user()->name )){{Auth::user()->name}} @else  Account @endif</a></li>
 								<li><a href=""><i class="fa fa-star"></i> Wishlist</a></li>
-								<li><a href="{{ asset('checkout') }}"><i class="fa fa-crosshairs"></i> Checkout</a></li>
+								<!-- <li><a href="{{ asset('checkout') }}"><i class="fa fa-crosshairs"></i> Checkout</a></li> -->
 								<li><a href="{{ asset('cart') }}"><i class="fa fa-shopping-cart"></i> Cart</a></li>
 								<li><a href="{{ asset('login') }}"><i class="fa fa-lock"></i> Login</a></li>
 								
@@ -399,29 +399,29 @@
 				}
 			})
 		}
-		function cartVocher(event){
-			event.preventDefault();
-			let urlVocher = $('.vocher_cart_url').data('url');
-			let vocher = $(this).parents('div').find('input').val();
-			$.ajax({
-				type: "GET",
-				url: urlVocher,
-				data: {
-					vocher: vocher
-				},
-				success: function(data) {
-					if (data.code === 200) {
-						alert('Sử dụng thành công vocher');
-						$('.cart_items').html(data.cart_items);
-					}
-				},
-				error: function() {
+		// function cartVocher(event){
+		// 	event.preventDefault();
+		// 	let urlVocher = $('.vocher_cart_url').data('url');
+		// 	let vocher = $(this).parents('div').find('input').val();
+		// 	$.ajax({
+		// 		type: "GET",
+		// 		url: urlVocher,
+		// 		data: {
+		// 			vocher: vocher
+		// 		},
+		// 		success: function(data) {
+		// 			if (data.code === 200) {
+		// 				alert('Sử dụng thành công vocher');
+		// 				$('.cart_items').html(data.cart_items);
+		// 			}
+		// 		},
+		// 		error: function() {
 
-				}
-			})
-		}
+		// 		}
+		// 	})
+		// }
 		$(function() {
-			$(document).on('click', '.add_vocher', cartVocher)
+			//$(document).on('click', '.add_vocher', cartVocher)
 			$(document).on('click', '.cart_update', cartUpdate);
 			$(document).on('click', '.cart_delete', cartDelete);
 		});

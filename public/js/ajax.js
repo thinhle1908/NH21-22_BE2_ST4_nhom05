@@ -30,7 +30,7 @@ async function showMoreProduct() {
                 <div class="productinfo text-center">
                     <img src="images/product-details/${element.image}" alt="" height="250px"
                         width="250px" />
-                    <h2>${element.price}</h2>
+                    <h2>${element.price}$</h2>
                     <p>${element.name.substr(0, 30)}...</p>
                     <a href="#" class="btn btn-default add-to-cart"><i
                             class="fa fa-shopping-cart"></i>Add to cart</a>

@@ -40,9 +40,20 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request);
-        $data = $request->all();
-        Product::create($data);
+        $request->validate([
+            'name'=>'required',
+            'manu_id'=>'required',
+            'type_id'=>'required',
+            'price'=>'required',
+            'image'=>'required',
+            'description'=>'required',
+            'feature'=>'required'
+        ]);
+        $protypes = Protype::all();
+        $manufactures = Manufacture::all();
+        Product::create($request->all());
+        return view('adminAddProduct')->with('succes','Product created successfully')->with('protypes',$protypes)->with('manufactures',$manufactures);
+        
     }
 
     /**

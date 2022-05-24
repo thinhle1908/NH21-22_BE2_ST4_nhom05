@@ -23,6 +23,7 @@ class CreateProductsTable extends Migration
             $table->text('description');
             $table->tinyInteger('feature');
             $table->timestamp('created_at');
+            
         });
     }
 

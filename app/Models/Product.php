@@ -8,6 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Product extends Model
 {
     use HasFactory;
+    public $timestamps = false;
+    protected $fillable = ['id','name','manu_id','type_id','price','image','description','feature','created_at'];
     public function manufacture()
     {
         return $this->belongsTo(Manufacture::class,"manu_id");

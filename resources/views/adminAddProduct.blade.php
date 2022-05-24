@@ -25,11 +25,16 @@
                   </ul>
                   <div class="card mb-4">
                     <h5 class="card-header">Profile Details</h5>
+          
+                    @if(isset($succes))
+                    {{$succes}}
+                    @endif
                     <!-- Account -->
                
                     <hr class="my-0" />
                     <div class="card-body">
                       <form id="formAccountSettings" method="POST" action="/dashboard/add-product">
+                        @csrf
                         <div class="row">
                           <div class="mb-3 col-md-12">
                             <label for="firstName" class="form-label">Name</label>
@@ -37,25 +42,25 @@
                               class="form-control"
                               type="text"
                               id="firstName"
-                              name="firstName"
-                              value="John"
+                              name="name"
+                              value=""
                               autofocus
                             />
                           </div>
                           <div class="mb-3 col-md-6">
                             <label class="form-label" for="country">Manufacture</label>
-                            <select id="country" class="select1 form-select">
+                            <select id="country" class="select1 form-select" name="manu_id">
                             @foreach($manufactures as $row)
-                              <option value="">{{$row->manu_name}}</option>
+                              <option value="{{$row->manu_id }}">{{$row->manu_name}}</option>
                               
                               @endforeach
                             </select>
                           </div>
                           <div class="mb-3 col-md-6">
                             <label class="form-label" for="country">Protypes</label>
-                            <select id="country" class="select1 form-select">
+                            <select id="country" class="select1 form-select" name="type_id">
                             @foreach($protypes as $row)
-                              <option value="">{{$row->type_name}}</option>
+                              <option value="{{$row->type_id}}">{{$row->type_name}}</option>
                               
                               @endforeach
                             </select>
@@ -66,27 +71,33 @@
                               class="form-control"
                               type="text"
                               id="firstName"
-                              name="firstName"
-                              value="John"
+                              name="price"
+                              value=""
                               autofocus
                             />
                           </div>
                           <div class="mb-3 col-md-6">
                             <label class="form-label" for="country">Feature</label>
-                            <select id="country" class="select1 form-select">
-                              <option value="">0</option>
-                              <option value="">1</option>
+                            <select id="country" class="select1 form-select" name="feature">
+                              <option value="0">0</option>
+                              <option value="1">1</option>
+                            </select>
+                          </div>
+                          <div class="mb-3 col-md-6">
+                            <label class="form-label" for="country">descrtion</label>
+                            <select id="country" class="select1 form-select" name="image">
+                              <option value="sdafasdfasdfasdf.png">sdafasdfasdfasdf.png</option>
                             </select>
                           </div>
                           <div class="mb-3 col-md-12">
                             <label for="w3review" class="form-label">Description</label>
                             <br>
-                            <textarea id="w3review" name="w3review" rows="6" cols="100%" style="width: 100%"></textarea>
+                            <textarea id="w3review"  rows="6" cols="100%" style="width: 100%" name="description"></textarea>
                           </div>
                         
                         </div>
                         <div class="mt-2">
-                          <button type="submit" class="btn btn-primary me-2">Save changes</button>
+                          <button type="submit" class="btn btn-primary me-2">Add product</button>
                           <button type="reset" class="btn btn-outline-secondary">Cancel</button>
                         </div>
                       </form>

@@ -81,8 +81,8 @@ class MyController extends Controller
         $rating = round($rating);
         
         // [het] phuc vu cho rating
-       
-        return view('product-details',compact('pro'))->with('tenManufactures',$manufactures)->with('productRelated',$related_product)->with('rating',$rating)->with('tenProtypes',$protype);
+        
+        return view('product-details',compact('pro'))->with('tenManufactures',$manufactures)->with('productRelated',$related_product)->with('rating',$rating)->with('tenProtypes',$protype)->with('product_id',$id);
 
     }
     public function showMoreProducts($qty)

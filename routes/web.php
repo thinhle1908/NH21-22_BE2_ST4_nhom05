@@ -2,7 +2,13 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MyController;
+use App\Http\Controllers\ProductController;
+
+use App\Http\Controllers\OrderItemController;
+use App\Http\Controllers\OrdersController;
+use App\Http\Controllers\OrdersItemsController;
 use App\Http\Controllers\ProductsController;
+
 use App\Http\Controllers\ReceipDetailtController;
 use App\Http\Controllers\ReceiptController;
 use App\Http\Controllers\VoucherController;
@@ -20,10 +26,9 @@ use Illuminate\Foundation\Auth\EmailVerificationRequest;
 |
 */
 
-
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/dashboard/add-product',[ProductController::class,'create'])->middleware(['auth'])->name('dashboard');
+Route::post('/dashboard/add-product',[ProductController::class,'store'])->middleware(['auth'])->name('dashboard');
+Route::get('/dashboard/product', [ProductController::class, 'index'])->middleware(['auth'])->name('dashboard');
 Route::get('/index', [MyController::class, 'index']);
 Route::get('/product-details/{id}', [MyController::class, 'productDetails']);
 //showCart
@@ -42,11 +47,13 @@ Route::get('/shop', [MyController::class, 'shop']);
 //show admin voucher
 Route::get('/dashboard/voucher', [VoucherController::class, 'voucher'])->middleware(['auth'])->name('dashboard');
 //show admin receipt
-Route::get('/dashboard/receipt', [ReceiptController::class, 'receipt'])->middleware(['auth'])->name('dashboard');
+Route::get('/dashboard/orders', [OrdersController::class, 'order'])->middleware(['auth'])->name('dashboard');
 //show admin receipt_details
-Route::get('dashboard/receipt_detail', [ReceipDetailtController::class, 'receipt_detail'])->middleware(['auth'])->name('dashboard');
+Route::get('dashboard/order_items', [OrdersItemsController::class, 'order_items'])->middleware(['auth'])->name('dashboard');
 //Delete AdminVoucher
 Route::match(['get','post'],'/dashboard/delete-voucher/{id}',[VoucherController::class ,'deleteVoucher']);
+Route::match(['get','post'],'/dashboard/delete-orders/{id}',[OrdersController::class ,'deleteOrders']);
+Route::match(['get','post'],'/dashboard/delete-orders-items/{id}',[OrdersItemsController::class ,'deleteOrderItems']);
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
@@ -75,5 +82,8 @@ Route::get('/dashboard', function () {
 Route::get('/manufacture/{manu_id}', [MyController::class, 'showManufacturebyID']);
 Route::get('/protype/{type_id}', [MyController::class, 'showProtypebyID']);
 Route::get('/place-order', [MyController::class, 'placeOrder']);
+Route::get('/', function () {
+    return view('welcome');
+});
 
 

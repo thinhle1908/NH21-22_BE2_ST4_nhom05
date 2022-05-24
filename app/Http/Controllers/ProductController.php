@@ -1,12 +1,13 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\Product;
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
+use App\Models\Protype;
+use App\Models\Manufacture;
 
-class ProductsController extends Controller
+class ProductController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +16,8 @@ class ProductsController extends Controller
      */
     public function index()
     {
-        //
+        $products = Product::paginate(10);
+        return view('adminProduct')->with('products',$products);
     }
 
     /**
@@ -25,7 +27,9 @@ class ProductsController extends Controller
      */
     public function create()
     {
-        //
+        $protypes = Protype::all();
+        $manufactures = Manufacture::all();
+        return view('adminAddProduct')->with('protypes',$protypes)->with('manufactures',$manufactures);
     }
 
     /**
@@ -36,7 +40,9 @@ class ProductsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        dd($request);
+        $data = $request->all();
+        Product::create($data);
     }
 
     /**
@@ -47,12 +53,7 @@ class ProductsController extends Controller
      */
     public function show($id)
     {
-        //
-    }
-    public function getTenFeatureProducts()
-    {
-        $tenProductsFeature = DB::table('products')->where('feature', 1)->limit(6)->get();
-        return view('index',['tenProductsFeature'=>$tenProductsFeature]);
+       
     }
 
     /**

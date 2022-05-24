@@ -26,25 +26,31 @@
   <!-- Content wrapper -->
   <div class="content-wrapper">
     <table>
-      <thead>
-        <tr>
-          <th>ID Receipt</th>
-          <th>ID User</th>
-          <th>Total Price Receipt</th>
-          <th>Status</th>
-          <th>Quantity</th>
-        </tr>
-      </thead>
+      <tr>
+        <th>ID</th>
+        <th>ID Order</th>
+        <th>ID Product</th>
+        <th>Quantity</th>
+        <th>Price</th>
+        <th>Total</th>
+      </tr>
+      @foreach($order_item as $data)
       <tbody>
         <tr>
-          <th scope row ="row">1</th>
-          <td>2</td>
-          <td>3</td>
-          <td>4</td>
-          <td>5</td>
+          <th scope row="row">{{$data->id}}</th>
+          <td>{{$data->order_id}}</td>
+          <td>{{$data->product_id}}</td>
+          <td>{{$data->qty}}</td>
+          <td>{{$data->price}}</td>
+          <td>{{$data->total}}</td>
+          <td><a href="{{asset('dashboard/delete-orders-items/'.$data->id)}}">Delete</a></td>
         </tr>
       </tbody>
+      @endforeach
     </table>
+
+    <hr>
+    <div class="">{{$order_item->appends(request()->all())->links()}}</div>
   </div>
   <!-- / Content -->
 

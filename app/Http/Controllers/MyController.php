@@ -9,7 +9,7 @@ use App\Models\Protypes;
 use App\Models\Orders;            
 use App\Models\Orders_Items;
 use App\Models\Rating;
-
+use Mail;
 
 class MyController extends Controller
 {
@@ -155,6 +155,8 @@ class MyController extends Controller
     {
 $order = Orders::create($request->all());
 $carts = session()->get('cart');
+$email_to = $order->order_email;
+$name = $order->order_name;
 foreach ($carts as $cart){
     $data = [
         'order_id' => $order->id,
@@ -167,8 +169,33 @@ foreach ($carts as $cart){
     Orders_Items::create($data);
     
     }
+    
+    Mail::send('email',compact('order','carts'), function ($message) use ($email_to){
+        
+        $message->to($email_to);
+        $message->subject('Order Notification');
+    });
+    // Mail::send('email',[
+    //     'order' => $request->order
+
+    // ], function($email) use( $c_email){
+    //     $email->to($c_email);
+    //     $email->from('20211tt2540@mail.tdc.edu.vn');
+    //     $email->subject('DUong Van quang');
+    // });
+    
+    
     $request->session()->flush();
     return "ThanhCong";
+}
+public function sendEmail($order){
+    $email_to = $order->order_email;
+    Mail::send(view('email',compact('order'), function ($message) use ($email_to){
+        $message->from('20211tt2540@mail.tdc.edu.vn');
+        $message->to($email_to,$email_to);
+        $message->subject('Order Notification');
+    }));
+
 }
 //     public function placeOrder(Request $request){
 //         // $data = array();

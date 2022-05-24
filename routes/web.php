@@ -2,14 +2,13 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MyController;
-<<<<<<< HEAD
 use App\Http\Controllers\ProductController;
-=======
+
 use App\Http\Controllers\OrderItemController;
 use App\Http\Controllers\OrdersController;
 use App\Http\Controllers\OrdersItemsController;
 use App\Http\Controllers\ProductsController;
->>>>>>> c2ee4c2902bb719fef0459707d649a2a2427d14b
+
 use App\Http\Controllers\ReceipDetailtController;
 use App\Http\Controllers\ReceiptController;
 use App\Http\Controllers\VoucherController;

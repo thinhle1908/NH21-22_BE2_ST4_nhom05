@@ -407,83 +407,108 @@ class ProductsSeeder extends Seeder
              ['name'=> "Ava BF502A",
              'manu_id'=>17,
              'type_id'=>11,
-             'price'=>1690000,
+             'price'=>82,
              'image'=>"nckd1.jpg",
-             'description'=>"Dung tích sử dụng 5.5 lít, nướng gà nguyên con dưới 2 kg",
+             'description'=>"Oil-free fryer with a usable capacity of 5.5 liters, can bake whole chicken under 2 kg
+             With a large capacity, you can cook many dishes for your family and for parties with friends.
+             Elegant, compact design, neatly placed on the dining table and does not occupy the kitchen area.
+             Capacity - Ava BF502A 5.5 liter oil-free fryer
+             Rapid Air technology combines a powerful 1400W power to help food cook quickly, evenly and reduce 80% of fat in food compared to conventional frying, good for health",
              'feature'=> 5], 
              //Minh 34
              ['name'=> "Sunhouse SHD4026",
              'manu_id'=>18,
              'type_id'=>11,
-             'price'=>2187000,
+             'price'=>110,
              'image'=>"nckd2.jpg",
-             'description'=>"Dung tích sử dụng 6 lít phù hợp sử dụng trong gia đình 5 - 6 thành viên",
+             'description'=>"Using capacity of 6 liters is suitable for use in a family of 5 - 6 members
+             Used to process dishes such as french fries, 1.5 kg whole grilled chicken or 2 0.5 kg ribs at the same time, delicious, ready for family meals
+             Sunhouse SHD4026 oil-free fryer 6 liters - Capacity 6 liters
+             Frying quickly, reducing up to 80% of grease on food with 1750W power and Rapid Air technology
+             Hot air flow easily circulates throughout the surface of the food to help the food cook just right and still retain the inherent flavor. At the same time, the dish is not smoky or flooded with grease, safe for users' health.",
              'feature'=> 6], 
              //Minh 35
              ['name'=> "Hommy BF525",
              'manu_id'=>19,
              'type_id'=>11,
-             'price'=>2570000,
+             'price'=>120,
              'image'=>"nckd3.jpg",
-             'description'=>"Công suất 2000W cùng công nghệ nướng không khí nóng đối lưu giúp thực phẩm chín nhanh và đều",
+             'description'=>"2000W large capacity oil-free fryer with convection hot air baking technology helps food to cook quickly and evenly
+             Capacity - Hommy BF525 air fryer 5 liters
+             Touch control panel with display makes it easy to monitor and customize the appropriate temperature and timer
+             Adjust the time in the range of 0 - 60 minutes, the temperature is 80 - 200°C to support users to process a variety of dishes.
+             Control panel - Hommy BF525 air fryer 5 liters
+             Hommy's oil-free fryer is equipped with 8 pre-set cooking programs for convenient and fast cooking",
              'feature'=> 5], 
              //Minh 36
              ['name'=> "Sunhouse SHD4062",
              'manu_id'=>18,
              'type_id'=>11,
-             'price'=>1972000,
+             'price'=>90,
              'image'=>"nckd4.jpg",
-             'description'=>"Dung tích 5.5 lít có thể chiên gà vịt nguyên con tầm 1.5 kg",
+             'description'=>"Large capacity, suitable for large families of 4-6 people who often cook and process a variety of delicious dishes.
+             Sunhouse SHD4062 5.5 liter oil-free fryer - Usable capacity
+             Powerful operation with a capacity of 1600W, Rapid Air technology helps food to cook quickly, crispy on the outside, soft on the inside.
+             Using an oil-free fryer helps to fry and bake food with up to 80% fat reduction, protecting family health.
+             Sunhouse SHD4062 5.5 liter oil-free fryer - Capacity
+             Whitford (USA) high-quality non-stick aluminum alloy pot is safe to cook, limited burning, easy to clean
+             The inner pot can be used in the dishwasher, convenient to clean after frying.",
              'feature'=> 5], 
 
              //Minh 37
              ['name'=> "Kangaroo KG12AF1A",
              'manu_id'=>20,
              'type_id'=>20,
-             'price'=>4542000,
+             'price'=>230,
              'image'=>"nckd5.jpg",
-             'description'=>"Các chức năng gồm chiên không dầu, khoai tây, thịt, cá, tôm, pizza, đùi gà, bánh mỳ, gà nướng nguyên con, sấy khô.",
+             'description'=>"Kangaroo KG12AF1A oil-free fryer is a multi-functional product: low-fat frying, food drying, ... extremely convenient
+             Kangaroo KG12AF1A 12 liter oil-free fryer - Multifunction
+             With the support of accompanying accessories, cooking is more convenient and cost-effective
+             Includes baking tray, rack, frying basket, skewers, hook, frying basket.
+             Accessories - Kangaroo oil-free fryer KG12AF1A 12 liters
+             Setting up 10 preset functions makes it easy to prepare a rich meal for your family every day
+             Functions include frying without oil, potatoes, meat, fish, shrimp, pizza, chicken thighs, bread, whole grilled chicken, and drying.",
              'feature'=> 5], 
 
              // 38 Minh
-             ['name'=> "Tai nghe Bluetooth AirPods 2 Wireless charge Apple MRXJ2",
+             ['name'=> "Earphone Bluetooth AirPods 2 Wireless charge Apple MRXJ2",
              'manu_id'=>21,
              'type_id'=>12,
-             'price'=>3490000,
+             'price'=>169,
              'image'=>"tainghe1.jpg",
-             'description'=>"AirPods 2 - một sản phẩm đã từng làm mưa làm gió trước khi người “anh em” AirPods Pro ra mắt. Đến thời điểm hiện tại, mặc dù không còn hot như Airpods Pro, nhưng Tai nghe Bluetooth AirPods 2 Wireless charge Apple MRXJ2 vẫn còn nhiều đặc điểm khiến sản phẩm này trở nên hấp dẫn và vẫn giữ được vị trí của mình với một lượng fan nhất định.",
+             'description'=>"AirPods 2 - a product that used to make waves before the  of AirPods Pro was released. Up to now, although it is no longer as hot as Airpods Pro, the AirPods 2 Wireless Charge Apple MRXJ2 Bluetooth Headset still has many features that make this product attractive and still retains its position with a fan base. certain.",
              'feature'=> 0],
              // 39 Minh
-             ['name'=> "Tai nghe Bluetooth AirPods Pro MagSafe Charge Apple MLWK3 Trắng",
+             ['name'=> "Earphone Bluetooth AirPods Pro MagSafe Charge Apple MLWK3 Trắng",
              'manu_id'=>21,
              'type_id'=>12,
-             'price'=>5190000,
+             'price'=>239,
              'image'=>"tainghe2.jpg",
-             'description'=>"Tai nghe Bluetooth AirPods Pro MagSafe Charge Apple MLWK3 trắng được chế tác với vẻ ngoài tinh giản, gam màu trắng trẻ trung, sáng đẹp, phối hợp tuyệt vời với mọi trang phục từ đời thường đến công sở, dự tiệc của bạn. ",
+             'description'=>"The white AirPods Pro MagSafe Charge Apple MLWK3 Bluetooth Earphone is crafted with a streamlined appearance, youthful white color, beautiful bright, great coordination with all your outfits from everyday life to your office or party.",
              'feature'=> 0],
              // 40 Minh
-             ['name'=> "Tai nghe Bluetooth AirPods 3 Apple MME73 Trắng",
+             ['name'=> "Earphone Bluetooth AirPods 3 Apple MME73 Trắng",
              'manu_id'=>21,
              'type_id'=>12,
-             'price'=>4490000,
+             'price'=>219,
              'image'=>"tainghe3.jpg",
-             'description'=>"Airpods 3 có thiết kế tương tự như AirPods Pro nhưng không còn phần eartips, đường viền và thân ngắn hơn cho âm thanh truyền tải đến tai tối ưu. Bề mặt tai nghe Bluetooth Apple phủ sắc trắng thời thượng, được làm từ các vật liệu tái chế với độ bền cao, bảo vệ môi trường sống của con người.",
+             'description'=>"Airpods 3 have the same design as AirPods Pro but no longer have eartips, a shorter border and body for optimal sound transmission to the ears. The surface of the Apple Bluetooth headset is covered with a trendy white color, made from recycled materials with high durability, protecting the human environment.",
              'feature'=> 0],
              // 41 Minh
-             ['name'=> "Tai nghe Bluetooth True Wireless Galaxy Buds Pro Bạc",
+             ['name'=> "Earphone Bluetooth True Wireless Galaxy Buds Pro Bạc",
              'manu_id'=>4,
              'type_id'=>12,
-             'price'=>2490000,
+             'price'=>109,
              'image'=>"tainghe4.jpg",
-             'description'=>"Tai nghe Bluetooth True Wireless Samsung Buds Pro sở hữu vẻ ngoài đẹp mắt thời thượng với hai màu đen và trắng. Thiết kế mới trên hình dạng tai nghe cổ điển, có khả năng làm giảm bớt sự khó chịu khi sử dụng tai nghe trong nhiều giờ",
+             'description'=>"True Wireless Bluetooth Earphone Samsung Buds Pro has a sleek and trendy look in two colors black and white. New design on the classic headphone shape, capable of alleviating the discomfort of using the headset for many hours",
              'feature'=> 0],
              // 42 Minh
-             ['name'=> "Tai nghe Bluetooth True Wireless JBL T115TWS",
+             ['name'=> "Earphone Bluetooth True Wireless JBL T115TWS",
              'manu_id'=>22,
              'type_id'=>12,
-             'price'=>990000,
+             'price'=>59,
              'image'=>"tainghe5.jpg",
-             'description'=>"Thiết kế housing với đường nét tinh tế, uốn cong theo hình oval, bề mặt bằng nhựa sần tốt, bền bỉ, kháng vỡ, cầm nắm dễ chịu, xoay chuyển vị trí linh hoạt để đeo tai vừa vặn. Nút tai silicone mềm mại, nâng cao khả năng cách âm khi chọn nút tai phù hợp với khổ tai của mình.",
+             'description'=>"Housing design with delicate lines, curved in oval shape, good textured plastic surface, durable, shatterproof, comfortable to hold, flexibly rotated to fit the ear. Soft silicone earplugs, improve sound insulation when choosing the right earplugs for your ear size.",
              'feature'=> 0],
         ]);
     }

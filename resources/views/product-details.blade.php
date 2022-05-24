@@ -15,7 +15,7 @@
 							</div>
 							@endforeach
 						</div><!--/category-products-->
-					
+						
 						<div class="brands_products"><!--brands_products-->
 							<h2>Brands</h2>
 							<div class="brands-name">
@@ -204,7 +204,56 @@
 									<p>{{$pro->description}}</p>
 
 
-									<p><b>Write Your Review</b></p>
+									<style type="text/css">
+											.style_comment{
+												
+												border: 1px solid #ddd;
+												border-radius:10px;
+												background: #f0f0e9;
+												padding-bottom:5px;
+												padding-top:5px;
+											}
+									</style>
+
+									<b>Comments form buyer </b>
+									<!-- Chỗ này là show ra bình luận -->
+									<div class ="row style_comment" style="margin-bottom:10px">  <!-- Chỗ này avatar người dùng -->
+										<div class='col-md-2'>
+												<img class="img img-responsive img-thumbnail" style="border: 1px solid #ddd;" src="{{asset('images/product-details/anonymous-user.jpg')}}" alt="">
+										</div>
+											<div class='col-md-10'>  <!-- Chỗ này là bình luận của người dùng -->
+												<p style="color:green; font-weight: bold">
+													@Minh Dep Trai
+												</p>
+												<p>
+												Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature 
+
+												</p>
+											</div>
+									</div>
+									<!-- Chỗ này là show ra bình luận -->
+									<div class ="row style_comment" style="margin-bottom:10px">  <!-- Chỗ này avatar người dùng -->
+										<div class='col-md-2'>
+												<img class="img img-responsive img-thumbnail" style="border: 1px solid #ddd;" src="{{asset('images/product-details/anonymous-user.jpg')}}" alt="">
+										</div>
+											<div class='col-md-10'>  <!-- Chỗ này là bình luận của người dùng -->
+												<p style="color:green; font-weight: bold">
+													@Minh Dep Trai
+												</p>
+												<p>
+												Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature 
+
+												</p>
+											</div>
+									</div>
+
+
+
+
+
+									<!-- /Chỗ này là show ra bình luận -->
+									
+									<p style="margin-top:50px"><b>Write Your Review</b></p>
 									<form action="#">
 										<span>
 											<input type="text" placeholder="Your Name"/>
@@ -216,7 +265,9 @@
 
 										@for($count = 1; $count <= 5; $count++)
 										
+
 										@php
+										
 										$color ="";
 										if($count<=$rating){
 											$color = '#ffcc00;'; 
@@ -246,7 +297,7 @@
 									</form>
 									<div class="rating-css">
  
-</div>
+                                    </div>
 									
 								</div>
 							</div>

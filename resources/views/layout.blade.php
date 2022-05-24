@@ -94,7 +94,7 @@
 							<ul class="nav navbar-nav">
 								<li><a href=""><i class="fa fa-user"></i>@if(isset(Auth::user()->name )){{Auth::user()->name}} @else  Account @endif</a></li>
 								<li><a href=""><i class="fa fa-star"></i> Wishlist</a></li>
-								<li><a href="{{ asset('checkout') }}"><i class="fa fa-crosshairs"></i> Checkout</a></li>
+								<!-- <li><a href="{{ asset('checkout') }}"><i class="fa fa-crosshairs"></i> Checkout</a></li> -->
 								<li><a href="{{ asset('cart') }}"><i class="fa fa-shopping-cart"></i> Cart</a></li>
 								<li><a href="{{ asset('login') }}"><i class="fa fa-lock"></i> Login</a></li>
 								

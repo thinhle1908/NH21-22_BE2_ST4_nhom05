@@ -15,18 +15,39 @@ class RatingSeeder extends Seeder
      */
     public function run()
     {
+        //cho 3 rating mac dinh vao san pham so 1, 2 va 3 de test
         DB::table('rating')->insert([
-            [
-                
-            'product_id'=>2,
+            ['product_id'=>1,
+            'rating'=>3], 
+
+            ['product_id'=>2,
             'rating'=>3], //cho 3 rating mac dinh de test
 
-            [ 
-                'product_id'=>1,
+            ['product_id'=>1,
             'rating'=>4],
 
+            ['product_id'=>1,
+            'rating'=>5],
+
+            ['product_id'=>2,
+            'rating'=>1], 
+
+            ['product_id'=>2,
+            'rating'=>2],
+
+            ['product_id'=>2,
+            'rating'=>1],
+
+            ['product_id'=>3,
+            'rating'=>5], 
+
+            ['product_id'=>3,
+            'rating'=>4],
+
+            ['product_id'=>3,
+            'rating'=>5],
             [  
-                'product_id'=>3,
+            'product_id'=>3,
             'rating'=>5],
             [  
                 'product_id'=>5,

@@ -10,6 +10,7 @@ use App\Models\Orders;
 use App\Models\Orders_Items;
 use App\Models\Rating;
 use App\Models\Voucher;
+use App\Models\User;
 use Mail;
 
 class MyController extends Controller
@@ -198,6 +199,10 @@ public function sendEmail($order){
         $message->subject('Order Notification');
     }));
 
+}
+public function adminUser(){
+    $user = User::all();
+    return view('adminUser',compact('user'));
 }
 //     public function placeOrder(Request $request){
 //         // $data = array();

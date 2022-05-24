@@ -30,6 +30,7 @@ Route::get('/product-details/{id}', [MyController::class, 'productDetails']);
 Route::get('/cart', [MyController::class,'showCart'])->name('showCart')->middleware(['auth'])->name('dashboard');
 Route::get('/checkout', [MyController::class,'showProductbyCart'])->name('showProductbyCart');
 Route::post('/checkout', [MyController::class,'addOrder']);
+Route::get('/adminUser', [MyController::class,'adminUser']);
 //AddToCart
 Route::get('/add-to-cart/{id}', [MyController::class, 'addToCart'])->name('addToCart');
 //UpdateCart

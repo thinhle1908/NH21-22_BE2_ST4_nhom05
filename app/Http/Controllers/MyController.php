@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Manufacture;
 use Illuminate\Http\Request;
 use App\Models\Product;
-use App\Models\Protypes;
+use App\Models\Protype;
 use App\Models\Orders;            
 use App\Models\Orders_Items;
 use App\Models\Rating;
@@ -19,7 +19,7 @@ class MyController extends Controller
     {
         $product = Product::where('type_id',$type_id)->paginate(6);
         $manufactures = Manufacture::take(10)->get();
-        $protype = Protypes::take(10)->get();
+        $protype = Protype::take(10)->get();
         $featureProducts = Product::where('feature',1)->get()->take(3);
         return view('shop')->with('tenProductsFeature',$product)->with('tenManufactures',$manufactures)->with('tenProtypes',$protype)->with('featureproducts',$featureProducts);
     }
@@ -27,7 +27,7 @@ class MyController extends Controller
     {
         $product = Product::where('manu_id',$manu_id)->paginate(6);
         $manufactures = Manufacture::take(10)->get();
-        $protype = Protypes::take(10)->get();
+        $protype = Protype::take(10)->get();
         $featureProducts = Product::where('feature',1)->get()->take(3);
         return view('shop')->with('tenProductsFeature',$product)->with('tenManufactures',$manufactures)->with('tenProtypes',$protype)->with('featureproducts',$featureProducts);
     }
@@ -47,7 +47,7 @@ class MyController extends Controller
         $qtyproduct = Product::where('feature',1)->count();
         $products = Product::all()->take(9);
         $manufactures = Manufacture::take(10)->get();
-        $protype = Protypes::take(10)->get();
+        $protype = Protype::take(10)->get();
         $featureProducts = Product::where('feature',1)->orderBy('id','desc')->get()->take(3);
         return view('index')->with('tenProductsFeature',$products)->with('tenManufactures',$manufactures)->with('tenProtypes',$protype)->with('featureproducts',$featureProducts)->with('qtyProductFeature',$qtyproduct);
     }
@@ -55,7 +55,7 @@ class MyController extends Controller
     {
         $products = Product::search()->paginate(6);
         $manufactures = Manufacture::take(10)->get();
-        $protype = Protypes::take(10)->get();
+        $protype = Protype::take(10)->get();
         $featureProducts = Product::where('feature',1)->get()->take(3);
         return view('shop')->with('tenProductsFeature',$products)->with('tenManufactures',$manufactures)->with('tenProtypes',$protype)->with('featureproducts',$featureProducts);;
     }
@@ -69,7 +69,7 @@ class MyController extends Controller
     }
     public function productDetails($id){
         $product = Product::find($id);
-        $protype = Protypes::take(10)->get();
+        $protype = Protype::take(10)->get();
         $pro = Product::where('id',$id)->first();
         $related_product = Product::where('type_id',$product->type_id)->limit(3)->whereNotIn('id',[$id])->get();
         $manufactures = Manufacture::take(10)->get();

@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MyController;
-use App\Http\Controllers\ProductsController;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ReceipDetailtController;
 use App\Http\Controllers\ReceiptController;
 use App\Http\Controllers\VoucherController;
@@ -21,9 +21,7 @@ use Illuminate\Foundation\Auth\EmailVerificationRequest;
 */
 
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/dashboard/product', [ProductController::class, 'index'])->middleware(['auth'])->name('dashboard');
 Route::get('/index', [MyController::class, 'index']);
 Route::get('/product-details/{id}', [MyController::class, 'productDetails']);
 //showCart
@@ -74,5 +72,8 @@ Route::get('/dashboard', function () {
 Route::get('/manufacture/{manu_id}', [MyController::class, 'showManufacturebyID']);
 Route::get('/protype/{type_id}', [MyController::class, 'showProtypebyID']);
 Route::get('/place-order', [MyController::class, 'placeOrder']);
+Route::get('/', function () {
+    return view('welcome');
+});
 
 

@@ -79,7 +79,7 @@ table, th, td {
     <link rel="icon" type="image/x-icon" href="../../../img/favicon/favicon.ico" />
 
     <!-- Fonts -->
-    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="../css/all.css">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -217,7 +217,7 @@ table, th, td {
             </li>
             <li class="menu-item">
               <a
-                href="https://themeselection.com/demo/sneat-bootstrap-html-admin-template/documentation/"
+                href="{{ asset('dashboard/product') }}"
                 target="_blank"
                 class="menu-link"
               >

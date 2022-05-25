@@ -46,6 +46,7 @@ Route::get('/update_cart', [MyController::class, 'updateCart'])->name('updateCar
 Route::get('/shop', [MyController::class, 'shop']);
 //show admin voucher
 Route::get('/dashboard/voucher', [VoucherController::class, 'voucher'])->middleware(['auth'])->name('dashboard');
+Route::match(['get','post'],'/dashboard/add-voucher', [VoucherController::class, 'addvoucher'])->middleware(['auth'])->name('dashboard');
 //show admin receipt
 Route::get('/dashboard/orders', [OrdersController::class, 'order'])->middleware(['auth'])->name('dashboard');
 //show admin receipt_details

@@ -330,6 +330,17 @@ table, th, td {
                 </div>
               </a>
             </li>
+            <li class="menu-item">
+              <a
+                href="{{ asset('dashboard/add-voucher') }}"
+                target="_blank"
+                class="menu-link"
+              >
+                <i class="menu-icon tf-icons bx bx-file"></i>
+                <div data-i18n="Documentation">Add Voucher
+                </div>
+              </a>
+            </li>
           </ul>
         </aside>
         <!-- / Menu -->

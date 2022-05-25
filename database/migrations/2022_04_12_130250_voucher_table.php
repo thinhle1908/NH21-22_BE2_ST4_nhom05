@@ -13,12 +13,13 @@ class VoucherTable extends Migration
      */
     public function up()
     {
-        //
+        
         Schema::create('vouchers', function (Blueprint $table) {
             $table->id("voucher_id");
             $table->string("voucher_code");
             $table->integer("voucher_value");
-            $table->string("voucher_name",100);
+            $table->string("voucher_name",100); 
+            $table->timestamps();    
         });
     }
 

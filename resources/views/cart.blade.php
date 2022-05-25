@@ -99,7 +99,6 @@
 						@if(!empty($voucher))
 						@foreach($voucher as $count)
 						<li>Vocher <span>{{$total*$count['voucher_value']/100 }}</span></li>
-						@break
 						@endforeach
 						@endif
 						<li>Total <span>{{$total+$total*0.1-$total*$count['voucher_value']/100}}</span></li>	

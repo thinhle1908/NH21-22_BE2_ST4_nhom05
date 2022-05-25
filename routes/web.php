@@ -58,7 +58,9 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 require __DIR__ . '/auth.php';
-
+Route::get('/', function () {
+    return view('welcome');
+});
 Route::get('/{url}', function ($url) {
     return view($url);
 });
@@ -82,8 +84,6 @@ Route::get('/dashboard', function () {
 Route::get('/manufacture/{manu_id}', [MyController::class, 'showManufacturebyID']);
 Route::get('/protype/{type_id}', [MyController::class, 'showProtypebyID']);
 Route::get('/place-order', [MyController::class, 'placeOrder']);
-Route::get('/', function () {
-    return view('welcome');
-});
+
 
 

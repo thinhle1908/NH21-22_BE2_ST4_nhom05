@@ -27,6 +27,7 @@
 <!--/head-->
 
 <body>
+	
 	<header id="header">
 		<!--header-->
 		<div class="header_top">
@@ -36,7 +37,7 @@
 					<div class="col-sm-6">
 						<div class="contactinfo">
 							<ul class="nav nav-pills">
-								<li><a href="#"><i class="fa fa-phone"></i> +2 95 01 88 821</a></li>
+								<li><a href="#"><i class="fa fa-phone"></i> +0927 352 114</a></li>
 								<li><a href="#"><i class="fa fa-envelope"></i> info@domain.com</a></li>
 							</ul>
 						</div>
@@ -93,8 +94,7 @@
 						<div class="shop-menu clearfix pull-right">
 							<ul class="nav navbar-nav">
 								<li><a href=""><i class="fa fa-user"></i>@if(isset(Auth::user()->name )){{Auth::user()->name}} @else  Account @endif</a></li>
-								<li><a href=""><i class="fa fa-star"></i> Wishlist</a></li>
-								<!-- <li><a href="{{ asset('checkout') }}"><i class="fa fa-crosshairs"></i> Checkout</a></li> -->
+								
 								<li><a href="{{ asset('cart') }}"><i class="fa fa-shopping-cart"></i> Cart</a></li>
 								<li><a href="{{ asset('login') }}"><i class="fa fa-lock"></i> Login</a></li>
 								
@@ -125,19 +125,12 @@
 								<li class="dropdown"><a href="#">Shop<i class="fa fa-angle-down"></i></a>
 									<ul role="menu" class="sub-menu">
 										<li><a href="{{ asset ('/shop') }}">Products</a></li>
-										<li><a href="{{ asset ('/product-details') }}">Product Details</a></li>
-										<li><a href="{{ asset ('/checkout.html') }}">Checkout</a></li>
 										<li><a href="{{ asset ('/cart') }}">Cart</a></li>
 										<li><a href="{{ asset ('/login') }}">Login</a></li>
 									</ul>
 								</li>
-								<li class="dropdown"><a href="#">Blog<i class="fa fa-angle-down"></i></a>
-									<ul role="menu" class="sub-menu">
-										<li><a href="{{ asset('/blog') }}">Blog List</a></li>
-										<li><a href="{{ asset('/blog-single') }}">Blog Single</a></li>
-									</ul>
-								</li>
-								<li><a href="{{ asset('/404') }}">404</a></li>
+								
+								
 								<li><a href="{{ asset('contact-us') }}">Contact Us</a></li>
 							</ul>
 						</div>

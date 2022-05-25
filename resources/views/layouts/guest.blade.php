@@ -91,7 +91,7 @@
                 <div class="row">
                     <div class="col-md-4 clearfix">
                         <div class="logo pull-left">
-                            <a href="index.html"><img src="images/home/logo.png" alt="" /></a>
+                            <a href="index"><img src="images/home/logo.png" alt="" /></a>
                         </div>
                         <div class="btn-group pull-right clearfix">
                             <div class="btn-group">
@@ -123,9 +123,7 @@
                         <div class="shop-menu clearfix pull-right">
                             <ul class="nav navbar-nav">
                                 <li><a href=""><i class="fa fa-user"></i> Account</a></li>
-                                <li><a href=""><i class="fa fa-star"></i> Wishlist</a></li>
-                                <li><a href="{{ asset('checkout		') }}"><i class="fa fa-crosshairs"></i> Checkout</a>
-                                </li>
+                                
                                 <li><a href="{{ asset('cart') }}"><i class="fa fa-shopping-cart"></i> Cart</a></li>
                                 <li><a href="{{ asset('login') }}"><i class="fa fa-lock"></i> Login</a></li>
                             </ul>
@@ -155,20 +153,15 @@
                                 <li><a href="{{ asset('index.html') }}" class="active">Home</a></li>
                                 <li class="dropdown"><a href="#">Shop<i class="fa fa-angle-down"></i></a>
                                     <ul role="menu" class="sub-menu">
-                                        <li><a href="{{ asset('/shop') }}">Products</a></li>
-                                        <li><a href="{{ asset('/product-details') }}">Product Details</a></li>
-                                        <li><a href="{{ asset('checkout.html') }}">Checkout</a></li>
-                                        <li><a href="{{ asset('cart.html') }}">Cart</a></li>
-                                        <li><a href="{{ asset('login.html') }}">Login</a></li>
+                                        <li><a href="{{ asset('/shop') }}">Products</a></li>                                      
+                                        <li><a href="{{ asset('cart') }}">Cart</a></li>
+                                        <li><a href="{{ asset('login') }}">Login</a></li>
                                     </ul>
                                 </li>
-                                <li class="dropdown"><a href="#">Blog<i class="fa fa-angle-down"></i></a>
-                                    <ul role="menu" class="sub-menu">
-                                        <li><a href="{{ asset('/blog') }}">Blog List</a></li>
-                                        <li><a href="{{ asset('/blog-single') }}">Blog Single</a></li>
-                                    </ul>
+                                
+                                   
                                 </li>
-                                <li><a href="{{ asset('/404') }}">404</a></li>
+                                
                                 <li><a href="{{ asset('contact-us') }}">Contact Us</a></li>
                             </ul>
                         </div>

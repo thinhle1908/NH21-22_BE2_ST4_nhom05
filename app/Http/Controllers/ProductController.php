@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use App\Models\Product;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -17,7 +18,7 @@ class ProductController extends Controller
     public function index()
     {
         $products = Product::paginate(10);
-        return view('adminProduct')->with('products',$products);
+        return view('adminProduct')->with('products', $products);
     }
 
     /**
@@ -29,7 +30,7 @@ class ProductController extends Controller
     {
         $protypes = Protype::all();
         $manufactures = Manufacture::all();
-        return view('adminAddProduct')->with('protypes',$protypes)->with('manufactures',$manufactures);
+        return view('adminAddProduct')->with('protypes', $protypes)->with('manufactures', $manufactures);
     }
 
     /**
@@ -41,19 +42,29 @@ class ProductController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'name'=>'required',
-            'manu_id'=>'required',
-            'type_id'=>'required',
-            'price'=>'required',
-            'image'=>'required',
-            'description'=>'required',
-            'feature'=>'required'
+            'name' => 'bail|required|alpha_num|max:255',
+            'manu_id' => 'bail|required|numeric',
+            'type_id' => 'bail|required|numeric',
+            'price' => 'bail|required|numeric',
+            'image' => 'image|required',
+            'description' => 'bail|required|string',
+            'feature' => 'bail|required|boolean'
         ]);
-        $protypes = Protype::all();
-        $manufactures = Manufacture::all();
-        Product::create($request->all());
-        return view('adminAddProduct')->with('succes','Product created successfully')->with('protypes',$protypes)->with('manufactures',$manufactures);
-        
+        $nameimg = $request->file('image')->getClientOriginalName();
+        $request->file('image')->move('images/product-details', $nameimg);
+        //cach 2
+        $product = new Product();
+        $product->name = $request->name;
+        $product->manu_id = $request->manu_id;
+        $product->type_id = $request->type_id;
+        $product->price = $request->price;
+        $product->image = $nameimg;
+        $product->description = $request->description;
+        $product->feature = $request->feature;
+        $product->save();
+        //cach 1
+        // Product::create($request->all());
+        return redirect()->back()->with('succes', 'Product created successfully');
     }
 
     /**
@@ -64,7 +75,6 @@ class ProductController extends Controller
      */
     public function show($id)
     {
-       
     }
 
     /**

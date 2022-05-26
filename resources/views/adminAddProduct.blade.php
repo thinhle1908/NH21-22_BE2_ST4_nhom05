@@ -4,76 +4,58 @@
         <!-- Content -->
 
         <div class="container-xxl flex-grow-1 container-p-y">
-            <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Account Settings /</span> Account</h4>
+            <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Dashboard /</span> Add-product</h4>
 
             <div class="row">
                 <div class="col-md-12">
                     <ul class="nav nav-pills flex-column flex-md-row mb-3">
                         <li class="nav-item">
                             <a class="nav-link active" href="javascript:void(0);"><i class="bx bx-user me-1"></i>
-                                Account</a>
+                                Add-Product</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="pages-account-settings-notifications.html"><i
-                                    class="bx bx-bell me-1"></i> Notifications</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="pages-account-settings-connections.html"><i
-                                    class="bx bx-link-alt me-1"></i> Connections</a>
+                            <a class="nav-link" href="{{ asset('dashboard/product') }}"><i
+                                    class="bx bx-link-alt me-1"></i> View Product</a>
                         </li>
                     </ul>
                     <div class="card mb-4">
                         <h5 class="card-header">Profile Details</h5>
-
-                        @if (isset($succes))
-                            {{ $succes }}
-                        @endif
                         @if ($errors->any())
-                        <ul>
-                            @foreach ($errors->all() as $error)
-                            <li>
-                                {{ $error }}
-                            </li>
-                            @endforeach
-                          </ul>
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                    <li>
+                                        {{ $error }}
+                                    </li>
+                                @endforeach
+                            </ul>
                         @endif
                         <!-- Account -->
 
                         <hr class="my-0" />
                         <div class="card-body">
-                            <form id="formAccountSettings" method="POST" action="/dashboard/add-product" enctype="multipart/form-data">  
+                            <form id="formAccountSettings" method="POST" action="/dashboard/add-product"
+                                enctype="multipart/form-data">
                                 @csrf
                                 <div class="row">
-                                  <div class="d-flex align-items-start align-items-sm-center gap-4">
-                                    <img
-                                      src="../img/avatars/1.png"
-                                      alt="user-avatar"
-                                      class="d-block rounded"
-                                      height="100"
-                                      width="100"
-                                      id="uploadedAvatar"
-                                    />
-                                    <div class="button-wrapper">
-                                      <label for="upload" class="btn btn-primary me-2 mb-4" tabindex="0">
-                                        <span class="d-none d-sm-block">Upload new photo</span>
-                                        <i class="bx bx-upload d-block d-sm-none"></i>
-                                        <input
-                                          type="file"
-                                          id="upload"
-                                          class="account-file-input"
-                                          hidden
-                                          accept="image/png, image/jpeg"
-                                          name="image"
-                                        />
-                                      </label>
-                                      <button type="button" class="btn btn-outline-secondary account-image-reset mb-4">
-                                        <i class="bx bx-reset d-block d-sm-none"></i>
-                                        <span class="d-none d-sm-block">Reset</span>
-                                      </button>
-            
-                                      <p class="text-muted mb-0">Allowed JPG, GIF or PNG. Max size of 800KB</p>
+                                    <div class="d-flex align-items-start align-items-sm-center gap-4">
+                                        <img src="../img/avatars/1.png" alt="user-avatar" class="d-block rounded"
+                                            height="100" width="100" id="uploadedAvatar" />
+                                        <div class="button-wrapper">
+                                            <label for="upload" class="btn btn-primary me-2 mb-4" tabindex="0">
+                                                <span class="d-none d-sm-block">Upload new photo</span>
+                                                <i class="bx bx-upload d-block d-sm-none"></i>
+                                                <input type="file" id="upload" class="account-file-input" hidden
+                                                    accept="image/png, image/jpeg" name="image" />
+                                            </label>
+                                            <button type="button"
+                                                class="btn btn-outline-secondary account-image-reset mb-4">
+                                                <i class="bx bx-reset d-block d-sm-none"></i>
+                                                <span class="d-none d-sm-block">Reset</span>
+                                            </button>
+
+                                            <p class="text-muted mb-0">Allowed JPG, GIF or PNG. Max size of 800KB</p>
+                                        </div>
                                     </div>
-                                  </div>
                                     <div class="mb-3 col-md-12">
                                         <label for="firstName" class="form-label">Name</label>
                                         <input class="form-control" type="text" id="firstName" name="name" value=""
@@ -112,7 +94,7 @@
                                         <br>
                                         <textarea id="w3review" rows="6" cols="100%" style="width: 100%" name="description"></textarea>
                                     </div>
-                                  
+
                                 </div>
                                 <div class="mt-2">
                                     <button type="submit" class="btn btn-primary me-2">Add product</button>

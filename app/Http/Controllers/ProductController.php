@@ -17,7 +17,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $products = Product::paginate(10);
+        $products = Product::orderBy('created_at','desc')->paginate(10);
         return view('adminProduct')->with('products', $products);
     }
 
@@ -64,7 +64,7 @@ class ProductController extends Controller
         $product->save();
         //cach 1
         // Product::create($request->all());
-        return redirect()->back()->with('succes', 'Product created successfully');
+        return redirect()->back();
     }
 
     /**
@@ -108,6 +108,7 @@ class ProductController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Product::destroy($id);
+        return redirect()->back();
     }
 }

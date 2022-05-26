@@ -26,6 +26,7 @@ use Illuminate\Foundation\Auth\EmailVerificationRequest;
 |
 */
 
+Route::get('/delete-product/{id}',[ProductController::class,'destroy'])->middleware(['auth'])->name('dashboard');
 Route::get('/dashboard/add-product',[ProductController::class,'create'])->middleware(['auth'])->name('dashboard');
 Route::post('/dashboard/add-product',[ProductController::class,'store'])->middleware(['auth'])->name('dashboard');
 Route::get('/dashboard/product', [ProductController::class, 'index'])->middleware(['auth'])->name('dashboard');

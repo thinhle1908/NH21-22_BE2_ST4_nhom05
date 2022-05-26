@@ -206,17 +206,6 @@ table, th, td {
             </li>
             <li class="menu-item">
               <a
-                href="https://themeselection.com/demo/sneat-bootstrap-html-admin-template/documentation/"
-                target="_blank"
-                class="menu-link"
-              >
-              <i class="fa-solid fa-pen-to-square"  style="margin-right:10%"></i>
-                <div data-i18n="Documentation">Edit product
-                </div>
-              </a>
-            </li>
-            <li class="menu-item">
-              <a
                 href="{{ asset('dashboard/product') }}"
                 target="_blank"
                 class="menu-link"

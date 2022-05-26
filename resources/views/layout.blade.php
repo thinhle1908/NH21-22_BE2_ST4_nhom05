@@ -366,7 +366,8 @@
 					}
 				},
 				error: function() {
-
+					location.reload();
+					alert('Cập nhật thành công');
 				}
 			})
 		}
@@ -388,7 +389,9 @@
 					}
 				},
 				error: function() {
-
+					location.reload();
+					alert('Xoá thành công');
+					
 				}
 			})
 		}

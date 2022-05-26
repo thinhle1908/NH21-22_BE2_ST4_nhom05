@@ -89,7 +89,7 @@ Route::get('dashboard/order_items', [OrdersItemsController::class, 'order_items'
 //Delete AdminVoucher
 Route::match(['get','post'],'/dashboard/delete-voucher/{id}',[VoucherController::class ,'deleteVoucher']);
 Route::match(['get','post'],'/dashboard/delete-orders/{id}',[OrdersController::class ,'deleteOrders']);
-Route::match(['get','post'],'/dashboard/delete-orders-items/{id}',[OrdersItemsController::class ,'deleteOrderItems']);
+Route::match(['get','post'],'/das hboard/delete-orders-items/{id}',[OrdersItemsController::class ,'deleteOrderItems']);
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');

@@ -287,7 +287,7 @@ table, th, td {
               </a>
             </li>
              <!-- Tên danh mục -->
-            <li class="menu-header small text-uppercase"><span class="menu-header-text">Receipt</span></li>
+            <li class="menu-header small text-uppercase"><span class="menu-header-text">Voucher</span></li>
               <li class="menu-item">
                 <a
                   href="{{ asset('dashboard/orders') }}"
@@ -299,17 +299,38 @@ table, th, td {
                   </div>
                 </a>
               </li>
-            <li class="menu-item">
-              <a
-                href="{{ asset('dashboard/order_items') }}"
-                target="_blank"
-                class="menu-link"
-              >
-                <i class="menu-icon tf-icons bx bx-file"></i>
-                <div data-i18n="Documentation">View Order Items
-                </div>
-              </a>
-            </li>
+              <li class="menu-item">
+                <a href="{{ asset('dashboard/add-voucher') }}"
+                  target="_blank"
+                  class="menu-link" >
+                  <i class="menu-icon tf-icons bx bx-file"></i>
+                  <div data-i18n="Documentation">Add Voucher
+                  </div>
+                </a>
+              </li>
+            <li class="menu-header small text-uppercase"><span class="menu-header-text">Order</span></li>
+              <li class="menu-item">
+                <a
+                  href="{{ asset('dashboard/order_items') }}"
+                  target="_blank"
+                  class="menu-link"
+                >
+                  <i class="menu-icon tf-icons bx bx-file"></i>
+                  <div data-i18n="Documentation">View Order Items
+                  </div>
+                </a>
+              </li>
+              <li class="menu-item">
+                <a
+                  href="{{ asset('dashboard/order_items') }}"
+                  target="_blank"
+                  class="menu-link"
+                >
+                  <i class="menu-icon tf-icons bx bx-file"></i>
+                  <div data-i18n="Documentation">View Order Items
+                  </div>
+                </a>
+              </li>
             <li class="menu-item">
               <a
                 href="{{ asset('dashboard/voucher') }}"
@@ -321,17 +342,7 @@ table, th, td {
                 </div>
               </a>
             </li>
-            <li class="menu-item">
-              <a
-                href="{{ asset('dashboard/add-voucher') }}"
-                target="_blank"
-                class="menu-link"
-              >
-                <i class="menu-icon tf-icons bx bx-file"></i>
-                <div data-i18n="Documentation">Add Voucher
-                </div>
-              </a>
-            </li>
+            
           </ul>
         </aside>
         <!-- / Menu -->

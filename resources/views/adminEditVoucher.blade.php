@@ -26,21 +26,24 @@
                   <div class="card mb-4">
                     <h5 class="card-header">Add Voucher</h5>
           
-                    @if(!empty($voucher))
+                    @if(isset($succes))
+                    {{$succes}}
+                    @endif
                     <!-- Account -->
                
                     <hr class="my-0" />
-                    @foreach($voucher as $row)
                     <div class="card-body">
-                      <form id="formAccountSettings" method="POST" action="/dashboard/add-product">
-                        @csrf
+                      <form id="formAccountSettings" enctype="multipart/form-data" action="{{ asset('dashboard/add-voucher') }}" method="post" novalidate>
+                        {{csrf_field()}}
                         <div class="row">
                           <div class="mb-3 col-md-12">
                             <label for="firstName" class="form-label">Voucher Code</label>
                             <input
                               class="form-control voucher_code"
                               type="text"
-                              value="{{$row->voucher_code}}"
+                              value=""
+                              name="voucher_code"
+                              id ="voucher_code"
                               autofocus
                             />
                           </div>
@@ -50,6 +53,8 @@
                               class="form-control voucher_value"
                               type="text"
                               value=""
+                              name="voucher_value"
+                              id ="voucher_value"
                               autofocus
                             />
                           </div>
@@ -59,11 +64,11 @@
                               class="form-control voucher_name"
                               type="text"
                               value=""
+                              name="voucher_name"
+                              id ="voucher_name"
                               autofocus
                             />
                           </div>
-                          
-                        
                         </div>
                         <div class="mt-2">
                           <button type="submit" class="btn btn-primary me-2">Add Voucher</button>
@@ -71,8 +76,6 @@
                         </div>
                       </form>
                     </div>
-                    @endforeach
-                    @endif
                     <!-- /Account -->
                   </div>
                 </div>

@@ -40,6 +40,7 @@
           <td>{{$data ->voucher_value}}</td>
           <td>{{$data ->voucher_name}}</td>
           <td><a href="{{asset('dashboard/delete-voucher/'.$data->voucher_id)}}">Delete</a></td>
+          <td><a href="{{asset('dashboard/edit-voucher/'.$data->voucher_id)}}">Delete</a></td>
         </tr>
       </tbody>
       @endforeach

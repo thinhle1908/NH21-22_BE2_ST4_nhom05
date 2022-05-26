@@ -1,5 +1,6 @@
 <?php
 
+use Hamcrest\Core\HasToString;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -23,6 +24,7 @@ class CreateProductsTable extends Migration
             $table->text('description');
             $table->tinyInteger('feature');
             $table->timestamp('created_at');
+            $table->timestamp('updated_at')->nullable();
             
         });
     }

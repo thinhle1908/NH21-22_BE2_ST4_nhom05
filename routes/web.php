@@ -25,10 +25,16 @@ use Illuminate\Foundation\Auth\EmailVerificationRequest;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+//Product
+//Edit Product 
+Route::get('/edit-product/{id}',[ProductController::class,'edit'])->middleware(['auth'])->name('dashboard');
+Route::post('/edit-product/{id}',[ProductController::class,'update'])->middleware(['auth'])->name('dashboard');
+//Delete Product
 Route::get('/delete-product/{id}',[ProductController::class,'destroy'])->middleware(['auth'])->name('dashboard');
+//Add Product
 Route::get('/dashboard/add-product',[ProductController::class,'create'])->middleware(['auth'])->name('dashboard');
 Route::post('/dashboard/add-product',[ProductController::class,'store'])->middleware(['auth'])->name('dashboard');
+//View Product
 Route::get('/dashboard/product', [ProductController::class, 'index'])->middleware(['auth'])->name('dashboard');
 Route::get('/index', [MyController::class, 'index']);
 Route::get('/product-details/{id}', [MyController::class, 'productDetails']);

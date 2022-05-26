@@ -17,7 +17,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $products = Product::orderBy('created_at','desc')->paginate(10);
+        $products = Product::orderBy('created_at', 'desc')->paginate(10);
         return view('adminProduct')->with('products', $products);
     }
 
@@ -42,7 +42,7 @@ class ProductController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'name' => 'bail|required|alpha_num|max:255',
+            'name' => 'bail|required|string|max:255',
             'manu_id' => 'bail|required|numeric',
             'type_id' => 'bail|required|numeric',
             'price' => 'bail|required|numeric',
@@ -85,7 +85,10 @@ class ProductController extends Controller
      */
     public function edit($id)
     {
-        //
+        $protypes = Protype::all();
+        $manufactures = Manufacture::all();
+        $product = Product::where('id', $id)->first();
+        return view('adminEditProduct')->with('protypes', $protypes)->with('manufactures', $manufactures)->with('product', $product);
     }
 
     /**
@@ -97,7 +100,32 @@ class ProductController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+            'name' => 'bail|required|string|max:255',
+            'manu_id' => 'bail|required|numeric',
+            'type_id' => 'bail|required|numeric',
+            'price' => 'bail|required|numeric',
+            'image' => 'image',
+            'description' => 'bail|required|string',
+            'feature' => 'bail|required|boolean'
+        ]);
+        if ($request->image) {
+            $nameimg = $request->file('image')->getClientOriginalName();
+            $request->file('image')->move('images/product-details', $nameimg);
+        }
+        $product =  Product::find($id);
+        $product->name = $request->name;
+        $product->manu_id = $request->manu_id;
+        $product->type_id = $request->type_id;
+        $product->price = $request->price;
+        if ($request->image) {
+            $product->image = $nameimg;
+        }
+        $product->description = $request->description;
+        $product->feature = $request->feature;
+        $product->update();
+       
+        return ProductController::index();
     }
 
     /**

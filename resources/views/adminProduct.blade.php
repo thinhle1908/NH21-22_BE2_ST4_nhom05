@@ -45,7 +45,7 @@
                                                 <i class="bx bx-dots-vertical-rounded"></i>
                                             </button>
                                             <div class="dropdown-menu">
-                                                <a class="dropdown-item" href="javascript:void(0);"><i
+                                                <a class="dropdown-item" href="{{ asset('edit-product/'.$row->id) }}"><i
                                                         class="bx bx-edit-alt me-1"></i> Edit</a>
                                                 <a class="dropdown-item" href="{{ asset('delete-product/'.$row->id) }}"><i
                                                         class="bx bx-trash me-1"></i> Delete</a>

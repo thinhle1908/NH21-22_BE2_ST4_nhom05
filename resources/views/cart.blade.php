@@ -100,13 +100,14 @@
 						@foreach($voucher as $count)
 
 						<li>Vocher <span>{{$total*$count['voucher_value']/100 ?? '0' }}</span></li>
-						
-						<li>Total <span>{{$total+$total*0.1-$total*$count['voucher_value']/100 ?? '0'}}</span></li>	
-						@endforeach
-						@endif
+
+						<li>Total <span>{{$total+$total*0.1-$total*$count['voucher_value']/100 ?? '0'}}</span></li>
+
 					</ul>
 					<a class="btn btn-default update" href="">Update</a>
-					<a class="btn btn-default check_out" href="checkout?code={{$total*$count['voucher_value']/100 }}">Check Out</a>
+					<a class="btn btn-default check_out" href="checkout?code={{$total*$count['voucher_value']/100 ?? '0'}}">Check Out</a>
+					@endforeach
+					@endif
 				</div>
 			</div>
 

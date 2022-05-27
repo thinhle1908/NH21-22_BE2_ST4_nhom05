@@ -11,15 +11,15 @@
                     <ul class="nav nav-pills flex-column flex-md-row mb-3">
                         <li class="nav-item">
                             <a class="nav-link active" href="javascript:void(0);"><i class="bx bx-user me-1"></i>
-                                Add-Product</a>
+                                Add-Protype</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ asset('dashboard/product') }}"><i
-                                    class="bx bx-link-alt me-1"></i> View Product</a>
+                            <a class="nav-link" href="{{ asset('dashboard/protype') }}"><i
+                                    class="bx bx-link-alt me-1"></i> View Protype</a>
                         </li>
                     </ul>
                     <div class="card mb-4">
-                        <h5 class="card-header">Manufacture</h5>
+                        <h5 class="card-header">Protype</h5>
                         @if ($errors->any())
                             <ul>
                                 @foreach ($errors->all() as $error)
@@ -33,19 +33,19 @@
 
                         <hr class="my-0" />
                         <div class="card-body">
-                            <form id="formAccountSettings" method="POST" action="/dashboard/add-product"
+                            <form id="formAccountSettings" method="POST" action="/dashboard/add-protype"
                                 enctype="multipart/form-data">
                                 @csrf
                                 <div class="row">
                                     <div class="mb-3 col-md-12">
-                                        <label for="firstName" class="form-label">Manu_Name</label>
-                                        <input class="form-control" type="text" id="firstName" name="manu_name" value=""
+                                        <label for="firstName" class="form-label">Type_Name</label>
+                                        <input class="form-control" type="text" id="firstName" name="type_name" value=""
                                             autofocus />
                                     </div>
 
                                 </div>
                                 <div class="mt-2">
-                                    <button type="submit" class="btn btn-primary me-2">Add product</button>
+                                    <button type="submit" class="btn btn-primary me-2">Add Type</button>
                                     <button type="reset" class="btn btn-outline-secondary">Cancel</button>
                                 </div>
                             </form>

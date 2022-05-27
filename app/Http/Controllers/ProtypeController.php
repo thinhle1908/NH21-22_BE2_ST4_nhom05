@@ -27,7 +27,7 @@ class ProtypeController extends Controller
      */
     public function create()
     {
-        //
+        return view('adminAddProtype');
     }
 
     /**
@@ -38,7 +38,11 @@ class ProtypeController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'type_name' => 'bail|required|string|max:255',
+        ]);
+        Protype::create($request->all());
+        return redirect()->back();
     }
 
     /**

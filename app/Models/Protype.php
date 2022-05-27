@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Protype extends Model
 {
     protected $primaryKey = 'type_id';
+    protected $fillable = ['type_id','type_name','created_at','updated_at'];
     use HasFactory;
     public function products()
     {

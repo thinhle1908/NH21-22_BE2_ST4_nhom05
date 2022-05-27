@@ -38,7 +38,7 @@
                                 @csrf
                                 <div class="row">
                                     <div class="d-flex align-items-start align-items-sm-center gap-4">
-                                        <img src="../img/avatars/1.png" alt="user-avatar" class="d-block rounded"
+                                        <img src="../images/product-details/{{ $product->image }}" alt="user-avatar" class="d-block rounded"
                                             height="100" width="100" id="uploadedAvatar" />
                                         <div class="button-wrapper">
                                             <label for="upload" class="btn btn-primary me-2 mb-4" tabindex="0">

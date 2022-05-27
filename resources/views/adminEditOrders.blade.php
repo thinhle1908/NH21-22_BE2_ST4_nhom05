@@ -24,16 +24,17 @@
                     </li>
                   </ul>
                   <div class="card mb-4">
-                    <h5 class="card-header">Add Order</h5>
+                    <h5 class="card-header">Edit Order</h5>
           
                     @if(isset($succes))
                     {{$succes}}
                     @endif
                     <!-- Account -->
-               
+
                     <hr class="my-0" />
+                    @foreach($orderDetail as $row)
                     <div class="card-body">
-                      <form id="formAccountSettings" enctype="multipart/form-data" action="{{ asset('dashboard/add-orders') }}" method="post" novalidate>
+                      <form id="formAccountSettings" enctype="multipart/form-data" action="{{ asset('dashboard/edit-orders/'.$row->id) }}" method="post" novalidate>
                         {{csrf_field()}}
                         <div class="row">
                           <div class="mb-3 col-md-12">
@@ -41,7 +42,7 @@
                             <input
                               class="form-control order_name"
                               type="text"
-                              value=""
+                              value="{{ $row->order_name}}"
                               name="order_name"
                               id ="order_name"
                               autofocus
@@ -52,7 +53,7 @@
                             <input
                               class="form-control order_address"
                               type="text"
-                              value=""
+                              value="{{ $row->order_address}}"
                               name="order_address"
                               id ="order_address"
                               autofocus
@@ -63,7 +64,7 @@
                             <input
                               class="form-control order_phone"
                               type="text"
-                              value=""
+                              value="{{ $row->order_phone}}"
                               name="order_phone"
                               id ="order_phone"
                               autofocus
@@ -74,24 +75,33 @@
                             <input
                               class="form-control order_email"
                               type="text"
-                              value=""
+                              value="{{ $row->order_email}}"
                               name="order_email"
                               id ="order_email"
                               autofocus
                             />
                           </div>
+                          @php
+                            if($row->order_notes=="Không có"){
+                              $note = "";
+                            }else
+                            {
+                              $note = $row->order_notes;
+                            }
+                          @endphp
                           <div class="mb-3 col-md-12">
                                         <label for="w3review" class="form-label">Notes</label>
                                         <br>
-                                        <textarea id="w3review" rows="6" cols="100%" style="width: 100%" name="order_notes"></textarea>
+                                        <textarea id="w3review" rows="6" cols="100%" style="width: 100%" name="order_notes">{{$note}}</textarea>
                                     </div>
                         </div>
                         <div class="mt-2">
-                          <button type="submit" class="btn btn-primary me-2">Add Orders</button>
-                          <button type="reset" class="btn btn-outline-secondary">Cancel</button>
+                          <button type="submit" class="btn btn-primary me-2">Repair Orders</button>
+                          <button type="reset" class="btn btn-outline-secondary cancel_order">Cancel</button>
                         </div>
                       </form>
                     </div>
+                    @endforeach
                     <!-- /Account -->
                   </div>
                 </div>

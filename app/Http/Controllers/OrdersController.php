@@ -25,10 +25,30 @@ class OrdersController extends Controller
             $order->order_address = $data['order_address'];
             $order->order_phone = $data['order_phone'];
             $order->order_email = $data['order_email'];
-            $order->order_notes = $data['order_notes'];
+            if($data['order_notes']==null){
+                 $note = "Không có";
+            }else{
+                $note = $data['order_notes'];
+            }
+            $order->order_notes = $note;
             $order->save();
             return redirect('/dashboard/add-orders')->with('flash_message_success', 'Orders has been added successfully');
         }
         return view('adminAddOrders');
+    }
+    public function editorders(Request $request,$id = null)
+    {
+        if ($request->ismethod('post')) {
+            $data = $request->all();
+            if($data['order_notes']==null){
+                $note = "Không có";
+           }else{
+               $note = $data['order_notes'];
+           }
+            Orders::where(['id'=>$id])->update(['order_name' => $data['order_name'], 'order_address' => $data['order_address'],'order_phone'=>$data['order_phone'],'order_email'=>$data['order_email'],'order_notes'=>$note]);
+            return redirect()->back()->with('flash_message_success', 'Order has been edit successfully');
+        }
+        $orderDetail =  Orders::where(['id' => $id])->get();
+        return view('adminEditOrders')->with('orderDetail',$orderDetail);
     }
 }

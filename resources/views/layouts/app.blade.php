@@ -322,7 +322,7 @@ table, th, td {
               </li>
               <li class="menu-item">
                 <a
-                  href="{{ asset('dashboard/orders') }}"
+                  href="{{ asset('dashboard/add-orders') }}"
                   target="_blank"
                   class="menu-link"
                 >
@@ -524,7 +524,7 @@ table, th, td {
       }
       function cancel_order(event){
         event.preventDefault();
-        location.replace('/dashboard/adminOrders');
+        location.replace('/dashboard/orders');
       }
       $(function(){
         $(document).on('click', '.cancel_voucher', cancel_voucher);

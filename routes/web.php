@@ -87,6 +87,7 @@ Route::match(['get','post'],'/dashboard/edit-voucher/{id}', [VoucherController::
 //show admin orders
 Route::get('/dashboard/orders', [OrdersController::class, 'order'])->middleware(['auth'])->name('dashboard');
 Route::match(['get','post'],'/dashboard/add-orders', [OrdersController::class, 'addorders'])->middleware(['auth'])->name('dashboard');
+Route::match(['get','post'],'/dashboard/edit-orders/{id}', [OrdersController::class, 'editorders'])->middleware(['auth'])->name('dashboard');
 //show admin receipt_details
 Route::get('dashboard/order_items', [OrdersItemsController::class, 'order_items'])->middleware(['auth'])->name('dashboard');
 //Delete AdminVoucher

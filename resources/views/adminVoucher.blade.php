@@ -1,11 +1,20 @@
 <x-app-layout>
-
+  
   <!-- Content wrapper -->
   <div class="content-wrapper">
     <div class="container-xxl flex-grow-1 container-p-y">
       <h4 class="fw-bold py-5 mb-4"><span class="text-muted fw-light">Dashboard /</span> Voucher</h4>
 
       <!-- Basic Bootstrap Table -->
+      <ul class="nav nav-pills flex-column flex-md-row mb-3">
+      <li class="nav-item">
+        <a class="nav-link active" href="javascript:void(0);"><i class="bx bx-user me-1"></i>
+          View Voucher</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="http://127.0.0.1:8000/dashboard/add-voucher"><i class="bx bx-link-alt me-1"></i>Add-Voucher</a>
+      </li>
+    </ul>
       <div class="card">
 
         <table class="table">

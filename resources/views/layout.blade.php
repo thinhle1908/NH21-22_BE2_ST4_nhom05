@@ -417,7 +417,7 @@
 		// 	})
 		// }
 		$(function() {
-			//$(document).on('click', '.add_vocher', cartVocher)
+			
 			$(document).on('click', '.cart_update', cartUpdate);
 			$(document).on('click', '.cart_delete', cartDelete);
 		});

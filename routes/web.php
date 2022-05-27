@@ -82,14 +82,16 @@ Route::get('/shop', [MyController::class, 'shop']);
 //show admin voucher
 Route::get('/dashboard/voucher', [VoucherController::class, 'voucher'])->middleware(['auth'])->name('dashboard');
 Route::match(['get','post'],'/dashboard/add-voucher', [VoucherController::class, 'addvoucher'])->middleware(['auth'])->name('dashboard');
-//show admin receipt
+Route::match(['get','post'],'/dashboard/edit-voucher/{id}', [VoucherController::class, 'editvoucher'])->middleware(['auth'])->name('dashboard');
+//show admin orders
 Route::get('/dashboard/orders', [OrdersController::class, 'order'])->middleware(['auth'])->name('dashboard');
+Route::match(['get','post'],'/dashboard/add-orders', [OrdersController::class, 'addorders'])->middleware(['auth'])->name('dashboard');
 //show admin receipt_details
 Route::get('dashboard/order_items', [OrdersItemsController::class, 'order_items'])->middleware(['auth'])->name('dashboard');
 //Delete AdminVoucher
 Route::match(['get','post'],'/dashboard/delete-voucher/{id}',[VoucherController::class ,'deleteVoucher']);
 Route::match(['get','post'],'/dashboard/delete-orders/{id}',[OrdersController::class ,'deleteOrders']);
-Route::match(['get','post'],'/das hboard/delete-orders-items/{id}',[OrdersItemsController::class ,'deleteOrderItems']);
+Route::match(['get','post'],'/dashboard/delete-orders-items/{id}',[OrdersItemsController::class ,'deleteOrderItems']);
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');

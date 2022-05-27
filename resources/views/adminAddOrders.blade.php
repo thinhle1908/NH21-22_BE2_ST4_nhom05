@@ -24,59 +24,74 @@
                     </li>
                   </ul>
                   <div class="card mb-4">
-                    <h5 class="card-header">Edit Voucher</h5>
+                    <h5 class="card-header">Add Order</h5>
           
                     @if(isset($succes))
                     {{$succes}}
                     @endif
                     <!-- Account -->
+               
                     <hr class="my-0" />
-                    @foreach($voucherDetail as $row)
                     <div class="card-body">
-                      <form id="formAccountSettings" enctype="multipart/form-data" action="{{asset('dashboard/edit-voucher/'.$row->voucher_id)}}" method="post" novalidate>
+                      <form id="formAccountSettings" enctype="multipart/form-data" action="{{ asset('dashboard/add-voucher') }}" method="post" novalidate>
                         {{csrf_field()}}
                         <div class="row">
                           <div class="mb-3 col-md-12">
-                            <label for="firstName" class="form-label">Voucher Code</label>
+                            <label for="firstName" class="form-label">Name</label>
                             <input
-                              class="form-control voucher_code"
+                              class="form-control order_name"
                               type="text"
-                              value="{{$row->voucher_code}}"
-                              name="voucher_code"
-                              id ="voucher_code"
+                              value=""
+                              name="order_name"
+                              id ="order_name"
                               autofocus
                             />
                           </div>
                           <div class="mb-3 col-md-12">
-                            <label for="firstName" class="form-label">Voucher Value</label>
+                            <label for="firstName" class="form-label">Address</label>
                             <input
-                              class="form-control voucher_value"
+                              class="form-control order_address"
                               type="text"
-                              value="{{$row->voucher_value}}"
-                              name="voucher_value"
-                              id ="voucher_value"
+                              value=""
+                              name="order_address"
+                              id ="order_address"
                               autofocus
                             />
                           </div>
                           <div class="mb-3 col-md-12">
-                            <label for="firstName" class="form-label">Voucher Name</label>
+                            <label for="firstName" class="form-label">Phone</label>
                             <input
-                              class="form-control voucher_name"
+                              class="form-control order_phone"
                               type="text"
-                              value="{{$row->voucher_name}}"
-                              name="voucher_name"
-                              id ="voucher_name"
+                              value=""
+                              name="order_phone"
+                              id ="order_phone"
                               autofocus
                             />
                           </div>
+                          <div class="mb-3 col-md-12">
+                            <label for="firstName" class="form-label">Email</label>
+                            <input
+                              class="form-control order_email"
+                              type="text"
+                              value=""
+                              name="order_email"
+                              id ="order_email"
+                              autofocus
+                            />
+                          </div>
+                          <div class="mb-3 col-md-12">
+                                        <label for="w3review" class="form-label">Notes</label>
+                                        <br>
+                                        <textarea id="w3review" rows="6" cols="100%" style="width: 100%" name="order_notes"></textarea>
+                                    </div>
                         </div>
                         <div class="mt-2">
-                          <button type="submit" class="btn btn-primary me-2 repair_voucher">Repair Voucher</button>
-                          <button type="reset" class="btn btn-outline-secondary cancel_voucher">Cancel</button>
+                          <button type="submit" class="btn btn-primary me-2">Add Orders</button>
+                          <button type="reset" class="btn btn-outline-secondary">Cancel</button>
                         </div>
                       </form>
                     </div>
-                    @endforeach
                     <!-- /Account -->
                   </div>
                 </div>

@@ -289,6 +289,27 @@ table, th, td {
              <!-- Tên danh mục -->
             <li class="menu-header small text-uppercase"><span class="menu-header-text">Voucher</span></li>
               <li class="menu-item">
+              <a
+                href="{{ asset('dashboard/voucher') }}"
+                target="_blank"
+                class="menu-link"
+              >
+                <i class="menu-icon tf-icons bx bx-file"></i>
+                <div data-i18n="Documentation">View Voucher
+                </div>
+              </a>
+            </li>
+              <li class="menu-item">
+                <a href="{{ asset('dashboard/add-voucher') }}"
+                  target="_blank"
+                  class="menu-link" >
+                  <i class="menu-icon tf-icons bx bx-file"></i>
+                  <div data-i18n="Documentation">Add Voucher
+                  </div>
+                </a>
+              </li>
+            <li class="menu-header small text-uppercase"><span class="menu-header-text">Order</span></li>
+            <li class="menu-item">
                 <a
                   href="{{ asset('dashboard/orders') }}"
                   target="_blank"
@@ -300,15 +321,17 @@ table, th, td {
                 </a>
               </li>
               <li class="menu-item">
-                <a href="{{ asset('dashboard/add-voucher') }}"
+                <a
+                  href="{{ asset('dashboard/orders') }}"
                   target="_blank"
-                  class="menu-link" >
+                  class="menu-link"
+                >
                   <i class="menu-icon tf-icons bx bx-file"></i>
-                  <div data-i18n="Documentation">Add Voucher
+                  <div data-i18n="Documentation">Add Order
                   </div>
                 </a>
               </li>
-            <li class="menu-header small text-uppercase"><span class="menu-header-text">Order</span></li>
+            <li class="menu-header small text-uppercase"><span class="menu-header-text">Order Items</span></li>
               <li class="menu-item">
                 <a
                   href="{{ asset('dashboard/order_items') }}"
@@ -327,21 +350,10 @@ table, th, td {
                   class="menu-link"
                 >
                   <i class="menu-icon tf-icons bx bx-file"></i>
-                  <div data-i18n="Documentation">View Order Items
+                  <div data-i18n="Documentation">Add Order Items
                   </div>
                 </a>
               </li>
-            <li class="menu-item">
-              <a
-                href="{{ asset('dashboard/voucher') }}"
-                target="_blank"
-                class="menu-link"
-              >
-                <i class="menu-icon tf-icons bx bx-file"></i>
-                <div data-i18n="Documentation">View Voucher
-                </div>
-              </a>
-            </li>
             
           </ul>
         </aside>
@@ -491,5 +503,19 @@ table, th, td {
     <script src="../../../js/pages-account-settings-account.js"></script>
     <!-- Place this tag in your head or just before your close body tag. -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <script>
+      function cancel_voucher(event){
+        event.preventDefault();
+        location.replace('/dashboard/voucher');
+      }
+      function cancel_order(event){
+        event.preventDefault();
+        location.replace('/dashboard/adminOrders');
+      }
+      $(function(){
+        $(document).on('click', '.cancel_voucher', cancel_voucher);
+        $(document).on('click', '.cancel_order', cancel_order);
+      });
+    </script>
   </body>
 </html>

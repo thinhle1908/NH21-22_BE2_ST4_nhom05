@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Manufacture extends Model
 {
     protected $primaryKey = 'manu_id';
+    protected $fillable = ['manu_id','manu_name','created_at','updated_at'];
     use HasFactory;
     public function products()
     {

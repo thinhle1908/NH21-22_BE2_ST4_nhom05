@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use App\Models\Manufacture;
 use App\Models\Product;
+use App\Models\Protype;
 use Illuminate\Http\Request;
 
 class ManufactureController extends Controller
@@ -27,7 +28,7 @@ class ManufactureController extends Controller
      */
     public function create()
     {
-        //
+        return view('adminAddManufacture');
     }
 
     /**
@@ -38,7 +39,11 @@ class ManufactureController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'manu_name' => 'bail|required|string|max:255',
+        ]);
+        Manufacture::create($request->all());
+        return redirect()->back();
     }
 
     /**

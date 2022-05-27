@@ -31,6 +31,9 @@ use Illuminate\Foundation\Auth\EmailVerificationRequest;
 //View Protype
 Route::get('/dashboard/protype', [ProtypeController::class, 'index'])->middleware(['auth'])->name('dashboard');
 //Manufacture
+//Add Manufacutre
+Route::get('/dashboard/add-manufacture',[ManufactureController::class,'create'])->middleware(['auth'])->name('dashboard');
+Route::post('/dashboard/add-manufacture',[ManufactureController::class,'store'])->middleware(['auth'])->name('dashboard');
 //View Manufacture
 Route::get('/dashboard/manufacture', [ManufactureController::class, 'index'])->middleware(['auth'])->name('dashboard');
 //Product

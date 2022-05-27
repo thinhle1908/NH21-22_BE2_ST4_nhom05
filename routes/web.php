@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ManufactureController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MyController;
 use App\Http\Controllers\ProductController;
@@ -8,10 +9,11 @@ use App\Http\Controllers\OrderItemController;
 use App\Http\Controllers\OrdersController;
 use App\Http\Controllers\OrdersItemsController;
 use App\Http\Controllers\ProductsController;
-
+use App\Http\Controllers\ProtypeController;
 use App\Http\Controllers\ReceipDetailtController;
 use App\Http\Controllers\ReceiptController;
 use App\Http\Controllers\VoucherController;
+use App\Models\Manufacture;
 use Illuminate\Http\Request;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
 
@@ -25,6 +27,12 @@ use Illuminate\Foundation\Auth\EmailVerificationRequest;
 | contains the "web" middleware group. Now create something great!
 |
 */
+//Protype
+//View Protype
+Route::get('/dashboard/protype', [ProtypeController::class, 'index'])->middleware(['auth'])->name('dashboard');
+//Manufacture
+//View Manufacture
+Route::get('/dashboard/manufacture', [ManufactureController::class, 'index'])->middleware(['auth'])->name('dashboard');
 //Product
 //Edit Product 
 Route::get('/edit-product/{id}',[ProductController::class,'edit'])->middleware(['auth'])->name('dashboard');
@@ -36,6 +44,7 @@ Route::get('/dashboard/add-product',[ProductController::class,'create'])->middle
 Route::post('/dashboard/add-product',[ProductController::class,'store'])->middleware(['auth'])->name('dashboard');
 //View Product
 Route::get('/dashboard/product', [ProductController::class, 'index'])->middleware(['auth'])->name('dashboard');
+//
 Route::get('/index', [MyController::class, 'index']);
 Route::get('/product-details/{id}', [MyController::class, 'productDetails']);
 //showCart

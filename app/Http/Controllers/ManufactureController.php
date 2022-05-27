@@ -65,7 +65,8 @@ class ManufactureController extends Controller
      */
     public function edit($id)
     {
-        //
+        $manufacture = Manufacture::where('manu_id', $id)->first();
+        return view('adminEditManufacture')->with('manufacture',$manufacture);
     }
 
     /**
@@ -77,7 +78,13 @@ class ManufactureController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+            'manu_name' => 'bail|required|string|max:255',
+        ]);
+        $manufacture = Manufacture::find($id);
+        $manufacture->manu_name = $request->manu_name;
+        $manufacture->update();
+        return ManufactureController::index();
     }
 
     /**

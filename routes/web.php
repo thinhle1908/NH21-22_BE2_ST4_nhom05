@@ -29,6 +29,9 @@ use Illuminate\Foundation\Auth\EmailVerificationRequest;
 |
 */
 //Protype
+//Edit Protype 
+Route::get('/edit-protype/{id}',[ProtypeController::class,'edit'])->middleware(['auth'])->name('dashboard');
+Route::post('/edit-protype/{id}',[ProtypeController::class,'update'])->middleware(['auth'])->name('dashboard');
 //Delete Protype
 Route::get('/delete-protype/{id}',[ProtypeController::class,'destroy'])->middleware(['auth'])->name('dashboard');
 //Add Protype
@@ -37,6 +40,9 @@ Route::post('/dashboard/add-protype',[ProtypeController::class,'store'])->middle
 //View Protype
 Route::get('/dashboard/protype', [ProtypeController::class, 'index'])->middleware(['auth'])->name('dashboard');
 //Manufacture
+//Edit Manufacture 
+Route::get('/edit-manufacture/{id}',[ManufactureController::class,'edit'])->middleware(['auth'])->name('dashboard');
+Route::post('/edit-manufacture/{id}',[ManufactureController::class,'update'])->middleware(['auth'])->name('dashboard');
 //Delete Manufacture
 Route::get('/delete-manufacture/{id}',[ManufactureController::class,'destroy'])->middleware(['auth'])->name('dashboard');
 //Add Manufacutre

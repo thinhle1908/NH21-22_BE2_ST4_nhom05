@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Models\Manufacture;
 use App\Models\Product;
 use App\Models\Protype;
 use Illuminate\Http\Request;
@@ -64,7 +65,8 @@ class ProtypeController extends Controller
      */
     public function edit($id)
     {
-        //
+        $protype = Protype::where('type_id', $id)->first();
+        return view('adminEditProtype')->with('protype',$protype);
     }
 
     /**
@@ -76,7 +78,13 @@ class ProtypeController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+            'type_name' => 'bail|required|string|max:255',
+        ]);
+        $protype = Protype::find($id);
+        $protype->type_name = $request->type_name;
+        $protype->update();
+        return ProtypeController::index();
     }
 
     /**

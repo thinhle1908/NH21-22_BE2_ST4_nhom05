@@ -17,7 +17,7 @@ class ManufactureController extends Controller
      */
     public function index()
     {
-        $manufactures = Manufacture::orderBy('created_at', 'desc')->orderBy('manu_id','asc')->paginate(10);
+        $manufactures = Manufacture::orderBy('created_at', 'desc')->orderBy('manu_id', 'asc')->paginate(10);
         return view('adminManufacture')->with('manufactures', $manufactures);
     }
 
@@ -88,6 +88,12 @@ class ManufactureController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $product = Product::where('manu_id', $id)->first();
+        if($product){
+            return redirect()->back();
+        }else{
+            Manufacture::destroy($id);
+            return redirect()->back();
+        }
     }
 }

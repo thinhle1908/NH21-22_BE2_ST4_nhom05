@@ -16,7 +16,7 @@ class ProtypeController extends Controller
      */
     public function index()
     {
-        $protypes = Protype::orderBy('created_at', 'desc')->orderBy('type_id','asc')->paginate(10);
+        $protypes = Protype::orderBy('created_at', 'desc')->orderBy('type_id', 'asc')->paginate(10);
         return view('adminProtype')->with('protypes', $protypes);
     }
 
@@ -87,6 +87,12 @@ class ProtypeController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $product = Product::where('type_id', $id)->first();
+        if ($product) {
+            return redirect()->back();
+        } else {
+            Protype::destroy($id);
+            return redirect()->back();
+        }
     }
 }

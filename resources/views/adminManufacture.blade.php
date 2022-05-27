@@ -3,7 +3,7 @@
         <!-- Content -->
 
         <div class="container-xxl flex-grow-1 container-p-y">
-            <h4 class="fw-bold py-5 mb-4"><span class="text-muted fw-light">Tables /</span> Basic Tables</h4>
+            <h4 class="fw-bold py-5 mb-4"><span class="text-muted fw-light">Dashboard /</span> Manufacture</h4>
 
             <!-- Basic Bootstrap Table -->
             <div class="card">
@@ -31,11 +31,11 @@
                                                 <i class="bx bx-dots-vertical-rounded"></i>
                                             </button>
                                             <div class="dropdown-menu">
-                                                <a class="dropdown-item" href="{{ asset('edit-product/'.$row->manu_id) }}"><i
+                                                <a class="dropdown-item" href="{{ asset('edit-manufacture/'.$row->manu_id) }}"><i
                                                         class="bx bx-edit-alt me-1"></i> Edit</a>
-                                                <a class="dropdown-item" href="{{ asset('delete-product/'.$row->manu_id) }}"><i
+                                                <a class="dropdown-item" href="{{ asset('delete-manufacture/'.$row->manu_id) }}"><i
                                                         class="bx bx-trash me-1"></i> Delete</a>
-                                            </div>
+                                            </div> 
                                         </div>
                                     </td>
                                     

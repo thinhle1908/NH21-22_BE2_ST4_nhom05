@@ -14,6 +14,7 @@ use App\Http\Controllers\ReceipDetailtController;
 use App\Http\Controllers\ReceiptController;
 use App\Http\Controllers\VoucherController;
 use App\Models\Manufacture;
+use App\Models\Protype;
 use Illuminate\Http\Request;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
 
@@ -28,12 +29,16 @@ use Illuminate\Foundation\Auth\EmailVerificationRequest;
 |
 */
 //Protype
+//Delete Protype
+Route::get('/delete-protype/{id}',[ProtypeController::class,'destroy'])->middleware(['auth'])->name('dashboard');
 //Add Protype
 Route::get('/dashboard/add-protype',[ProtypeController::class,'create'])->middleware(['auth'])->name('dashboard');
 Route::post('/dashboard/add-protype',[ProtypeController::class,'store'])->middleware(['auth'])->name('dashboard');
 //View Protype
 Route::get('/dashboard/protype', [ProtypeController::class, 'index'])->middleware(['auth'])->name('dashboard');
 //Manufacture
+//Delete Manufacture
+Route::get('/delete-manufacture/{id}',[ManufactureController::class,'destroy'])->middleware(['auth'])->name('dashboard');
 //Add Manufacutre
 Route::get('/dashboard/add-manufacture',[ManufactureController::class,'create'])->middleware(['auth'])->name('dashboard');
 Route::post('/dashboard/add-manufacture',[ManufactureController::class,'store'])->middleware(['auth'])->name('dashboard');

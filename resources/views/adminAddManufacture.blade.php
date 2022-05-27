@@ -4,18 +4,18 @@
         <!-- Content -->
 
         <div class="container-xxl flex-grow-1 container-p-y">
-            <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Dashboard /</span> Add-product</h4>
+            <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Dashboard /</span> Add-manufacture</h4>
 
             <div class="row">
                 <div class="col-md-12">
                     <ul class="nav nav-pills flex-column flex-md-row mb-3">
                         <li class="nav-item">
                             <a class="nav-link active" href="javascript:void(0);"><i class="bx bx-user me-1"></i>
-                                Add-Product</a>
+                                Add-manufacture</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ asset('dashboard/product') }}"><i
-                                    class="bx bx-link-alt me-1"></i> View Product</a>
+                            <a class="nav-link" href="{{ asset('dashboard/manufacture') }}"><i
+                                    class="bx bx-link-alt me-1"></i> View manufacture</a>
                         </li>
                     </ul>
                     <div class="card mb-4">
@@ -45,7 +45,7 @@
 
                                 </div>
                                 <div class="mt-2">
-                                    <button type="submit" class="btn btn-primary me-2">Add product</button>
+                                    <button type="submit" class="btn btn-primary me-2">Add manufacture</button>
                                     <button type="reset" class="btn btn-outline-secondary">Cancel</button>
                                 </div>
                             </form>

@@ -4,22 +4,22 @@
         <!-- Content -->
 
         <div class="container-xxl flex-grow-1 container-p-y">
-            <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Dashboard /</span> Add-User</h4>
+            <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Dashboard /</span> Add-Comment</h4>
 
             <div class="row">
                 <div class="col-md-12">
                     <ul class="nav nav-pills flex-column flex-md-row mb-3">
                         <li class="nav-item">
                             <a class="nav-link active" href="javascript:void(0);"><i class="bx bx-user me-1"></i>
-                                Add-User</a>
+                                Add-Comment</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ asset('dashboard/protype') }}"><i
-                                    class="bx bx-link-alt me-1"></i> View User</a>
+                            <a class="nav-link" href="{{ asset('dashboard/user') }}"><i
+                                    class="bx bx-link-alt me-1"></i> View Comment</a>
                         </li>
                     </ul>
                     <div class="card mb-4">
-                        <h5 class="card-header">User</h5>
+                        <h5 class="card-header">Comment</h5>
                         @if ($errors->any())
                             <ul>
                                 @foreach ($errors->all() as $error)
@@ -33,28 +33,26 @@
 
                         <hr class="my-0" />
                         <div class="card-body">
-                            <form id="formAccountSettings" method="POST" action="/edit-user/{{$user->id}}"
+                            <form id="formAccountSettings" method="POST" action="/dashboard/add-comment"
                                 enctype="multipart/form-data">
                                 @csrf
                                 <div class="row">
-                                    <div class="mb-3 col-md-8">
-                                        <label for="firstName" class="form-label">Name</label>
-                                        <input class="form-control" type="text" id="firstName" name="name" value="{{$user->name}}"
+                                    <div class="mb-3 col-md-6">
+                                        <label for="firstName" class="form-label">Product_ID</label>
+                                        <input class="form-control" type="text" id="firstName" name="product_id" value=""
                                             autofocus />
-                                            <label for="firstName" class="form-label">Email</label>
-                                        <input class="form-control" type="text" id="firstName" name="email" value="{{$user->email}}"
+                                            <label for="firstName" class="form-label">User_Id</label>
+                                        <input class="form-control" type="text" id="firstName" name="user_id" value=""
                                             autofocus />
-                                            
-                                         
-                                            <label for="firstName" class="form-label">Password</label>
-                                        <input class="form-control" type="text" id="firstName" name="password" value="{{$user->password}}"
+                                            <label for="firstName" class="form-label">Comment</label>
+                                        <input class="form-control" type="text" id="firstName" name="comment_comment" value=""
                                             autofocus />
                                             
                                     </div>
 
                                 </div>
                                 <div class="mt-2">
-                                    <button type="submit" class="btn btn-primary me-2">Edit User</button>
+                                    <button type="submit" class="btn btn-primary me-2">Add Comment</button>
                                     <button type="reset" class="btn btn-outline-secondary">Cancel</button>
                                 </div>
                             </form>

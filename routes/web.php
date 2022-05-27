@@ -18,6 +18,7 @@ use App\Models\Manufacture;
 use App\Models\Protype;
 use Illuminate\Http\Request;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
+use App\Http\Controllers\CommentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -133,3 +134,14 @@ Route::get('/edit-user/{id}',[UserController::class,'edit'])->middleware(['auth'
 Route::post('/edit-user/{id}',[UserController::class,'update'])->middleware(['auth'])->name('dashboard');
 //delete
 Route::get('/delete-user/{id}',[UserController::class,'destroy'])->middleware(['auth'])->name('dashboard');
+//Admin Comment
+//View
+Route::get('/dashboard/comment', [CommentController::class, 'index'])->middleware(['auth'])->name('dashboard');
+//add Comment
+Route::get('/dashboard/add-comment',[CommentController::class,'create'])->middleware(['auth'])->name('dashboard');
+Route::post('/dashboard/add-comment',[CommentController::class,'store'])->middleware(['auth'])->name('dashboard');
+//edit
+Route::get('/edit-comment/{id}',[CommentController::class,'edit'])->middleware(['auth'])->name('dashboard');
+Route::post('/edit-comment/{id}',[CommentController::class,'update'])->middleware(['auth'])->name('dashboard');
+//delete
+Route::get('/delete-comment/{id}',[CommentController::class,'destroy'])->middleware(['auth'])->name('dashboard');

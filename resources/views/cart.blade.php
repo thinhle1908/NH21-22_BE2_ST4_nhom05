@@ -102,7 +102,7 @@
 						if($count['voucher_value']==null){
 							$result = 0;
 						}else{
-							$result = $total*$count['voucher_value']/100
+							$result = $total*$count['voucher_value']/100;
 						}
 						@endphp
 						<li>Vocher <span>{{$total*$count['voucher_value']/100 ?? '0'}}</span></li>

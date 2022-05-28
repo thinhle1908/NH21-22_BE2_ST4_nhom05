@@ -98,16 +98,19 @@
 						<li>Shipping Cost <span>Free</span></li>
 						@if(!empty($voucher))
 						@foreach($voucher as $count)
-
-						<li>Vocher <span>{{$total*$count['voucher_value']/100 ?? '0' }}</span></li>
+						@php
+						$result=$total*$count['voucher_value']/100 ?? '0';
+						@endphp
+						<li>Vocher <span>{{$total*$count['voucher_value']/100 ?? '0'}}</span></li>
 
 						<li>Total <span>{{$total+$total*0.1-$total*$count['voucher_value']/100 ?? '0'}}</span></li>
-
+						@endforeach
+						@endif
 					</ul>
+					
 					<a class="btn btn-default update" href="">Update</a>
-					<a class="btn btn-default check_out" href="checkout?code={{$total*$count['voucher_value']/100 ?? '0'}}">Check Out</a>
-					@endforeach
-					@endif
+					<a class="btn btn-default check_out" href="checkout?code={{$result}}">Check Out</a>
+
 				</div>
 			</div>
 

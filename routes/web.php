@@ -9,6 +9,7 @@ use App\Http\Controllers\OrderItemController;
 use App\Http\Controllers\OrdersController;
 use App\Http\Controllers\OrdersItemsController;
 use App\Http\Controllers\ProductsController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProtypeController;
 use App\Http\Controllers\ReceipDetailtController;
 use App\Http\Controllers\ReceiptController;
@@ -63,6 +64,7 @@ Route::post('/dashboard/add-product',[ProductController::class,'store'])->middle
 Route::get('/dashboard/product', [ProductController::class, 'index'])->middleware(['auth'])->name('dashboard');
 //
 Route::get('/index', [MyController::class, 'index']);
+//Product Details
 Route::get('/product-details/{id}', [MyController::class, 'productDetails']);
 //showCart
 Route::get('/cart', [MyController::class,'showCart'])->name('showCart')->middleware(['auth'])->name('dashboard');
@@ -118,6 +120,14 @@ Route::get('/dashboard', function () {
 Route::get('/manufacture/{manu_id}', [MyController::class, 'showManufacturebyID']);
 Route::get('/protype/{type_id}', [MyController::class, 'showProtypebyID']);
 Route::get('/place-order', [MyController::class, 'placeOrder']);
-
-
-
+//Admin user
+//View
+Route::get('/dashboard/user', [UserController::class, 'index'])->middleware(['auth'])->name('dashboard');
+//add
+Route::get('/dashboard/add-user',[UserController::class,'create'])->middleware(['auth'])->name('dashboard');
+Route::post('/dashboard/add-user',[UserController::class,'store'])->middleware(['auth'])->name('dashboard');
+//edit
+Route::get('/edit-user/{id}',[UserController::class,'edit'])->middleware(['auth'])->name('dashboard');
+Route::post('/edit-user/{id}',[UserController::class,'update'])->middleware(['auth'])->name('dashboard');
+//delete
+Route::get('/delete-user/{id}',[UserController::class,'destroy'])->middleware(['auth'])->name('dashboard');

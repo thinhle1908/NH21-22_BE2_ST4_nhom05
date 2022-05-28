@@ -262,6 +262,30 @@ table, th, td {
                 </div>
               </a>
             </li>
+            <!-- User -->
+            <li class="menu-header small text-uppercase"><span class="menu-header-text">User</span></li>
+            <li class="menu-item">
+              <a
+                href="{{ asset('dashboard/add-user') }}"
+                target="_blank"
+                class="menu-link"
+              >
+              <i class="fa-solid fa-tag"  style="margin-right:10%"></i>
+             
+                <div data-i18n="Support">Add User</div>
+              </a>
+            </li>
+            <li class="menu-item">
+              <a
+                href="{{ asset('dashboard/user') }}"
+                target="_blank"
+                class="menu-link"
+              >
+              <i class="fa-solid fa-tags"  style="margin-right:10%"></i>
+                <div data-i18n="Documentation">View User
+                </div>
+              </a>
+            </li>
              <!-- Tên danh mục -->
             <li class="menu-header small text-uppercase"><span class="menu-header-text">Receipt</span></li>
               <li class="menu-item">
@@ -433,14 +457,7 @@ table, th, td {
     </div>
     <!-- / Layout wrapper -->
 
-    <div class="buy-now">
-      <a
-        href="https://themeselection.com/products/sneat-bootstrap-html-admin-template/"
-        target="_blank"
-        class="btn btn-danger btn-buy-now"
-        >Upgrade to Pro</a
-      >
-    </div>
+   
 
     <!-- Core JS -->
     <!-- build:js assets/vendor/js/core.js -->

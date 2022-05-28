@@ -11,11 +11,11 @@
                     <ul class="nav nav-pills flex-column flex-md-row mb-3">
                         <li class="nav-item">
                             <a class="nav-link active" href="javascript:void(0);"><i class="bx bx-user me-1"></i>
-                                Add-User</a>
+                                Add-Comment</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ asset('dashboard/protype') }}"><i
-                                    class="bx bx-link-alt me-1"></i> View User</a>
+                            <a class="nav-link" href="{{ asset('dashboard/comment') }}"><i
+                                    class="bx bx-link-alt me-1"></i> View Comment</a>
                         </li>
                     </ul>
                     <div class="card mb-4">
@@ -33,28 +33,28 @@
 
                         <hr class="my-0" />
                         <div class="card-body">
-                            <form id="formAccountSettings" method="POST" action="/edit-user/{{$user->id}}"
+                            <form id="formAccountSettings" method="POST" action="/edit-comment/{{$comment->comment_id}}"
                                 enctype="multipart/form-data">
                                 @csrf
                                 <div class="row">
                                     <div class="mb-3 col-md-8">
-                                        <label for="firstName" class="form-label">Name</label>
-                                        <input class="form-control" type="text" id="firstName" name="name" value="{{$user->name}}"
+                                        <label for="firstName" class="form-label">Product_Id</label>
+                                        <input class="form-control" type="text" id="firstName" name="product_id" value="{{$comment->product_id}}"
                                             autofocus />
-                                            <label for="firstName" class="form-label">Email</label>
-                                        <input class="form-control" type="text" id="firstName" name="email" value="{{$user->email}}"
+                                            <label for="firstName" class="form-label">User_Id</label>
+                                        <input class="form-control" type="text" id="firstName" name="user_id" value="{{$comment->user_id}}"
                                             autofocus />
                                             
                                          
-                                            <label for="firstName" class="form-label">Password</label>
-                                        <input class="form-control" type="text" id="firstName" name="password" value="{{$user->password}}"
+                                            <label for="firstName" class="form-label">Comment</label>
+                                        <input class="form-control" type="text" id="firstName" name="comment_comment" value="{{$comment->comment_comment}}"
                                             autofocus />
                                             
                                     </div>
 
                                 </div>
                                 <div class="mt-2">
-                                    <button type="submit" class="btn btn-primary me-2">Edit User</button>
+                                    <button type="submit" class="btn btn-primary me-2">Edit Comment</button>
                                     <button type="reset" class="btn btn-outline-secondary">Cancel</button>
                                 </div>
                             </form>

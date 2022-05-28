@@ -12,7 +12,7 @@
 
     <tr>
         <td style="border-top: 1px solid black;border-bottom: 1px solid black;border-right: 1px solid black;border-left: 1px solid black; width: 153px; padding: 5px;">
-            <img src="https://nentang.vn/wp-content/uploads/2018/08/logo-nentang.jpg" style="width: 153px; height: 153px;" />
+            <img src="https://www.inquangcaopcm.com/upload/images/12.png" style="width: 153px; height: 153px;" />
         </td>
         <td style="border-top: 1px solid black;border-bottom: 1px solid black;border-right: 1px solid black; text-align: center; vertical-align: middle; padding: 5px;" colspan="3">
             <h1 style="color: red;">Shop bán đồ gia dụng</h1>

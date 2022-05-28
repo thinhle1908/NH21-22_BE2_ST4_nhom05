@@ -21,6 +21,7 @@ class CommentTable extends Migration
             $table->integer("user_id");
             $table->string("comment_comment",255);
             $table->timestamp('comment_date');
+            $table->timestamps(); 
         });
 
     }

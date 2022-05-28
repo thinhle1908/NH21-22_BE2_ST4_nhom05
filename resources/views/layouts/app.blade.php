@@ -342,7 +342,30 @@ table, th, td {
                 </div>
               </a>
             </li>
-            
+            <!-- Comment -->
+            <li class="menu-header small text-uppercase"><span class="menu-header-text">Comment</span></li>
+            <li class="menu-item">
+              <a
+                href="{{ asset('dashboard/add-comment') }}"
+                target="_blank"
+                class="menu-link"
+              >
+              <i class="fa-solid fa-tag"  style="margin-right:10%"></i>
+             
+                <div data-i18n="Support">Add Comment</div>
+              </a>
+            </li>
+            <li class="menu-item">
+              <a
+                href="{{ asset('dashboard/comment') }}"
+                target="_blank"
+                class="menu-link"
+              >
+              <i class="fa-solid fa-tags"  style="margin-right:10%"></i>
+                <div data-i18n="Documentation">View Comment
+                </div>
+              </a>
+            </li>
           </ul>
         </aside>
         <!-- / Menu -->

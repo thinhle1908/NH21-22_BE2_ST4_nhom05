@@ -118,6 +118,7 @@
                                     </li>
                                 @else
                                     <li><a href="{{ asset('login') }}"><i class="fa fa-lock"></i> Login</a></li>
+                                    <li><a href="{{ asset('register') }}"><i class="fa fa-lock"></i> Register</a></li>
                                 @endif
 
                             </ul>

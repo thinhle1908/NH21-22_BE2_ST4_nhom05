@@ -99,7 +99,11 @@
 						@if(!empty($voucher))
 						@foreach($voucher as $count)
 						@php
-						$result=$total*$count['voucher_value']/100 ?? '0';
+						if($count['voucher_value']==null){
+							$result = 0;
+						}else{
+							$result = $total*$count['voucher_value']/100
+						}
 						@endphp
 						<li>Vocher <span>{{$total*$count['voucher_value']/100 ?? '0'}}</span></li>
 

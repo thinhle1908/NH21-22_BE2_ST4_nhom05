@@ -16,7 +16,7 @@ class OrdersSeeder extends Seeder
         DB::table('orders')->insert([
             //1
             [
-                'order_name'=>'Tivi',
+                'order_name'=>'Tính',
                 'order_address'=>'123 Hàm Yên Đống Đa Hà Nội',
                 'order_phone'=>'0987654321',
                 'order_email'=>'mail1@gmail.com',
@@ -24,7 +24,7 @@ class OrdersSeeder extends Seeder
             ],
             //2
             [
-                'order_name'=>'Laptop',
+                'order_name'=>'Giang',
                 'order_address'=>'456 Trần Hưng Đạo Quận 1 Thành Phố HCM',
                 'order_phone'=>'0123456789',
                 'order_email'=>'mail2@gmail.com',
@@ -32,7 +32,7 @@ class OrdersSeeder extends Seeder
             ],
             //3
             [
-                'order_name'=>'Bicycle',
+                'order_name'=>'Hằng',
                 'order_address'=>'789 Ngô Quyền Đà Nẵng',
                 'order_phone'=>'0987123456  ',
                 'order_email'=>'mail3@gmail.com',

@@ -16,4 +16,8 @@ class Orders extends Model
         'order_email',
         'order_notes',
     ];
+    public function orders_items()
+    {
+        return $this->hasMany(Orders_Items::class,'order_id','id');
+    }
 }

@@ -16,4 +16,8 @@ class Orders_Items extends Model
         'qty',
         'total',
     ];
+    public function orders()
+    {
+        return $this->belongsTo(Orders::class,"order_id");
+    }
 }

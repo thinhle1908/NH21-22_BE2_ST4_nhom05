@@ -7,7 +7,15 @@
 
       <!-- Basic Bootstrap Table -->
       <div class="card">
-
+      <ul class="nav nav-pills flex-column flex-md-row mb-3">
+        <li class="nav-item">
+          <a class="nav-link active" href="javascript:void(0);"><i class="bx bx-user me-1"></i>
+            View OrderItems</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="http://127.0.0.1:8000/dashboard/add-order"><i class="bx bx-link-alt me-1"></i>Add-OrderItems</a>
+        </li>
+      </ul>
         <table class="table">
           <thead>
             <tr>
@@ -34,7 +42,7 @@
                     <i class="bx bx-dots-vertical-rounded"></i>
                   </button>
                   <div class="dropdown-menu">
-                    <a class="dropdown-item" href="{{asset('dashboard/edit-voucher/'.$data->voucher_id)}}"><i class="bx bx-edit-alt me-1"></i> Edit</a>
+                    <a class="dropdown-item" href="{{asset('dashboard/edit-ordersitems/'.$data->id)}}"><i class="bx bx-edit-alt me-1"></i> Edit</a>
                     <a class="dropdown-item" href="{{asset('dashboard/delete-orders-items/'.$data->id)}}"><i class="bx bx-trash me-1"></i> Delete</a>
                   </div>
                 </div>

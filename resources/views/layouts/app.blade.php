@@ -303,7 +303,7 @@ table, th, td {
                 <a href="{{ asset('dashboard/add-voucher') }}"
                   target="_blank"
                   class="menu-link" >
-                  <i class="menu-icon tf-icons bx bx-file"></i>
+                  <i class="menu-icon fa fa-plus "></i>
                   <div data-i18n="Documentation">Add Voucher
                   </div>
                 </a>
@@ -326,7 +326,7 @@ table, th, td {
                   target="_blank"
                   class="menu-link"
                 >
-                  <i class="menu-icon tf-icons bx bx-file"></i>
+                  <i class="menu-icon fa fa-plus "></i>
                   <div data-i18n="Documentation">Add Order
                   </div>
                 </a>
@@ -345,11 +345,11 @@ table, th, td {
               </li>
               <li class="menu-item">
                 <a
-                  href="{{ asset('dashboard/order_items') }}"
+                  href="{{ asset('dashboard/add-ordersitems') }}"
                   target="_blank"
                   class="menu-link"
                 >
-                  <i class="menu-icon tf-icons bx bx-file"></i>
+                  <i class="menu-icon fa fa-plus"></i>
                   <div data-i18n="Documentation">Add Order Items
                   </div>
                 </a>
@@ -526,8 +526,19 @@ table, th, td {
         event.preventDefault();
         location.replace('/dashboard/orders');
       }
+      function cancel_order_item(event){
+        event.preventDefault();
+        location.replace('/dashboard/order_items');
+      }
+      function productChanged(obj){
+          $value = obj.value;
+          let pri = $('.pri'+$value).data('pri');
+          document.getElementById('price_item').value = pri;
+      }
+
       $(function(){
         $(document).on('click', '.cancel_voucher', cancel_voucher);
+        $(document).on('click', '.cancel_orders_items', cancel_order_item);
         $(document).on('click', '.cancel_order', cancel_order);
       });
     </script>

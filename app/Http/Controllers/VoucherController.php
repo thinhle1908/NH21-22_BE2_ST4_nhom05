@@ -22,6 +22,11 @@ class VoucherController extends Controller
     public function addvoucher(Request $request)
     {
         if ($request->ismethod('post')) {
+            $request->validate([
+                'voucher_code' => 'bail|required|string|max:255',
+                'voucher_value' => 'bail|required|numeric',
+                'voucher_name' =>'bail|required|string|max:255',
+            ]);
             $data = $request->all();
             $voucher = new Voucher;
             $voucher->voucher_code = $data['voucher_code'];
@@ -35,6 +40,11 @@ class VoucherController extends Controller
     public function editvoucher(Request $request, $id = null)
     {
         if ($request->ismethod('post')) {
+            $request->validate([
+                'voucher_code' => 'bail|required|string|max:255',
+                'voucher_value' => 'bail|required|numeric',
+                'voucher_name' =>'bail|required|string|max:255',
+            ]);
             $data = $request->all();
             Voucher::where(['voucher_id'=>$id])->update(['voucher_code' => $data['voucher_code'], 'voucher_value' => $data['voucher_value'],'voucher_name'=>$data['voucher_name']]);
             return redirect()->back()->with('flash_message_success', 'Voucher has been edit successfully');

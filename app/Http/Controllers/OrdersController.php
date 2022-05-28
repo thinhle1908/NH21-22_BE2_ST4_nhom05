@@ -19,6 +19,12 @@ class OrdersController extends Controller
     public function addorders(Request $request)
     {
         if ($request->ismethod('post')) {
+            $request->validate([
+                'order_name' => 'bail|required|string|max:255',
+                'order_address' =>'bail|required|string|max:255',
+                'order_phone' => 'bail|required|numeric',
+                'order_phone' =>'bail|required|string|max:255',
+            ]);
             $data = $request->all();
             $order = new Orders;
             $order->order_name = $data['order_name'];
@@ -39,6 +45,12 @@ class OrdersController extends Controller
     public function editorders(Request $request,$id = null)
     {
         if ($request->ismethod('post')) {
+            $request->validate([
+                'order_name' => 'bail|required|string|max:255',
+                'order_address' =>'bail|required|string|max:255',
+                'order_phone' => 'bail|required|numeric',
+                'order_phone' =>'bail|required|string|max:255',
+            ]);
             $data = $request->all();
             if($data['order_notes']==null){
                 $note = "Không có";

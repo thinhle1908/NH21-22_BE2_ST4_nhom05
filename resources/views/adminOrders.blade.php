@@ -7,7 +7,15 @@
 
       <!-- Basic Bootstrap Table -->
       <div class="card">
-
+        <ul class="nav nav-pills flex-column flex-md-row mb-3">
+          <li class="nav-item">
+            <a class="nav-link active" href="javascript:void(0);"><i class="bx bx-user me-1"></i>
+              View Order</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="http://127.0.0.1:8000/dashboard/add-orders"><i class="bx bx-link-alt me-1"></i>Add-Order</a>
+          </li>
+        </ul>
         <table class="table">
           <thead>
             <tr>

@@ -572,5 +572,33 @@ table, th, td {
         $(document).on('click', '.cancel_order', cancel_order);
       });
     </script>
+ 
+
+      <!--  cho comment -->
+    <script type="text/javascript">
+      $(document).ready(function(){
+        var product_id = $('.comment_product_id').val();
+        load_comment();
+        
+        function load_comment(){
+
+        
+        var _token = $('input[name="_token"]').val();
+
+          $.ajax({
+            url:"{{ url('/load-comment') }}",
+            method:"post",
+            data:{product_id:query, _token:_token},
+            success:funtion(data){
+              $('#comment').html(data);
+              
+            }
+          })
+        }
+
+      });
+
+    </script>
+
   </body>
 </html>

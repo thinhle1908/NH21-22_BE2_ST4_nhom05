@@ -16,12 +16,14 @@ class CommentTable extends Migration
         //
         Schema::create('comments', function (Blueprint $table) {
             $table->id("comment_id");
-            $table->integer("product_id");
+            $table->string("comment",255);
+            $table->integer("comment_product_id");
             
-            $table->integer("user_id");
-            $table->string("comment_comment",255);
-            $table->timestamp('comment_date');
-            $table->timestamps(); 
+            $table->string("comment_name");
+            $table->string("comment_date");
+            $table->timestamp('created_at');
+            $table->timestamp('updated_at')->nullable();
+        
         });
 
     }

@@ -12,9 +12,10 @@ class Comment extends Model
     protected $table = 'comments';
     protected $fillable = [
         'comment_id',
-        'product_id',
-        'user_id',
-        'comment_comment',
+        'comment',
+        'comment_product_id',
+        'comment_name',
         'comment_date',
     ];
+    public $timestamps = false;
 }

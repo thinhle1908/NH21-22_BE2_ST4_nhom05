@@ -1,5 +1,7 @@
 @extends('layout')
 @section('content')	
+@foreach($productRelated as $key => $value )
+@endforeach
 	<section>
 		<div class="container">
 			<div class="row">
@@ -217,41 +219,21 @@
 
 									<b>Comments form buyer </b>
 									<!-- Chỗ này là show ra bình luận -->
-									<div class ="row style_comment" style="margin-bottom:10px">  <!-- Chỗ này avatar người dùng -->
-										<div class='col-md-2'>
-												<img class="img img-responsive img-thumbnail" style="border: 1px solid #ddd;" src="{{asset('images/product-details/anonymous-user.jpg')}}" alt="">
-										</div>
-											<div class='col-md-10'>  <!-- Chỗ này là bình luận của người dùng -->
-												<p style="color:green; font-weight: bold">
-													@Minh Dep Trai
-												</p>
-												<p>
-												Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature 
-
-												</p>
-											</div>
-									</div>
-									<!-- Chỗ này là show ra bình luận -->
-									<div class ="row style_comment" style="margin-bottom:10px">  <!-- Chỗ này avatar người dùng -->
-										<div class='col-md-2'>
-												<img class="img img-responsive img-thumbnail" style="border: 1px solid #ddd;" src="{{asset('images/product-details/anonymous-user.jpg')}}" alt="">
-										</div>
-											<div class='col-md-10'>  <!-- Chỗ này là bình luận của người dùng -->
-												<p style="color:green; font-weight: bold">
-													@Minh Dep Trai
-												</p>
-												<p>
-												Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature 
-
-												</p>
-											</div>
-									</div>
+									<form >
+										@php
+										
+										
+										@endphp
+										@csrf 
+										<div id = comment_show></div>
+										<input type="hidden" name="comment_product_id" class="comment_product_id" value="{{$value->id}}">	
+									</form>
+									
 
 
 
 
-
-									<!-- /Chỗ này là show ra bình luận -->
+									<!-- /Chỗ này là show ra star  -->
 									
 									<p style="margin-top:50px"><b>Write Your Review</b></p>
 									<form action="#">
@@ -329,7 +311,7 @@
 									@endforeach
 								</div>
 								
-							 
+									
 						</div>
 					</div><!--/recommended_items-->
 					
@@ -337,4 +319,5 @@
 			</div>
 		</div>
 	</section>
+	
 @endsection

@@ -28,5 +28,14 @@ class DatabaseSeeder extends Seeder
         $this->call([
             CommentSeeder::class
         ]);
+        $this->call([
+            RatingSeeder::class
+        ]);
+        
+        $this->call([
+            ReceiptDetailsSeeder::class
+        ]);
+        
+        
     }
 }

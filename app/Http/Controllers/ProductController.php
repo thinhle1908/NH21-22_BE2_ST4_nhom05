@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Protype;
 use App\Models\Manufacture;
+use App\Models\Comment;
 
 class ProductController extends Controller
 {
@@ -139,4 +140,7 @@ class ProductController extends Controller
         Product::destroy($id);
         return redirect()->back();
     }
+
+
+    
 }

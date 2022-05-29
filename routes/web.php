@@ -68,6 +68,9 @@ Route::get('/dashboard/product', [ProductController::class, 'index'])->middlewar
 Route::get('/index', [MyController::class, 'index']);
 //Product Details
 Route::get('/product-details/{id}', [MyController::class, 'productDetails']);
+//Product comment
+Route::post('/load-comment',[MyController::class,'load_comment']);
+
 //showCart
 Route::get('/cart', [MyController::class,'showCart'])->name('showCart')->middleware(['auth'])->name('dashboard');
 Route::get('/checkout', [MyController::class,'showProductbyCart'])->name('showProductbyCart');

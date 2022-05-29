@@ -96,22 +96,19 @@
 						<li>Cart Sub Total <span>{{$total}}</span></li>
 						<li>Eco Tax <span>{{$total*0.1}}</span></li>
 						<li>Shipping Cost <span>Free</span></li>
+						@php
+						$result=0;
+						@endphp
 						@if(!empty($voucher))
 						@foreach($voucher as $count)
 						@php
-						if($count['voucher_value']==null){
-							$result = 0;
-						}else{
-							$result = $total*$count['voucher_value']/100;
-						}
+						$result = $total*$count['voucher_value']/100;
 						@endphp
-						<li>Vocher <span>{{$total*$count['voucher_value']/100 ?? '0'}}</span></li>
-
-						<li>Total <span>{{$total+$total*0.1-$total*$count['voucher_value']/100 ?? '0'}}</span></li>
 						@endforeach
 						@endif
+						<li>Vocher <span>{{$result}}</span></li>
+						<li>Total <span>{{$total+$total*0.1-$result}}</span></li>
 					</ul>
-					
 					<a class="btn btn-default update" href="">Update</a>
 					<a class="btn btn-default check_out" href="checkout?code={{$result}}">Check Out</a>
 

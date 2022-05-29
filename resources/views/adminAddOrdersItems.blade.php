@@ -14,7 +14,7 @@
                 Add-OrdersItems</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="http://127.0.0.1:8000/dashboard/orders-items"><i class="bx bx-link-alt me-1"></i>View Orders Items</a>
+              <a class="nav-link" href="http://127.0.0.1:8000/dashboard/order_items"><i class="bx bx-link-alt me-1"></i>View Orders Items</a>
             </li>
           </ul>
           <div class="card mb-4">

@@ -4,21 +4,25 @@
     <!-- Content -->
 
     <div class="container-xxl flex-grow-1 container-p-y">
-      <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light"> Dashboard /</span> Add-Order Items</h4>
+      <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light"> Dashboard /</span> Edit-Order Items</h4>
 
       <div class="row">
         <div class="col-md-12">
           <ul class="nav nav-pills flex-column flex-md-row mb-3">
             <li class="nav-item">
               <a class="nav-link active" href="javascript:void(0);"><i class="fa fa-plus-square"></i>
-                Add-OrdersItems</a>
+                Edit-OrdersItems</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="http://127.0.0.1:8000/dashboard/orders-items"><i class="bx bx-link-alt me-1"></i>View Orders Items</a>
+              <a class="nav-link" href="http://127.0.0.1:8000/dashboard/add-ordersitems"><i class="bx bx-link-alt me-1"></i>Add Orders Items</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="http://127.0.0.1:8000/dashboard/order_items"><i class="bx bx-link-alt me-1"></i>View Orders Items</a>
+            </li>
+            
           </ul>
           <div class="card mb-4">
-            <h5 class="card-header">Add Order Items</h5>
+            <h5 class="card-header">Edit Order Items</h5>
             @if ($errors->any())
             <ul>
               @foreach ($errors->all() as $error)

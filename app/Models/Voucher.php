@@ -13,10 +13,15 @@ class Voucher extends Model
     {
         if (request()->code == null) {
             $query = $query->where('voucher_code', "NOVOUCHER");
-        } else {
-            if ($code = request()->code) {
-                $query = $query->where('voucher_code', $code);
-            }
+        }else {
+            if(!empty($query->where('voucher_code',request()->code))){
+                if ($code = request()->code) {
+                    $query = $query->where('voucher_code', $code);
+            
+            }else{ 
+                $query = $query->where('voucher_code', "NOVOUCHER");
+            }}
+           
         }
         return $query;
     }

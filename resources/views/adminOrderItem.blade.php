@@ -13,7 +13,7 @@
             View OrderItems</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="http://127.0.0.1:8000/dashboard/add-order"><i class="bx bx-link-alt me-1"></i>Add-OrderItems</a>
+          <a class="nav-link" href="http://127.0.0.1:8000/dashboard/add-ordersitems"><i class="bx bx-link-alt me-1"></i>Add-OrderItems</a>
         </li>
       </ul>
         <table class="table">

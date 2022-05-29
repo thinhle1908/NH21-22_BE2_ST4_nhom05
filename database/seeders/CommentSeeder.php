@@ -16,35 +16,68 @@ class CommentSeeder extends Seeder
     {
         //
         DB::table('comments')->insert([
-            //1
-            ['product_id'=>1,
-            'user_id'=>1,
-            'comment_comment'=>"Good"],
-            ['product_id'=>2,
-            'user_id'=>1,
-            'comment_comment'=>"Good"],
-            ['product_id'=>3,
-            'user_id'=>1,
-            'comment_comment'=>"Good"],
-            ['product_id'=>4,
-            'user_id'=>1,
-            'comment_comment'=>"Good"],
-            ['product_id'=>5,
-            'user_id'=>1,
-            'comment_comment'=>"Good"],
-            ['product_id'=>6,
-            'user_id'=>1,
-            'comment_comment'=>"Good"],
-            ['product_id'=>7,
-            'user_id'=>1,
-            'comment_comment'=>"Good"],
-            ['product_id'=>8,
-            'user_id'=>1,
-            'comment_comment'=>"Good"],
-            ['product_id'=>9,
-            'user_id'=>1,
-            'comment_comment'=>"Good"],
+          
+//1
+['comment_product_id'=>1,
+'comment_name'=>'anonymous',
+'comment_date'=>'null',
+'comment'=>'Good'],
+//2
+['comment_product_id'=>2,
+'comment_name'=>'anonymous',
+'comment_date'=>'null',
+'comment'=>'Good'],
+//3
+['comment_product_id'=>3,
+'comment_name'=>'anonymous',
+'comment_date'=>'null',
+'comment'=>'Good'],
+//4
+['comment_product_id'=>4,
+'comment_name'=>'anonymous',
+'comment_date'=>'null',
+'comment'=>'Good'],
+//5
+['comment_product_id'=>5,
+'comment_name'=>'anonymous',
+'comment_date'=>'null',
+'comment'=>'Good'],
+//6
+['comment_product_id'=>6,
+'comment_name'=>'anonymous',
+'comment_date'=>'null',
+'comment'=>'Good'],
+//7
+['comment_product_id'=>7,
+'comment_name'=>'anonymous',
+'comment_date'=>'null',
+'comment'=>'Good'],
+//8
+['comment_product_id'=>8,
+'comment_name'=>'anonymous',
+'comment_date'=>'null',
+'comment'=>'Good'],
+//9
+['comment_product_id'=>9,
+'comment_name'=>'anonymous',
+'comment_date'=>'null',
+'comment'=>'Good'],
+//10
+['comment_product_id'=>10,
+'comment_name'=>'anonymous',
+'comment_date'=>'null',
+'comment'=>'Good'],
+//11
+['comment_product_id'=>11,
+'comment_name'=>'anonymous',
+'comment_date'=>'null',
+'comment'=>'Good']
+
+           
+            
         ]);
+
+    
     
     }
 }

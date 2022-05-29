@@ -11,6 +11,8 @@ use App\Models\Orders_Items;
 use App\Models\Rating;
 use App\Models\Voucher;
 use App\Models\User;
+use App\Models\Comment;
+use DB;
 use Mail;
 
 class MyController extends Controller
@@ -80,10 +82,11 @@ class MyController extends Controller
         $rating = Rating::where('product_id',$id)->avg('rating');
         $rating = round($rating);
         
+
+
         // [het] phuc vu cho rating
         
         return view('product-details',compact('pro'))->with('tenManufactures',$manufactures)->with('productRelated',$related_product)->with('rating',$rating)->with('tenProtypes',$protype)->with('product_id',$id);
-
     }
     public function showMoreProducts($qty)
     {
@@ -272,5 +275,30 @@ public function adminUser(){
     }
 
     //Rating: Minh
+    public function load_comment(Request $request)
+    {
+        $product_id = $request->id;
+        $comment = Comment::where('comment_product_id', $product_id)->get();
+        $output="";
+        foreach($comment as $key => $comm)
+        {
+            $output.='
+            <div class ="row style_comment" style="margin-bottom:10px">  
+											<div class="col-md-2">
+													<img class="img img-responsive img-thumbnail" style="border: 1px solid #ddd;" src="/images/product-details/anonymous-user.jpg" alt="">
+											</div>
+												<div class="col-md-10">
+													<p style="color:green; font-weight: bold">
+														@'.$comm->comment_name.'
+													</p>
+													<p>
+													'.$comm->comment.'
 
+													</p>
+												</div>
+										</div>
+            ';
+        }
+        echo $output;
+    }
 }

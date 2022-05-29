@@ -118,7 +118,7 @@
 			<div class="col-sm-9 padding-right">
 				<div class="features_items" id="result-filter">
 					<!--features_items-->
-					<h2 class="title text-center">Features Items</h2>
+					<h2 class="title text-center">Product</h2>
 					@foreach($tenProductsFeature as $row)
 					<div class="col-sm-4">
 						<div class="product-image-wrapper">

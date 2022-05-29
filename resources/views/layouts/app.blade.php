@@ -354,7 +354,14 @@ table, th, td {
                   </div>
                 </a>
               </li>
-             
+              <li class="menu-header small text-uppercase"><span class="menu-header-text">Comment</span></li>
+            <li class="menu-item">
+              <a
+                href="{{ asset('dashboard/add-comment') }}"
+                target="_blank"
+                class="menu-link"
+              >
+              <i class="fa-solid fa-tag"  style="margin-right:10%"></i>
                 <div data-i18n="Support">Add Comment</div>
               </a>
             </li>
@@ -366,6 +373,29 @@ table, th, td {
               >
               <i class="fa-solid fa-tags"  style="margin-right:10%"></i>
                 <div data-i18n="Documentation">View Comment
+                </div>
+              </a>
+            </li>
+            <!-- Rating -->
+            <li class="menu-header small text-uppercase"><span class="menu-header-text">Rating</span></li>
+            <li class="menu-item">
+              <a
+                href="{{ asset('dashboard/add-rating') }}"
+                target="_blank"
+                class="menu-link"
+              >
+              <i class="fa-solid fa-tag"  style="margin-right:10%"></i>
+                <div data-i18n="Support">Add Rating</div>
+              </a>
+            </li>
+            <li class="menu-item">
+              <a
+                href="{{ asset('dashboard/rating') }}"
+                target="_blank"
+                class="menu-link"
+              >
+              <i class="fa-solid fa-tags"  style="margin-right:10%"></i>
+                <div data-i18n="Documentation">View Rating
                 </div>
               </a>
             </li>

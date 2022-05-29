@@ -25,5 +25,8 @@ class DatabaseSeeder extends Seeder
         $this->call([
             VouchersSeeder::class
         ]);
+        $this->call([
+            CommentSeeder::class
+        ]);
     }
 }

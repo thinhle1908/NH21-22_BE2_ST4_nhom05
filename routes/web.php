@@ -19,6 +19,7 @@ use App\Models\Protype;
 use Illuminate\Http\Request;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
 use App\Http\Controllers\CommentController;
+use App\Http\Controllers\RatingController;
 
 /*
 |--------------------------------------------------------------------------
@@ -148,3 +149,14 @@ Route::get('/edit-comment/{id}',[CommentController::class,'edit'])->middleware([
 Route::post('/edit-comment/{id}',[CommentController::class,'update'])->middleware(['auth'])->name('dashboard');
 //delete
 Route::get('/delete-comment/{id}',[CommentController::class,'destroy'])->middleware(['auth'])->name('dashboard');
+//Admin Rating
+//View
+Route::get('/dashboard/rating', [RatingController::class, 'index'])->middleware(['auth'])->name('dashboard');
+//add Comment
+Route::get('/dashboard/add-rating',[RatingController::class,'create'])->middleware(['auth'])->name('dashboard');
+Route::post('/dashboard/add-rating',[RatingController::class,'store'])->middleware(['auth'])->name('dashboard');
+//edit
+Route::get('/edit-rating/{id}',[RatingController::class,'edit'])->middleware(['auth'])->name('dashboard');
+Route::post('/edit-rating/{id}',[RatingController::class,'update'])->middleware(['auth'])->name('dashboard');
+//delete
+Route::get('/delete-rating/{id}',[RatingController::class,'destroy'])->middleware(['auth'])->name('dashboard');

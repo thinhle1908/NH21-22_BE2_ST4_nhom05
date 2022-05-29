@@ -16,10 +16,34 @@ class CommentSeeder extends Seeder
     {
         //
         DB::table('comments')->insert([
-            'product_id'=>random_int(1,10000),
-            'rating_id'=>random_int(1,10000),
-            'user_id'=>random_int(1,100000),
-            'comment_comment'=>Str::random(100),
+            //1
+            ['product_id'=>1,
+            'user_id'=>1,
+            'comment_comment'=>"Good"],
+            ['product_id'=>2,
+            'user_id'=>1,
+            'comment_comment'=>"Good"],
+            ['product_id'=>3,
+            'user_id'=>1,
+            'comment_comment'=>"Good"],
+            ['product_id'=>4,
+            'user_id'=>1,
+            'comment_comment'=>"Good"],
+            ['product_id'=>5,
+            'user_id'=>1,
+            'comment_comment'=>"Good"],
+            ['product_id'=>6,
+            'user_id'=>1,
+            'comment_comment'=>"Good"],
+            ['product_id'=>7,
+            'user_id'=>1,
+            'comment_comment'=>"Good"],
+            ['product_id'=>8,
+            'user_id'=>1,
+            'comment_comment'=>"Good"],
+            ['product_id'=>9,
+            'user_id'=>1,
+            'comment_comment'=>"Good"],
         ]);
     
     }

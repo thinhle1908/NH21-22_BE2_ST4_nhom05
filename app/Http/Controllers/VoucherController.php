@@ -17,7 +17,7 @@ class VoucherController extends Controller
     public function deleteVoucher($id = null)
     {
         Voucher::where(['voucher_id' => $id])->delete();
-        return redirect()->back()->with('flash_message_success', 'Voucher has been delele');
+        return redirect()->back();
     }
     public function addvoucher(Request $request)
     {
@@ -33,7 +33,7 @@ class VoucherController extends Controller
             $voucher->voucher_value = $data['voucher_value'];
             $voucher->voucher_name = $data['voucher_name'];
             $voucher->save();
-            return redirect('/dashboard/add-voucher')->with('flash_message_success', 'Voucher has been added successfully');
+            return redirect('/dashboard/add-voucher');
         }
         return view('adminAddVoucher');
     }
@@ -47,7 +47,7 @@ class VoucherController extends Controller
             ]);
             $data = $request->all();
             Voucher::where(['voucher_id'=>$id])->update(['voucher_code' => $data['voucher_code'], 'voucher_value' => $data['voucher_value'],'voucher_name'=>$data['voucher_name']]);
-            return redirect()->back()->with('flash_message_success', 'Voucher has been edit successfully');
+            return redirect()->back();
         }
         $voucherDetail =  Voucher::where(['voucher_id' => $id])->get();
         return view('AdminEditVoucher')->with('voucherDetail',$voucherDetail);

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Models\Orders;
+use App\Models\Orders_Items;
 use Illuminate\Http\Request;
 class OrdersController extends Controller
 {
@@ -13,8 +14,14 @@ class OrdersController extends Controller
         return view('adminOrders')->with('order',$order);
     }
     public function deleteOrders($id = null){
-        Orders::where(['id'=>$id])->delete();
-        return redirect()->back()->with('flash_message_success','Voucher has been delele');
+        $orderitems = Orders_Items::where('order_id',$id)->get();
+        if($orderitems){
+            return redirect()->back();
+        }else{
+            Orders::where(['id'=>$id])->delete();
+            return redirect()->back();
+        }
+        
     }
     public function addorders(Request $request)
     {
@@ -38,7 +45,7 @@ class OrdersController extends Controller
             }
             $order->order_notes = $note;
             $order->save();
-            return redirect('/dashboard/add-orders')->with('flash_message_success', 'Orders has been added successfully');
+            return redirect('/dashboard/add-orders');
         }
         return view('adminAddOrders');
     }
@@ -58,7 +65,7 @@ class OrdersController extends Controller
                $note = $data['order_notes'];
            }
             Orders::where(['id'=>$id])->update(['order_name' => $data['order_name'], 'order_address' => $data['order_address'],'order_phone'=>$data['order_phone'],'order_email'=>$data['order_email'],'order_notes'=>$note]);
-            return redirect()->back()->with('flash_message_success', 'Order has been edit successfully');
+            return redirect()->back();
         }
         $orderDetail =  Orders::where(['id' => $id])->get();
         return view('adminEditOrders')->with('orderDetail',$orderDetail);

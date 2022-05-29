@@ -18,7 +18,7 @@ class OrdersItemsController extends Controller
     public function deleteOrderItems($id = null)
     {
         Orders_Items::where(['id' => $id])->delete();
-        return redirect()->back()->with('flash_message_success', 'Voucher has been delele');
+        return redirect()->back();
     }
     public function addorderitems(Request $request)
     {
@@ -35,7 +35,7 @@ class OrdersItemsController extends Controller
             $result = $data['price_item'] * $data['qty'];
             $orderitems->total = "$" . $result;
             $orderitems->save();
-            return redirect('/dashboard/add-ordersitems')->with('flash_message_success', 'Orders Items has been added successfully');
+            return redirect('/dashboard/add-ordersitems');
         }
         $product = Product::all();
         $order = Orders::all();
@@ -50,7 +50,7 @@ class OrdersItemsController extends Controller
             $data = $request->all();
             $result = $data['price_item'] * $data['qty'];
             Orders_Items::where(['id' => $id])->update(['order_id' => $data['order_id'], 'product_id' => $data['product_id'], 'qty' => $data['qty'], 'price' => "$" . $data['price_item'], 'total' => "$" . $result]);
-            return redirect()->back()->with('flash_message_success', 'Order item has been edit successfully');
+            return redirect()->back();
         }
         $product = Product::all();
         $order = Orders::all();

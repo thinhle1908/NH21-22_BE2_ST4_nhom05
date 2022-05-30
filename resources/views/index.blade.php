@@ -180,6 +180,7 @@
                             <div class="carousel-inner" id="result-feature">
                                 <div class="item active">
                                     @foreach ($featureproducts as $row)
+                                    <a href="{{URL::to('/product-details/'.$row->id)}}">
                                         <div class="col-sm-4">
                                             <div class="product-image-wrapper">
                                                 <div class="single-products">
@@ -197,6 +198,7 @@
                                                 </div>
                                             </div>
                                         </div>
+                                        </a>
                                     @endforeach
                                 </div>
 

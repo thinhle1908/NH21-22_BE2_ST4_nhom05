@@ -294,12 +294,14 @@
 							<div class="carousel-inner">
 								<div class="item active">	
 								@foreach ($productRelated as $item)
+								<a href="{{URL::to('/product-details/'.$item->id)}}">
 									<div class="col-sm-4">
+										
 										<div class="product-image-wrapper">
 											<div class="single-products">
 												<div class="productinfo text-center">
 													<img src="{{  asset('images/product-details/'.$item->image)}}" width= "250px" height= "250px" alt="" />
-													<h2>{{$item->price}}</h2>
+													<h2>${{$item->price}}</h2>
 													<p>{{substr($item->name, 0, 30)}}</p>
 													<button type="button" 
 													data-url="{{ route('addToCart',['id' => $item->id])}}"
@@ -308,6 +310,7 @@
 											</div>
 										</div>
 									</div>
+									</a>
 									@endforeach
 								</div>
 								

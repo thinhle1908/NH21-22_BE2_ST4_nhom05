@@ -8,6 +8,7 @@
 </head>
 <body>
     <h1>Hi {{$order->order_name}}</h1>
+    <h2>Cảm ơn bạn đã đặt hàng tại shop</h2>
 <table style="width: 100%; border-spacing: 0px">
 
     <tr>
@@ -51,52 +52,7 @@
     </tr>
     
 </table>
-<h2>Thông tin sản phẩm</h2>
-    <table style="width: 100%" border="1">
-        <thead>
-            <tr>
-            <th>Name</th>
-            <th>Số Lượng</th>
-            <th>Giá</th>
-            <th>Thành tiền</th>
-            </tr>
-        </thead>
-        <tbody>
-        @php
-		$total = 0;
-		@endphp
-		@foreach($carts as $id => $value)
-		@php
-		$total += $value['price'] * $value['quantity'];
-		@endphp
-            <tr>
-                <td><p>{{Str::limit ($value['name'],50) }}</p></td>
-                <td><p>{{$value['quantity']}}</p></td>
-                
-                <td>${{ $value['price'] }}</td>
-                <td>${{$value['price'] * $value['quantity'];}}</td>
-            </tr>
-            @endforeach
-        </tbody>
-    </table>
-    <table >
-									<tr>
-										<td>Cart Sub Total</td>
-										<td>${{$total}}</td>
-									</tr>
-									<tr>
-										<td>Exo Tax</td>
-										<td>${{$total*0.1}}</td>
-									</tr>
-									<tr class="shipping-cost">
-										<td>Shipping Cost</td>
-										<td>Free</td>										
-									</tr>
-									<tr>
-										<td>Total</td>
-										<td><span>${{$total+$total*0.1}}</span></td>
-									</tr>
-								</table>
+
                                 
 </body>
 </html>

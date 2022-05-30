@@ -50,7 +50,7 @@
 
                                 </div>
                                 <div class="mt-2">
-                                    <button type="submit" class="btn btn-primary me-2">Add Comment</button>
+                                    <button type="submit" class="btn btn-primary me-2">Add Rating</button>
                                     <button type="reset" class="btn btn-outline-secondary">Cancel</button>
                                 </div>
                             </form>

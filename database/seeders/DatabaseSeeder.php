@@ -35,6 +35,12 @@ class DatabaseSeeder extends Seeder
         $this->call([
             ReceiptDetailsSeeder::class
         ]);
+        $this->call([
+            OrdersSeeder::class
+        ]);
+        $this->call([
+            OrderItemsSeeder::class
+        ]);
         
         
     }
